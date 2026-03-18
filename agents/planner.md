@@ -1,6 +1,9 @@
 ---
 name: planner
-description: Expert planning specialist for complex features and refactoring. Use PROACTIVELY when users request feature implementation, architectural changes, or complex refactoring. Automatically activated for planning tasks.
+display_name: "Planificador de Tareas"
+description: |
+  Crea planes de implementación detallados antes de escribir código. Divide features complejos en fases y pasos concretos con rutas de archivos, dependencias entre pasos y riesgos identificados. Ideal para features grandes, refactors o cuando no sabes por dónde empezar.
+  Úsalo ANTES de implementar cualquier feature complejo o refactor grande.
 tools: ["Read", "Grep", "Glob"]
 model: opus
 ---

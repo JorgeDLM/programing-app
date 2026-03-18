@@ -183,29 +183,66 @@ Watch for these architectural anti-patterns:
 - **Tight Coupling**: Components too dependent
 - **God Object**: One class/component does everything
 
-## Project-Specific Architecture (Example)
+## Stack Principal
 
-Example architecture for an AI-powered SaaS platform:
+Este es el stack base para todos los proyectos. Siempre diseña con estos como default:
 
-### Current Architecture
-- **Frontend**: Next.js 15 (Vercel/Cloud Run)
-- **Backend**: FastAPI or Express (Cloud Run/Railway)
-- **Database**: PostgreSQL (Supabase)
-- **Cache**: Redis (Upstash/Railway)
-- **AI**: Claude API with structured output
-- **Real-time**: Supabase subscriptions
+### Core
+- **Framework**: Next.js (App Router, Server Components, API Routes)
+- **Runtime**: Node.js
+- **ORM**: Prisma
+- **Database**: PostgreSQL
+- **Cache**: Redis
+- **Real-time**: Supabase (subscriptions, presence)
 
-### Key Design Decisions
-1. **Hybrid Deployment**: Vercel (frontend) + Cloud Run (backend) for optimal performance
-2. **AI Integration**: Structured output with Pydantic/Zod for type safety
-3. **Real-time Updates**: Supabase subscriptions for live data
-4. **Immutable Patterns**: Spread operators for predictable state
-5. **Many Small Files**: High cohesion, low coupling
+### AI
+- **LLM principal**: Claude API (Anthropic) — Sonnet 4.6 para codigo, Haiku 4.5 para tareas rapidas
+- **Imagenes storage**: Cloudinary (upload, transformaciones, CDN)
+- **Imagenes generacion**: fal.ai Nano Banana 2 o Gemini (ultimo modelo disponible)
+- **Embeddings**: Claude o modelo dedicado segun volumen
+
+### Patrones Obligatorios
+- **Prisma como unica fuente de verdad** para schema de DB
+- **API Routes de Next.js** como backend (no Express separado a menos que sea necesario)
+- **Server Components** por default, Client Components solo cuando hay interactividad
+- **Redis** para: cache de queries, rate limiting, sesiones, colas de jobs
+- **Supabase** para: real-time subscriptions, presencia de usuarios, notificaciones live
+- **Cloudinary** para: toda imagen/media subida por usuarios (nunca guardar en filesystem)
+- **Zod** para validacion de inputs en API routes y formularios
+
+### Estructura de Proyecto
+```
+src/
+  app/              — Pages y API routes (App Router)
+  components/       — UI components (por feature, no por tipo)
+  lib/              — Utilidades, clients (prisma, redis, supabase, claude)
+  hooks/            — Custom React hooks
+  types/            — TypeScript types compartidos
+prisma/
+  schema.prisma     — Schema de base de datos
+  migrations/       — Migrations de Prisma
+```
+
+### Integraciones AI
+```
+lib/ai/
+  claude.ts         — Client de Claude API (messages, streaming, tools)
+  images.ts         — Generacion con fal.ai/Gemini + upload a Cloudinary
+  embeddings.ts     — Generacion y busqueda de embeddings
+```
+
+### Key Decisions
+1. **Prisma + PostgreSQL**: Type-safe queries, migrations automaticas, schema como codigo
+2. **Redis como middleware**: Cache de API responses, rate limiting, session store
+3. **Supabase solo para real-time**: No como DB principal — PostgreSQL con Prisma es la DB
+4. **Cloudinary para todo media**: Transformaciones on-the-fly, CDN global, no storage local
+5. **Claude como LLM principal**: Structured output con Zod, streaming, tool use
+6. **Nano Banana 2 / Gemini**: Generacion de imagenes rapida y economica via fal.ai
 
 ### Scalability Plan
-- **10K users**: Current architecture sufficient
-- **100K users**: Add Redis clustering, CDN for static assets
-- **1M users**: Microservices architecture, separate read/write databases
-- **10M users**: Event-driven architecture, distributed caching, multi-region
+- **1K-10K users**: Next.js en Vercel + PostgreSQL + Redis en Upstash. Suficiente.
+- **10K-100K users**: Agregar Redis clustering, Cloudinary CDN, connection pooling con PgBouncer
+- **100K-1M users**: Separar read replicas, background jobs con Redis queues, edge caching
+- **1M+**: Microservicios, multi-region, event-driven con Redis Streams
 
-**Remember**: Good architecture enables rapid development, easy maintenance, and confident scaling. The best architecture is simple, clear, and follows established patterns.
+**Regla de oro**: Usa el stack completo desde el inicio. No inventes — Prisma para DB, Redis para cache, Supabase para real-time, Cloudinary para media, Claude para AI. Simple y consistente.
