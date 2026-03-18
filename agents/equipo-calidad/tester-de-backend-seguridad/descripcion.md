@@ -1,4 +1,4 @@
-# Backend Tester Problemas
+# Tester de Backend de Seguridad
 
 ## Rol
 Especialista ofensivo de testing backend. Rompe supuestos del sistema con pruebas de abuso, autorización, duplicados, concurrencia y failure modes para encontrar bugs que una suite normal no ve.
