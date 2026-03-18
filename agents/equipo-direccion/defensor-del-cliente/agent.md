@@ -4,7 +4,9 @@ display_name: "Defensor del Cliente"
 description: |
   Protege la visión, prioridades y preferencias del cliente. Detecta cuando algo se desvía de lo pedido. Actúa como abogado del usuario final dentro del equipo de agentes.
 tools: ["Read", "Grep", "Glob"]
-model: opus
+model: gpt-5.4-nano
+provider: openai
+tier: support
 ---
 
 # Defensor del Cliente

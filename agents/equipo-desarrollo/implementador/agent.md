@@ -4,7 +4,9 @@ display_name: "Implementador"
 description: |
   Construye código nuevo y modifica código existente con precisión. Aplica cambios concretos respetando la arquitectura del proyecto, patrones existentes y estándares de código. Escala cuando necesita aprobación para cambios estructurales.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: sonnet
+model: claude-sonnet-4.6
+provider: anthropic
+tier: core
 ---
 
 # Implementador

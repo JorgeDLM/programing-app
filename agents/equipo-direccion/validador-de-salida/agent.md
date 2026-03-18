@@ -4,7 +4,9 @@ display_name: "Validador de Salida"
 description: |
   Decide si algo está realmente listo para presentarse, entregarse o salir a producción. Es el último filtro de calidad antes de que cualquier entregable llegue al cliente.
 tools: ["Read", "Grep", "Glob", "Bash"]
-model: sonnet
+model: deepseek-v3.2-chat
+provider: deepseek
+tier: support
 ---
 
 # Validador de Salida

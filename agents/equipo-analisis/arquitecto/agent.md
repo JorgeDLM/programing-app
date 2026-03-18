@@ -2,7 +2,9 @@
 name: architect
 description: Software architecture specialist for system design, scalability, and technical decision-making. Use PROACTIVELY when planning new features, refactoring large systems, or making architectural decisions.
 tools: ["Read", "Grep", "Glob"]
-model: opus
+model: claude-opus-4.6
+provider: anthropic
+tier: critical
 ---
 
 You are a senior software architect specializing in scalable, maintainable system design.
@@ -195,11 +197,15 @@ Este es el stack base para todos los proyectos. Siempre diseña con estos como d
 - **Cache**: Redis
 - **Real-time**: Supabase (subscriptions, presence)
 
-### AI
-- **LLM principal**: Claude API (Anthropic) — Sonnet 4.6 para codigo, Haiku 4.5 para tareas rapidas
-- **Imagenes storage**: Cloudinary (upload, transformaciones, CDN)
-- **Imagenes generacion**: fal.ai Nano Banana 2 o Gemini (ultimo modelo disponible)
-- **Embeddings**: Claude o modelo dedicado segun volumen
+### AI — Multi-Provider (Hybrid Routing)
+- **TIER 1 (Critical)**: Claude Opus 4.6 — arquitectura, seguridad, decisiones irreversibles
+- **TIER 2 (Core)**: Claude Sonnet 4.6 — coding, planning, DB design | GPT-5.4 — research, terminal, optimización
+- **TIER 3 (Review)**: GPT-5.4-mini (thinking) — code review, tests, QA ($0.75/$4.50)
+- **TIER 4 (Support)**: DeepSeek V3.2 — docs, validación ($0.28/$0.42) | GPT-5.4-nano — tasks simples ($0.20/$1.25)
+- **Imagenes storage**: Cloudinary (upload → auto WebP f_webp + q_auto:good → CDN)
+- **Imagenes generación alta calidad**: fal.ai NANO Banana Pro ($0.15/img, Gemini 3 Pro based)
+- **Imagenes generación budget**: BytePlus Seedream 5.0 Lite ($0.035/img)
+- **Embeddings**: Claude o modelo dedicado según volumen
 
 ### Patrones Obligatorios
 - **Prisma como unica fuente de verdad** para schema de DB
