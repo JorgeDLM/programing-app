@@ -2,10 +2,18 @@
 name: e2e-runner
 description: End-to-end testing specialist using Vercel Agent Browser (preferred) with Playwright fallback. Use PROACTIVELY for generating, maintaining, and running E2E tests. Manages test journeys, quarantines flaky tests, uploads artifacts (screenshots, videos, traces), and ensures critical user flows work.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: gpt-5.4-mini
-provider: openai
-thinking: true
-tier: review
+model: claude-sonnet-4.6
+provider: anthropic
+tier: core
+criticalityLevel: medium
+modelPolicy: claude_preferred
+coreOrOnDemand: core
+defaultSkills: ["pruebas-end-to-end"]
+fallbackModel: claude-haiku-4.5
+escalationModel: claude-sonnet-4.6
+handoffExpects: "implementation output + code changes to test"
+handoffProduces: "E2E test results + screenshots/traces + flow validation report"
+requiresClientApprovalOn: []
 ---
 
 # E2E Test Runner

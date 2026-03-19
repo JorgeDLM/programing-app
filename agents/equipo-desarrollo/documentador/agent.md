@@ -2,9 +2,18 @@
 name: doc-updater
 description: Documentation and codemap specialist. Use PROACTIVELY for updating codemaps and documentation. Runs /update-codemaps and /update-docs, generates docs/CODEMAPS/*, updates READMEs and guides.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: deepseek-v3.2-chat
-provider: deepseek
+model: claude-haiku-4.5
+provider: anthropic
 tier: support
+criticalityLevel: low
+modelPolicy: claude_preferred
+coreOrOnDemand: on-demand
+defaultSkills: []
+fallbackModel: claude-haiku-4.5
+escalationModel: claude-sonnet-4.6
+handoffExpects: "research findings or implementation output to document"
+handoffProduces: "updated documentation + codemaps + READMEs"
+requiresClientApprovalOn: []
 ---
 
 # Documentation & Codemap Specialist

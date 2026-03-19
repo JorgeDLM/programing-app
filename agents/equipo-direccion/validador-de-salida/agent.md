@@ -4,9 +4,18 @@ display_name: "Validador de Salida"
 description: |
   Decide si algo está realmente listo para presentarse, entregarse o salir a producción. Es el último filtro de calidad antes de que cualquier entregable llegue al cliente.
 tools: ["Read", "Grep", "Glob", "Bash"]
-model: deepseek-v3.2-chat
-provider: deepseek
+model: claude-haiku-4.5
+provider: anthropic
 tier: support
+criticalityLevel: low
+modelPolicy: claude_preferred
+coreOrOnDemand: core
+defaultSkills: ["ciclo-de-verificacion"]
+fallbackModel: claude-haiku-4.5
+escalationModel: claude-sonnet-4.6
+handoffExpects: "complete deliverable from previous phases"
+handoffProduces: "validation verdict (pass/fail) + quality checklist + open issues"
+requiresClientApprovalOn: []
 ---
 
 # Validador de Salida

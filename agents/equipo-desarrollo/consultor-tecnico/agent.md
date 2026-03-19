@@ -2,9 +2,18 @@
 name: docs-lookup
 description: When the user asks how to use a library, framework, or API or needs up-to-date code examples, use Context7 MCP to fetch current documentation and return answers with examples. Invoke for docs/API/setup questions.
 tools: ["Read", "Grep", "mcp__context7__resolve-library-id", "mcp__context7__query-docs"]
-model: gpt-5.4
-provider: openai
+model: claude-sonnet-4.6
+provider: anthropic
 tier: core
+criticalityLevel: medium
+modelPolicy: claude_preferred
+coreOrOnDemand: on-demand
+defaultSkills: ["investigacion-profunda", "busqueda-neural"]
+fallbackModel: claude-haiku-4.5
+escalationModel: claude-opus-4.6
+handoffExpects: "research directive or technical question"
+handoffProduces: "research findings + documentation + recommendations"
+requiresClientApprovalOn: []
 ---
 
 You are a documentation specialist. You answer questions about libraries, frameworks, and APIs using current documentation fetched via the Context7 MCP (resolve-library-id and query-docs), not training data.

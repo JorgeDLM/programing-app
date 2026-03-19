@@ -64,64 +64,65 @@
 | **arquitecto** | `claude-opus-4.6` | Decisiones de arquitectura requieren máximo reasoning + 1M context para análisis de codebase completo |
 | **guardian-de-seguridad** | `claude-opus-4.6` | Auditorías de seguridad son CRITICAL — Opus lidera en detección de vulnerabilidades sutiles (91.3% GPQA) |
 
-### TIER 2: CORE DEVELOPMENT — Claude Sonnet + GPT-5.4
-> Código de producción, planning, DB design. Calidad alta, costo moderado.
+### TIER 2: CORE — Claude Sonnet 4.6 ($3/$15 per MTok)
+> Todo agente que participa en el runtime principal. Claude-first obligatorio.
 
-| Agente | Modelo | Justificación |
-|---|---|---|
-| **planificador** | `claude-sonnet-4.6` | Planning necesita intent understanding — Sonnet 79.6% SWE-bench es suficiente |
-| **implementador** | `claude-sonnet-4.6` | Generación de código se beneficia del estilo Claude + patterns del proyecto |
-| **disenador-de-base-de-datos** | `claude-sonnet-4.6` | Diseño de schemas necesita razonamiento cuidadoso sobre relaciones |
-| **consultor-tecnico** | `gpt-5.4` | Research técnico se beneficia del 1M context + tool search (-47% tokens) |
-| **optimizador-de-codigo** | `gpt-5.4` | Optimización de código se beneficia de Terminal-Bench strength (75.1%) |
-| **doctor-de-errores** | `gpt-5.4-mini` | Bug fixes con errores claros son tasks estructuradas — mini con thinking excels |
+| Agente | Modelo | Policy | Justificación |
+|---|---|---|---|
+| **planificador** | `claude-sonnet-4.6` | claude_preferred | Planning necesita intent understanding. Escala a Opus via template para architecture/quotation |
+| **implementador** | `claude-sonnet-4.6` | claude_preferred | Modifica código — Claude obligatorio por calidad y consistency |
+| **disenador-de-base-de-datos** | `claude-sonnet-4.6` | claude_preferred | Schemas + migrations necesitan razonamiento cuidadoso |
+| **inspector-de-codigo** | `claude-sonnet-4.6` | claude_preferred | Agente más usado (en casi todos los templates) — Claude para confiabilidad |
+| **maestro-de-pruebas** | `claude-sonnet-4.6` | claude_preferred | QA normal en runtime principal → Sonnet |
+| **tester-de-flujos** | `claude-sonnet-4.6` | claude_preferred | E2E testing en runtime principal → Sonnet |
+| **doctor-de-errores** | `claude-sonnet-4.6` | claude_preferred | Modifica código (fixes) — Claude obligatorio |
+| **consultor-tecnico** | `claude-sonnet-4.6` | claude_preferred | Research — escala a Opus via template recommendedModel |
+| **optimizador-de-codigo** | `claude-sonnet-4.6` | claude_preferred | Modifica código (refactor) — Claude obligatorio |
+| **defensor-del-cliente** | `claude-sonnet-4.6` | claude_preferred | Client-safe reasoning + business rules en quotation flow |
 
-### TIER 3: REVIEW & QA — GPT-5.4-mini (thinking)
-> Code review, tests, QA. Tasks estructuradas donde mini con thinking rinde igual que frontier.
+### TIER 3: SUPPORT — Claude Haiku 4.5 ($1/$5 per MTok)
+> Agentes de cierre/documentación. Cheapest Claude, mantiene ecosistema unificado.
 
-| Agente | Modelo | Justificación |
-|---|---|---|
-| **inspector-de-codigo** | `gpt-5.4-mini` | Code review es pattern-matching — mini (thinking) a $0.75/$4.50 cubre >90% de reviews |
-| **maestro-de-pruebas** | `gpt-5.4-mini` | Test writing es estructurado — mini genera tests sólidos |
-| **tester-de-flujos** | `gpt-5.4-mini` | E2E test generation es template-driven, no necesita frontier |
+| Agente | Modelo | Policy | Justificación |
+|---|---|---|---|
+| **validador-de-salida** | `claude-haiku-4.5` | claude_preferred | Finalization en casi todos los templates — parte del core pipeline, no periférico |
+| **documentador** | `claude-haiku-4.5` | claude_preferred | Finalization en research template — parte del pipeline |
 
-### TIER 4: SUPPORT — DeepSeek / GPT-5.4-nano
-> Validación, documentación, comunicación. Tasks simples donde el costo mínimo es viable.
-
-| Agente | Modelo | Justificación |
-|---|---|---|
-| **validador-de-salida** | `deepseek-v3.2-chat` | Validación de output es straightforward — DeepSeek a $0.28/$0.42 es suficiente |
-| **documentador** | `deepseek-v3.2-chat` | Documentación técnica no requiere frontier — DeepSeek maneja bien markdown/docs |
-| **defensor-del-cliente** | `gpt-5.4-nano` | Comunicación con cliente es formateo simple — nano a $0.20/$1.25 basta |
-
-### Candidatos (no conectados aún)
+### Candidatos (no conectados aún) — Claude-first aplica
 
 | Agente | Modelo Recomendado | Justificación |
 |---|---|---|
 | arquitecto-backend | `claude-sonnet-4.6` | Backend architecture necesita Claude reasoning |
-| arquitecto-frontend | `gpt-5.4-mini` (thinking) | Frontend patterns son más template-driven |
-| desarrollador-backend | `claude-sonnet-4.6` | Backend code generation con Prisma/Next.js — Claude excels |
-| desarrollador-frontend | `gpt-5.4-mini` (thinking) | Frontend components son estructurados |
-| analista-de-negocio | `deepseek-v3.2-reasoner` | Análisis de negocio a bajo costo con reasoning |
-| project-manager | `gpt-5.4-nano` | Project management es coordinación simple |
+| arquitecto-frontend | `claude-sonnet-4.6` | Frontend patterns en runtime → Claude-first |
+| desarrollador-backend | `claude-sonnet-4.6` | Backend code generation — modifica código |
+| desarrollador-frontend | `claude-sonnet-4.6` | Frontend code generation — modifica código |
+| analista-de-negocio | `claude-sonnet-4.6` | Participa en quotation (business rules) → Claude-first |
+| project-manager | `claude-haiku-4.5` | Coordinación simple, no modifica código |
+
+### GPT / DeepSeek — Reservados para futuro
+> Solo se activarán para agentes PERIFÉRICOS una vez que el pipeline esté probado en producción.
+> Candidatos futuros: workers de clasificación, extractores de metadata, normalizadores de datos.
 
 ---
 
 ## Escalamiento de Modelos
 
-### Reglas de escalamiento automático
-1. Si un agente TIER 2-4 falla 2 veces → escalar un tier arriba
-2. Si la task tiene tag `security` o `architecture` → siempre TIER 1
-3. Si el contexto supera 200K tokens → usar modelo con 1M context (Opus o GPT-5.4)
-4. Si la task es `architecture_change` → todos los agentes mínimo TIER 2
+### Reglas de escalamiento
+1. Si un agente falla 2 veces → escalar al `escalationModel` declarado en su frontmatter
+2. Si la task tiene tag `security` o `architecture` → siempre TIER 1 (Opus)
+3. Si el contexto supera 200K tokens → `claude-opus-4.6` (1M context)
+4. Si la task es `architecture_change` → todos los agentes mínimo `claude-sonnet-4.6`
+5. El `fallbackModel` de cada agente siempre apunta a un Claude inferior
+6. El `escalationModel` de cada agente siempre apunta a un Claude superior
 
 ### Override por ticket type
 | Ticket Type | Override |
 |---|---|
-| `architecture_change` | Todos los agentes → mínimo `claude-sonnet-4.6` |
-| `research` | consultor-tecnico → `gpt-5.4` (1M context) |
-| `small_fix` | doctor-de-errores → `gpt-5.4-mini`, inspector → `gpt-5.4-nano` |
-| `qa_review` | Mantener tiers asignados |
+| `architecture_change` | Todos → mínimo `claude-sonnet-4.6`, discovery/planning → `claude-opus-4.6` |
+| `research` | consultor-tecnico → `claude-opus-4.6` (via template recommendedModel) |
+| `small_fix` | Mantener Sonnet — modifica código |
+| `qa_review` | Mantener Sonnet — review del core |
+| `quotation` | discovery → `claude-opus-4.6`, defensor-del-cliente → `claude-sonnet-4.6` |
 
 ---
 

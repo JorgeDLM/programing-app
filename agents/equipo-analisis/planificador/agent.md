@@ -8,6 +8,15 @@ tools: ["Read", "Grep", "Glob"]
 model: claude-sonnet-4.6
 provider: anthropic
 tier: core
+criticalityLevel: high
+modelPolicy: claude_preferred
+coreOrOnDemand: core
+defaultSkills: ["patrones-backend", "patrones-frontend", "migraciones-de-base-de-datos"]
+fallbackModel: claude-haiku-4.5
+escalationModel: claude-opus-4.6
+handoffExpects: "directive + architecture proposal (if discovery phase ran)"
+handoffProduces: "implementation plan with phases, file paths, dependencies, risks"
+requiresClientApprovalOn: ["scope_budget", "architecture_change", "feature_removal"]
 ---
 
 You are an expert planning specialist focused on creating comprehensive, actionable implementation plans.

@@ -5,6 +5,15 @@ tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: claude-opus-4.6
 provider: anthropic
 tier: critical
+criticalityLevel: high
+modelPolicy: claude_only
+coreOrOnDemand: core
+defaultSkills: ["revision-de-seguridad", "escaneo-de-seguridad"]
+fallbackModel: claude-sonnet-4.6
+escalationModel: claude-opus-4.6
+handoffExpects: "code changes + implementation output from previous phase"
+handoffProduces: "security audit report + vulnerability list + fix recommendations"
+requiresClientApprovalOn: ["auth_permissions", "breaking_change", "business_rules"]
 ---
 
 # Security Reviewer

@@ -7,6 +7,15 @@ tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: claude-sonnet-4.6
 provider: anthropic
 tier: core
+criticalityLevel: high
+modelPolicy: claude_preferred
+coreOrOnDemand: core
+defaultSkills: ["estandares-de-codigo", "integracion-claude"]
+fallbackModel: claude-haiku-4.5
+escalationModel: claude-opus-4.6
+handoffExpects: "implementation plan + architecture context"
+handoffProduces: "code changes + files modified + decisions taken + open questions"
+requiresClientApprovalOn: ["schema_change", "auth_permissions", "dependency_major", "architecture_change"]
 ---
 
 # Implementador
