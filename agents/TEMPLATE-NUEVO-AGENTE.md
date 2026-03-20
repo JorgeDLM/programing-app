@@ -4,7 +4,7 @@ display_name: ""
 description: |
   [1 línea clara de qué hace este agente]
 tools: ["Read", "Grep", "Glob"]
-model: claude-sonnet-4.6
+model: claude-sonnet-4-6
 provider: anthropic
 tier: core
 thinking: false
@@ -38,11 +38,11 @@ outputs:
 
 # --- Modelo ---
 defaultProvider: anthropic
-defaultModel: claude-sonnet-4.6
+defaultModel: claude-sonnet-4-6
 allowedProviders: [anthropic]
-allowedModels: [claude-sonnet-4.6, claude-opus-4.6]
-fallbackModel: claude-sonnet-4.6
-escalationModel: claude-opus-4.6
+allowedModels: [claude-sonnet-4-6, claude-opus-4-6]
+fallbackModel: claude-sonnet-4-6
+escalationModel: claude-opus-4-6
 modelPolicy: claude_preferred
 
 # --- Criticidad ---
@@ -90,7 +90,7 @@ whyThisShouldNotBeJustASkill: ""
 | Touches production-critical code | no |
 | Touches architecture/security/business rules | no |
 
-**Modelo elegido:** `claude-sonnet-4.6`
+**Modelo elegido:** `claude-sonnet-4-6`
 **Justificación:** [Por qué este modelo y no otro]
 
 ## Auditabilidad

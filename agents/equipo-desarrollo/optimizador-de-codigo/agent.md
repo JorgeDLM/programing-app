@@ -2,15 +2,14 @@
 name: refactor-cleaner
 description: Dead code cleanup and consolidation specialist. Use PROACTIVELY for removing unused code, duplicates, and refactoring. Runs analysis tools (knip, depcheck, ts-prune) to identify dead code and safely removes it.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: claude-sonnet-4.6
+model: claude-sonnet-4-6
 provider: anthropic
 tier: core
 criticalityLevel: medium
-modelPolicy: claude_preferred
 coreOrOnDemand: on-demand
 defaultSkills: ["calidad-de-codigo", "estandares-de-codigo"]
-fallbackModel: claude-haiku-4.5
-escalationModel: claude-sonnet-4.6
+fallbackmodel: claude-sonnet-4-6
+escalationmodel: claude-sonnet-4-6
 handoffExpects: "codebase to analyze for dead code and optimization"
 handoffProduces: "cleanup report + files modified + dead code removed"
 requiresClientApprovalOn: ["feature_removal"]

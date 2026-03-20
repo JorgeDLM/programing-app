@@ -4,7 +4,7 @@ display_name: "Tester de Backend Seguridad"
 description: |
   Especialista ofensivo de QA backend. Diseña pruebas de abuso, autorización, concurrencia, idempotencia y failure modes para descubrir bugs que una suite normal no ve. Piensa como atacante, bot, integrador roto y sistema bajo presión. Complementa al Backend Test Engineer en escenarios de alto riesgo.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: sonnet
+model: claude-sonnet-4-6
 ---
 
 # Tester de Backend Seguridad

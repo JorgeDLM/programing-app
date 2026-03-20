@@ -4,15 +4,14 @@ display_name: "Validador de Salida"
 description: |
   Decide si algo está realmente listo para presentarse, entregarse o salir a producción. Es el último filtro de calidad antes de que cualquier entregable llegue al cliente.
 tools: ["Read", "Grep", "Glob", "Bash"]
-model: claude-haiku-4.5
-provider: anthropic
+model: gpt-5-nano
+provider: openai
 tier: support
 criticalityLevel: low
-modelPolicy: claude_preferred
 coreOrOnDemand: core
 defaultSkills: ["ciclo-de-verificacion"]
-fallbackModel: claude-haiku-4.5
-escalationModel: claude-sonnet-4.6
+fallbackmodel: gpt-5-nano
+escalationmodel: gpt-5-nano
 handoffExpects: "complete deliverable from previous phases"
 handoffProduces: "validation verdict (pass/fail) + quality checklist + open issues"
 requiresClientApprovalOn: []

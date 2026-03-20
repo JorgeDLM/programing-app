@@ -4,7 +4,7 @@ display_name: "Diseñador de Contenido para Redes"
 description: |
   Diseña piezas pensadas para Instagram, TikTok, Facebook y redes sociales. Entiende formatos, tendencias y engagement por plataforma.
 tools: ["Read", "Write", "Grep", "Glob"]
-model: sonnet
+model: gpt-5-nano
 ---
 
 # Diseñador de Contenido para Redes

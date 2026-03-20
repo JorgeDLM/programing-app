@@ -4,7 +4,7 @@ display_name: "Responsable del Sistema Visual"
 description: |
   Define reglas visuales reutilizables: tipografía, colores, spacing, componentes base y consistencia. Es el guardián del design system.
 tools: ["Read", "Write", "Edit", "Grep", "Glob"]
-model: sonnet
+model: gpt-5-nano
 ---
 
 # Responsable del Sistema Visual

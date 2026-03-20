@@ -5,15 +5,14 @@ description: |
   Crea planes de implementación detallados antes de escribir código. Divide features complejos en fases y pasos concretos con rutas de archivos, dependencias entre pasos y riesgos identificados. Ideal para features grandes, refactors o cuando no sabes por dónde empezar.
   Úsalo ANTES de implementar cualquier feature complejo o refactor grande.
 tools: ["Read", "Grep", "Glob"]
-model: claude-sonnet-4.6
-provider: anthropic
+model: gpt-5-mini
+provider: openai
 tier: core
 criticalityLevel: high
-modelPolicy: claude_preferred
 coreOrOnDemand: core
 defaultSkills: ["patrones-backend", "patrones-frontend", "migraciones-de-base-de-datos"]
-fallbackModel: claude-haiku-4.5
-escalationModel: claude-opus-4.6
+fallbackmodel: gpt-5-mini
+escalationmodel: gpt-5-mini
 handoffExpects: "directive + architecture proposal (if discovery phase ran)"
 handoffProduces: "implementation plan with phases, file paths, dependencies, risks"
 requiresClientApprovalOn: ["scope_budget", "architecture_change", "feature_removal"]

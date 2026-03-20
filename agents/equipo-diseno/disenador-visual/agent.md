@@ -4,7 +4,7 @@ display_name: "Diseñador Visual de Producto"
 description: |
   Diseña interfaces, pantallas, jerarquía visual, componentes, responsive y claridad visual. Crea UI aesthetic, moderna y simplificada usando TailwindCSS.
 tools: ["Read", "Write", "Edit", "Grep", "Glob"]
-model: sonnet
+model: gpt-5-nano
 ---
 
 # Diseñador Visual de Producto

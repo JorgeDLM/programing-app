@@ -4,7 +4,7 @@ display_name: "Experto en Análisis Estratégico"
 description: |
   Analiza escenarios, riesgos, decisiones, oportunidades y consecuencias antes de que el equipo actúe. Piensa en segundo y tercer orden de consecuencias.
 tools: ["Read", "Grep", "Glob"]
-model: opus
+model: gpt-5-mini
 ---
 
 # Experto en Análisis Estratégico

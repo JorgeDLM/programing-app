@@ -2,15 +2,14 @@
 name: build-error-resolver
 description: Build and TypeScript error resolution specialist. Use PROACTIVELY when build fails or type errors occur. Fixes build/type errors only with minimal diffs, no architectural edits. Focuses on getting the build green quickly.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: claude-sonnet-4.6
+model: claude-sonnet-4-6
 provider: anthropic
 tier: core
 criticalityLevel: medium
-modelPolicy: claude_preferred
 coreOrOnDemand: core
 defaultSkills: []
-fallbackModel: claude-haiku-4.5
-escalationModel: claude-sonnet-4.6
+fallbackmodel: claude-sonnet-4-6
+escalationmodel: claude-sonnet-4-6
 handoffExpects: "error logs + build output + failing files"
 handoffProduces: "minimal fixes applied + files modified + build status"
 requiresClientApprovalOn: []

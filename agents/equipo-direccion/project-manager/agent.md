@@ -4,7 +4,7 @@ display_name: "Project Manager"
 description: |
   Convierte ideas y planes en fases, tareas, prioridades, dependencias, tiempos y seguimiento. Es el responsable de que todo tenga estructura, orden y avance medible.
 tools: ["Read", "Write", "Grep", "Glob"]
-model: sonnet
+model: gpt-5.4
 ---
 
 # Project Manager

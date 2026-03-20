@@ -4,7 +4,7 @@ display_name: "Validador Técnico"
 description: |
   Audita lo construido, detecta deuda técnica, fragilidad, malas decisiones y puntos débiles del sistema. Es el auditor que revisa después de construir.
 tools: ["Read", "Grep", "Glob", "Bash"]
-model: sonnet
+model: gpt-5-mini
 ---
 
 # Validador Técnico

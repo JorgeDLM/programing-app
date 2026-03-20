@@ -61,43 +61,43 @@
 
 | Agente | Modelo | Justificación |
 |---|---|---|
-| **arquitecto** | `claude-opus-4.6` | Decisiones de arquitectura requieren máximo reasoning + 1M context para análisis de codebase completo |
-| **guardian-de-seguridad** | `claude-opus-4.6` | Auditorías de seguridad son CRITICAL — Opus lidera en detección de vulnerabilidades sutiles (91.3% GPQA) |
+| **arquitecto** | `claude-opus-4-6` | Decisiones de arquitectura requieren máximo reasoning + 1M context para análisis de codebase completo |
+| **guardian-de-seguridad** | `claude-opus-4-6` | Auditorías de seguridad son CRITICAL — Opus lidera en detección de vulnerabilidades sutiles (91.3% GPQA) |
 
 ### TIER 2: CORE — Claude Sonnet 4.6 ($3/$15 per MTok)
 > Todo agente que participa en el runtime principal. Claude-first obligatorio.
 
 | Agente | Modelo | Policy | Justificación |
 |---|---|---|---|
-| **planificador** | `claude-sonnet-4.6` | claude_preferred | Planning necesita intent understanding. Escala a Opus via template para architecture/quotation |
-| **implementador** | `claude-sonnet-4.6` | claude_preferred | Modifica código — Claude obligatorio por calidad y consistency |
-| **disenador-de-base-de-datos** | `claude-sonnet-4.6` | claude_preferred | Schemas + migrations necesitan razonamiento cuidadoso |
-| **inspector-de-codigo** | `claude-sonnet-4.6` | claude_preferred | Agente más usado (en casi todos los templates) — Claude para confiabilidad |
-| **maestro-de-pruebas** | `claude-sonnet-4.6` | claude_preferred | QA normal en runtime principal → Sonnet |
-| **tester-de-flujos** | `claude-sonnet-4.6` | claude_preferred | E2E testing en runtime principal → Sonnet |
-| **doctor-de-errores** | `claude-sonnet-4.6` | claude_preferred | Modifica código (fixes) — Claude obligatorio |
-| **consultor-tecnico** | `claude-sonnet-4.6` | claude_preferred | Research — escala a Opus via template recommendedModel |
-| **optimizador-de-codigo** | `claude-sonnet-4.6` | claude_preferred | Modifica código (refactor) — Claude obligatorio |
-| **defensor-del-cliente** | `claude-sonnet-4.6` | claude_preferred | Client-safe reasoning + business rules en quotation flow |
+| **planificador** | `claude-sonnet-4-6` | claude_preferred | Planning necesita intent understanding. Escala a Opus via template para architecture/quotation |
+| **implementador** | `claude-sonnet-4-6` | claude_preferred | Modifica código — Claude obligatorio por calidad y consistency |
+| **disenador-de-base-de-datos** | `claude-sonnet-4-6` | claude_preferred | Schemas + migrations necesitan razonamiento cuidadoso |
+| **inspector-de-codigo** | `claude-sonnet-4-6` | claude_preferred | Agente más usado (en casi todos los templates) — Claude para confiabilidad |
+| **maestro-de-pruebas** | `claude-sonnet-4-6` | claude_preferred | QA normal en runtime principal → Sonnet |
+| **tester-de-flujos** | `claude-sonnet-4-6` | claude_preferred | E2E testing en runtime principal → Sonnet |
+| **doctor-de-errores** | `claude-sonnet-4-6` | claude_preferred | Modifica código (fixes) — Claude obligatorio |
+| **consultor-tecnico** | `claude-sonnet-4-6` | claude_preferred | Research — escala a Opus via template recommendedModel |
+| **optimizador-de-codigo** | `claude-sonnet-4-6` | claude_preferred | Modifica código (refactor) — Claude obligatorio |
+| **defensor-del-cliente** | `claude-sonnet-4-6` | claude_preferred | Client-safe reasoning + business rules en quotation flow |
 
 ### TIER 3: SUPPORT — Claude Haiku 4.5 ($1/$5 per MTok)
 > Agentes de cierre/documentación. Cheapest Claude, mantiene ecosistema unificado.
 
 | Agente | Modelo | Policy | Justificación |
 |---|---|---|---|
-| **validador-de-salida** | `claude-haiku-4.5` | claude_preferred | Finalization en casi todos los templates — parte del core pipeline, no periférico |
-| **documentador** | `claude-haiku-4.5` | claude_preferred | Finalization en research template — parte del pipeline |
+| **validador-de-salida** | `claude-haiku-4-5` | claude_preferred | Finalization en casi todos los templates — parte del core pipeline, no periférico |
+| **documentador** | `claude-haiku-4-5` | claude_preferred | Finalization en research template — parte del pipeline |
 
 ### Candidatos (no conectados aún) — Claude-first aplica
 
 | Agente | Modelo Recomendado | Justificación |
 |---|---|---|
-| arquitecto-backend | `claude-sonnet-4.6` | Backend architecture necesita Claude reasoning |
-| arquitecto-frontend | `claude-sonnet-4.6` | Frontend patterns en runtime → Claude-first |
-| desarrollador-backend | `claude-sonnet-4.6` | Backend code generation — modifica código |
-| desarrollador-frontend | `claude-sonnet-4.6` | Frontend code generation — modifica código |
-| analista-de-negocio | `claude-sonnet-4.6` | Participa en quotation (business rules) → Claude-first |
-| project-manager | `claude-haiku-4.5` | Coordinación simple, no modifica código |
+| arquitecto-backend | `claude-sonnet-4-6` | Backend architecture necesita Claude reasoning |
+| arquitecto-frontend | `claude-sonnet-4-6` | Frontend patterns en runtime → Claude-first |
+| desarrollador-backend | `claude-sonnet-4-6` | Backend code generation — modifica código |
+| desarrollador-frontend | `claude-sonnet-4-6` | Frontend code generation — modifica código |
+| analista-de-negocio | `claude-sonnet-4-6` | Participa en quotation (business rules) → Claude-first |
+| project-manager | `claude-haiku-4-5` | Coordinación simple, no modifica código |
 
 ### GPT / DeepSeek — Reservados para futuro
 > Solo se activarán para agentes PERIFÉRICOS una vez que el pipeline esté probado en producción.
@@ -110,19 +110,19 @@
 ### Reglas de escalamiento
 1. Si un agente falla 2 veces → escalar al `escalationModel` declarado en su frontmatter
 2. Si la task tiene tag `security` o `architecture` → siempre TIER 1 (Opus)
-3. Si el contexto supera 200K tokens → `claude-opus-4.6` (1M context)
-4. Si la task es `architecture_change` → todos los agentes mínimo `claude-sonnet-4.6`
+3. Si el contexto supera 200K tokens → `claude-opus-4-6` (1M context)
+4. Si la task es `architecture_change` → todos los agentes mínimo `claude-sonnet-4-6`
 5. El `fallbackModel` de cada agente siempre apunta a un Claude inferior
 6. El `escalationModel` de cada agente siempre apunta a un Claude superior
 
 ### Override por ticket type
 | Ticket Type | Override |
 |---|---|
-| `architecture_change` | Todos → mínimo `claude-sonnet-4.6`, discovery/planning → `claude-opus-4.6` |
-| `research` | consultor-tecnico → `claude-opus-4.6` (via template recommendedModel) |
+| `architecture_change` | Todos → mínimo `claude-sonnet-4-6`, discovery/planning → `claude-opus-4-6` |
+| `research` | consultor-tecnico → `claude-opus-4-6` (via template recommendedModel) |
 | `small_fix` | Mantener Sonnet — modifica código |
 | `qa_review` | Mantener Sonnet — review del core |
-| `quotation` | discovery → `claude-opus-4.6`, defensor-del-cliente → `claude-sonnet-4.6` |
+| `quotation` | discovery → `claude-opus-4-6`, defensor-del-cliente → `claude-sonnet-4-6` |
 
 ---
 
@@ -195,13 +195,13 @@ https://res.cloudinary.com/{cloud_name}/image/upload/f_webp,q_auto:good/{public_
 #### Antes (todo Claude Sonnet)
 | Tickets | Modelo | Tokens promedio | Costo/ticket | Total |
 |---|---|---|---|---|
-| 100 | claude-sonnet-4.6 | ~15K in + 5K out | ~$0.12 | ~$1,200/mes |
+| 100 | claude-sonnet-4-6 | ~15K in + 5K out | ~$0.12 | ~$1,200/mes |
 
 #### Después (hybrid routing)
 | Tier | Tickets | Modelo | Costo/ticket | Total |
 |---|---|---|---|---|
-| TIER 1 | 10 | claude-opus-4.6 | ~$0.18 | $1.80 |
-| TIER 2 | 35 | claude-sonnet-4.6 | ~$0.12 | $4.20 |
+| TIER 1 | 10 | claude-opus-4-6 | ~$0.18 | $1.80 |
+| TIER 2 | 35 | claude-sonnet-4-6 | ~$0.12 | $4.20 |
 | TIER 2 | 15 | gpt-5.4 | ~$0.11 | $1.65 |
 | TIER 3 | 25 | gpt-5.4-mini | ~$0.035 | $0.88 |
 | TIER 4 | 10 | deepseek-v3.2 | ~$0.004 | $0.04 |

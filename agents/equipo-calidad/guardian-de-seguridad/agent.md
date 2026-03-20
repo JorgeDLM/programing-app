@@ -2,15 +2,14 @@
 name: security-reviewer
 description: Security vulnerability detection and remediation specialist. Use PROACTIVELY after writing code that handles user input, authentication, API endpoints, or sensitive data. Flags secrets, SSRF, injection, unsafe crypto, and OWASP Top 10 vulnerabilities.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: claude-opus-4.6
-provider: anthropic
+model: gpt-5.4
+provider: openai
 tier: critical
 criticalityLevel: high
-modelPolicy: claude_only
 coreOrOnDemand: core
 defaultSkills: ["revision-de-seguridad", "escaneo-de-seguridad"]
-fallbackModel: claude-sonnet-4.6
-escalationModel: claude-opus-4.6
+fallbackmodel: gpt-5.4
+escalationmodel: gpt-5.4
 handoffExpects: "code changes + implementation output from previous phase"
 handoffProduces: "security audit report + vulnerability list + fix recommendations"
 requiresClientApprovalOn: ["auth_permissions", "breaking_change", "business_rules"]

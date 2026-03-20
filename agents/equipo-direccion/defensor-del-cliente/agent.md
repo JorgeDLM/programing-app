@@ -4,15 +4,14 @@ display_name: "Defensor del Cliente"
 description: |
   Protege la visión, prioridades y preferencias del cliente. Detecta cuando algo se desvía de lo pedido. Actúa como abogado del usuario final dentro del equipo de agentes.
 tools: ["Read", "Grep", "Glob"]
-model: claude-sonnet-4.6
-provider: anthropic
+model: gpt-5-mini
+provider: openai
 tier: core
 criticalityLevel: medium
-modelPolicy: claude_preferred
 coreOrOnDemand: on-demand
 defaultSkills: []
-fallbackModel: claude-haiku-4.5
-escalationModel: claude-sonnet-4.6
+fallbackmodel: gpt-5-mini
+escalationmodel: gpt-5-mini
 handoffExpects: "plan or deliverable to validate against client expectations"
 handoffProduces: "alignment validation + deviations detected + approval/rejection"
 requiresClientApprovalOn: ["scope_budget", "quotation_ambiguity", "business_rules"]

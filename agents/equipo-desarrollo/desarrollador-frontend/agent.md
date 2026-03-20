@@ -4,7 +4,7 @@ display_name: "Desarrollador Frontend"
 description: |
   Construye pantallas, formularios, vistas, flujos visuales, estados y conexión con backend. Implementa UI real con React, Next.js y TailwindCSS.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: sonnet
+model: claude-sonnet-4-6
 ---
 
 # Desarrollador Frontend

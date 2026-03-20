@@ -4,7 +4,7 @@ display_name: "Editor Visual"
 description: |
   Retoca, limpia, ajusta y mejora imágenes, composiciones, mockups y presentaciones visuales. Es el pulidor final de todo material visual.
 tools: ["Read", "Write", "Grep", "Glob"]
-model: sonnet
+model: gpt-5-nano
 ---
 
 # Editor Visual

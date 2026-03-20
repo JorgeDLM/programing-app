@@ -2,15 +2,14 @@
 name: docs-lookup
 description: When the user asks how to use a library, framework, or API or needs up-to-date code examples, use Context7 MCP to fetch current documentation and return answers with examples. Invoke for docs/API/setup questions.
 tools: ["Read", "Grep", "mcp__context7__resolve-library-id", "mcp__context7__query-docs"]
-model: claude-sonnet-4.6
+model: claude-sonnet-4-6
 provider: anthropic
 tier: core
 criticalityLevel: medium
-modelPolicy: claude_preferred
 coreOrOnDemand: on-demand
 defaultSkills: ["investigacion-profunda", "busqueda-neural"]
-fallbackModel: claude-haiku-4.5
-escalationModel: claude-opus-4.6
+fallbackmodel: claude-sonnet-4-6
+escalationmodel: claude-sonnet-4-6
 handoffExpects: "research directive or technical question"
 handoffProduces: "research findings + documentation + recommendations"
 requiresClientApprovalOn: []

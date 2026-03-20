@@ -4,7 +4,7 @@ display_name: "Arquitecto de Backend"
 description: |
   Diseña la lógica interna del sistema: APIs, reglas de negocio, seguridad, procesos, automatizaciones y servicios. Especialista en Node.js, Next.js API Routes, Prisma y PostgreSQL.
 tools: ["Read", "Write", "Grep", "Glob", "Bash"]
-model: opus
+model: claude-sonnet-4-6
 ---
 
 # Arquitecto de Backend

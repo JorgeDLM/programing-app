@@ -4,7 +4,7 @@ display_name: "Redactor de Producto"
 description: |
   Escribe textos de interfaz, mensajes, botones, onboarding, errores, microcopy comercial y todo texto que el usuario lee dentro del producto.
 tools: ["Read", "Write", "Edit", "Grep", "Glob"]
-model: sonnet
+model: gpt-5-nano
 ---
 
 # Redactor de Producto

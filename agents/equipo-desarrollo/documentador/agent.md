@@ -2,15 +2,14 @@
 name: doc-updater
 description: Documentation and codemap specialist. Use PROACTIVELY for updating codemaps and documentation. Runs /update-codemaps and /update-docs, generates docs/CODEMAPS/*, updates READMEs and guides.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: claude-haiku-4.5
-provider: anthropic
+model: gpt-5-nano
+provider: openai
 tier: support
 criticalityLevel: low
-modelPolicy: claude_preferred
 coreOrOnDemand: on-demand
 defaultSkills: []
-fallbackModel: claude-haiku-4.5
-escalationModel: claude-sonnet-4.6
+fallbackmodel: gpt-5-nano
+escalationmodel: gpt-5-nano
 handoffExpects: "research findings or implementation output to document"
 handoffProduces: "updated documentation + codemaps + READMEs"
 requiresClientApprovalOn: []

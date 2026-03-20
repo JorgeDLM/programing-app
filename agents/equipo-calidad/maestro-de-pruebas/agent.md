@@ -2,15 +2,14 @@
 name: tdd-guide
 description: Test-Driven Development specialist enforcing write-tests-first methodology. Use PROACTIVELY when writing new features, fixing bugs, or refactoring code. Ensures 80%+ test coverage.
 tools: ["Read", "Write", "Edit", "Bash", "Grep"]
-model: claude-sonnet-4.6
+model: claude-sonnet-4-6
 provider: anthropic
 tier: core
 criticalityLevel: medium
-modelPolicy: claude_preferred
 coreOrOnDemand: core
 defaultSkills: ["desarrollo-guiado-por-tests"]
-fallbackModel: claude-haiku-4.5
-escalationModel: claude-sonnet-4.6
+fallbackmodel: claude-sonnet-4-6
+escalationmodel: claude-sonnet-4-6
 handoffExpects: "implementation output + code changes"
 handoffProduces: "test suite + coverage report + test results"
 requiresClientApprovalOn: []

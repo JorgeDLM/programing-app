@@ -4,7 +4,7 @@ display_name: "Especialista en Integraciones"
 description: |
   Conecta APIs externas, pagos, CRMs, OAuth, marketplaces, ERPs y servicios de terceros. Especialista en webhooks, rate limits, retry patterns y manejo de errores de integraciones.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: sonnet
+model: claude-sonnet-4-6
 ---
 
 # Especialista en Integraciones

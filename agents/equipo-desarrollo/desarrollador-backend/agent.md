@@ -4,7 +4,7 @@ display_name: "Desarrollador Backend"
 description: |
   Construye endpoints, lógica de negocio, servicios, integraciones y procesos del servidor. Ejecuta el código real del backend siguiendo la arquitectura definida.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: sonnet
+model: claude-sonnet-4-6
 ---
 
 # Desarrollador Backend

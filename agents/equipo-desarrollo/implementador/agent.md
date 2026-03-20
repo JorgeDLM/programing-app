@@ -4,15 +4,14 @@ display_name: "Implementador"
 description: |
   Construye código nuevo y modifica código existente con precisión. Aplica cambios concretos respetando la arquitectura del proyecto, patrones existentes y estándares de código. Escala cuando necesita aprobación para cambios estructurales.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: claude-sonnet-4.6
+model: claude-sonnet-4-6
 provider: anthropic
 tier: core
 criticalityLevel: high
-modelPolicy: claude_preferred
 coreOrOnDemand: core
 defaultSkills: ["estandares-de-codigo", "integracion-claude"]
-fallbackModel: claude-haiku-4.5
-escalationModel: claude-opus-4.6
+fallbackmodel: claude-sonnet-4-6
+escalationmodel: claude-sonnet-4-6
 handoffExpects: "implementation plan + architecture context"
 handoffProduces: "code changes + files modified + decisions taken + open questions"
 requiresClientApprovalOn: ["schema_change", "auth_permissions", "dependency_major", "architecture_change"]

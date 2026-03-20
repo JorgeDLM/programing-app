@@ -4,7 +4,7 @@ display_name: "Experto en Fotografía de Producto"
 description: |
   Define cómo deben fotografiarse productos para vender mejor: ángulos, iluminación, fondos, composición, enfoque comercial y dirección de arte fotográfica.
 tools: ["Read", "Write", "Grep", "Glob"]
-model: sonnet
+model: gpt-5-nano
 ---
 
 # Experto en Fotografía de Producto

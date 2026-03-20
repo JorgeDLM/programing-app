@@ -4,7 +4,7 @@ display_name: "Analista de Negocio"
 description: |
   Baja ideas a requerimientos claros, reglas de negocio, permisos, procesos, escenarios y necesidades reales. Traduce la visión del cliente en especificaciones accionables para el equipo técnico.
 tools: ["Read", "Grep", "Glob"]
-model: opus
+model: gpt-5-mini
 ---
 
 # Analista de Negocio

@@ -2,15 +2,14 @@
 name: database-reviewer
 description: PostgreSQL database specialist for query optimization, schema design, security, and performance. Use PROACTIVELY when writing SQL, creating migrations, designing schemas, or troubleshooting database performance. Incorporates Supabase best practices.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: claude-sonnet-4.6
+model: claude-sonnet-4-6
 provider: anthropic
 tier: core
 criticalityLevel: high
-modelPolicy: claude_preferred
 coreOrOnDemand: core
 defaultSkills: ["patrones-postgresql", "migraciones-de-base-de-datos"]
-fallbackModel: claude-haiku-4.5
-escalationModel: claude-opus-4.6
+fallbackmodel: claude-sonnet-4-6
+escalationmodel: claude-sonnet-4-6
 handoffExpects: "implementation output + schema changes to review"
 handoffProduces: "DB review report + optimization recommendations + migration validation"
 requiresClientApprovalOn: ["schema_change", "breaking_change"]

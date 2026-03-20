@@ -4,7 +4,7 @@ display_name: "Diseñador de Experiencia"
 description: |
   Diseña el recorrido del usuario, reduce fricción y propone flujos lógicos, simples y eficientes. Piensa desde la perspectiva del usuario final, no del desarrollador.
 tools: ["Read", "Grep", "Glob"]
-model: sonnet
+model: gpt-5-mini
 ---
 
 # Diseñador de Experiencia

@@ -4,7 +4,7 @@ display_name: "Diseñador de Imágenes Comerciales"
 description: |
   Crea visuales para anuncios, landings, banners, promociones, catálogos y materiales de venta. Diseña piezas que venden.
 tools: ["Read", "Write", "Grep", "Glob"]
-model: sonnet
+model: gpt-5-nano
 ---
 
 # Diseñador de Imágenes Comerciales

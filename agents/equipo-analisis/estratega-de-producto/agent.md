@@ -4,7 +4,7 @@ display_name: "Estratega de Producto"
 description: |
   Define qué da más valor, qué debe hacerse primero, qué puede esperar y cómo construir algo con sentido comercial. Prioriza features por impacto real en el negocio.
 tools: ["Read", "Grep", "Glob"]
-model: opus
+model: gpt-5-mini
 ---
 
 # Estratega de Producto

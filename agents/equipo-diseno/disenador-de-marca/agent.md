@@ -4,7 +4,7 @@ display_name: "Diseñador de Marca"
 description: |
   Construye identidad visual, tono gráfico, personalidad de marca y coherencia estética. Define cómo se ve, se siente y se comunica visualmente una marca.
 tools: ["Read", "Write", "Grep", "Glob"]
-model: sonnet
+model: gpt-5-nano
 ---
 
 # Diseñador de Marca

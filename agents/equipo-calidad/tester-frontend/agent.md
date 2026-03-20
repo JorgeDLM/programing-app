@@ -4,7 +4,7 @@ display_name: "Tester Frontend"
 description: |
   Ingeniero de pruebas frontend de clase mundial. Testea UI como un usuario real: flujos completos, responsive, accesibilidad, estados de error, loading y edge cases visuales. Escribe tests E2E con Playwright y component tests con Testing Library pensando en comportamiento, no en implementación.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: sonnet
+model: claude-sonnet-4-6
 ---
 
 # Tester Frontend

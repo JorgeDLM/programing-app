@@ -4,7 +4,7 @@ display_name: "Validador de Arquitectura"
 description: |
   Revisa la arquitectura propuesta, detecta huecos, sobreingeniería, riesgos y cosas mal planteadas. Es el auditor técnico que cuestiona antes de que se construya.
 tools: ["Read", "Grep", "Glob", "Bash"]
-model: opus
+model: gpt-5.4
 ---
 
 # Validador de Arquitectura

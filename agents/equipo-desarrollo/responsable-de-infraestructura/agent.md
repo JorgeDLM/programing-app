@@ -4,7 +4,7 @@ display_name: "Responsable de Infraestructura"
 description: |
   Maneja despliegues, entornos, backups, monitoreo, secretos, CI/CD, estabilidad y operación técnica. Garantiza que el sistema funcione de manera confiable en producción.
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
-model: sonnet
+model: claude-sonnet-4-6
 ---
 
 # Responsable de Infraestructura

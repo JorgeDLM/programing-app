@@ -2,15 +2,14 @@
 name: code-reviewer
 description: Expert code review specialist. Proactively reviews code for quality, security, and maintainability. Use immediately after writing or modifying code. MUST BE USED for all code changes.
 tools: ["Read", "Grep", "Glob", "Bash"]
-model: claude-sonnet-4.6
+model: claude-sonnet-4-6
 provider: anthropic
 tier: core
 criticalityLevel: high
-modelPolicy: claude_preferred
 coreOrOnDemand: core
 defaultSkills: ["estandares-de-codigo"]
-fallbackModel: claude-haiku-4.5
-escalationModel: claude-opus-4.6
+fallbackmodel: claude-sonnet-4-6
+escalationmodel: claude-sonnet-4-6
 handoffExpects: "code changes from implementation phase"
 handoffProduces: "review report with CRITICAL/HIGH/MEDIUM/LOW findings + verdict"
 requiresClientApprovalOn: []

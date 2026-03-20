@@ -56,7 +56,7 @@ allowedTools: []             # Read, Write, Edit, Bash, Grep, Glob, etc.
 
 # --- Modelo ---
 defaultProvider: ""          # anthropic | openai | deepseek
-defaultModel: ""             # claude-sonnet-4.6, gpt-5.4-mini, etc.
+defaultModel: ""             # claude-sonnet-4-6, gpt-5.4-mini, etc.
 allowedProviders: []
 allowedModels: []
 fallbackModel: ""

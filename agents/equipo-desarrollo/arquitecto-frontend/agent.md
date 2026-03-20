@@ -4,7 +4,7 @@ display_name: "Arquitecto de Frontend"
 description: |
   Diseña la estructura interna del lado visual: estados, componentes, navegación, performance y organización UI. Especialista en React, Next.js, TailwindCSS y patrones de componentes.
 tools: ["Read", "Write", "Grep", "Glob", "Bash"]
-model: sonnet
+model: claude-sonnet-4-6
 ---
 
 # Arquitecto de Frontend
