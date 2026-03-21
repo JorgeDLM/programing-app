@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "ecc.api-map.v1",
+  "generatedAt": "2026-03-21T10:24:12.220Z",
+  "repoRoot": "C:\\Users\\UsX\\Desktop\\Proyectos - Desarrollo web\\WeLoveCode - Formulario",
+  "routes": [
+    {
+      "path": "src/app/api/auth/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/auth",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/client/preferences/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/client/preferences",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/client/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/client",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/clients/ai/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/clients/ai",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/clients/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/clients",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/migrate/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/migrate",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/modules/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/modules",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/modules/seed/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/modules/seed",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/questionnaire/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/questionnaire",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/quotes/ai/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/quotes/ai",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/quotes/pdf/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/quotes/pdf",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/quotes/public/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/quotes/public",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/quotes/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/quotes",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/seed/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/seed",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/services/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/services",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    },
+    {
+      "path": "src/app/api/stages/route.ts",
+      "kind": "nextjs-app-route",
+      "endpoint": "/stages",
+      "domains": [
+        "backend",
+        "api"
+      ]
+    }
+  ],
+  "supportingFiles": []
+}

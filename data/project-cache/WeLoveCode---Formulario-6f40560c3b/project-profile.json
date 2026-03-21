@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "ecc.project-profile.v1",
+  "generatedAt": "2026-03-21T10:24:12.212Z",
+  "repoRoot": "C:\\Users\\UsX\\Desktop\\Proyectos - Desarrollo web\\WeLoveCode - Formulario",
+  "languages": [
+    "typescript"
+  ],
+  "frameworks": [
+    "nextjs",
+    "react"
+  ],
+  "primary": "nextjs",
+  "projectDir": "C:\\Users\\UsX\\Desktop\\Proyectos - Desarrollo web\\WeLoveCode - Formulario"
+}

@@ -55,6 +55,38 @@ function parseBullets(section) {
     .map(line => stripCodeTicks(line.replace(/^- /, '').trim()));
 }
 
+function parseBulletPairs(section) {
+  if (!section) {
+    return {};
+  }
+
+  return section
+    .split('\n')
+    .map(line => line.trim())
+    .filter(line => line.startsWith('- '))
+    .reduce((accumulator, line) => {
+      const match = line.match(/^- ([^:]+):\s*(.+)$/);
+      if (!match) {
+        return accumulator;
+      }
+
+      accumulator[match[1].trim().toLowerCase()] = stripCodeTicks(match[2]);
+      return accumulator;
+    }, {});
+}
+
+function parseBooleanValue(value) {
+  if (value === 'true') {
+    return true;
+  }
+
+  if (value === 'false') {
+    return false;
+  }
+
+  return null;
+}
+
 function parseWorkerStatus(content) {
   const status = {
     state: null,
@@ -90,9 +122,25 @@ function parseWorkerStatus(content) {
 }
 
 function parseWorkerTask(content) {
+  const preparedContext = parseBulletPairs(parseSection(content, 'Prepared Context'));
+  const workingSet = parseBulletPairs(parseSection(content, 'Enforced Working Set'));
+  const expansionProtocol = parseBulletPairs(parseSection(content, 'Expansion Protocol'));
+
   return {
     objective: parseSection(content, 'Objective'),
-    seedPaths: parseBullets(parseSection(content, 'Seeded Local Overlays'))
+    seedPaths: parseBullets(parseSection(content, 'Seeded Local Overlays')),
+    recommendedDocs: parseBullets(parseSection(content, 'Recommended AI_CONTEXT')),
+    relatedArtifacts: parseBullets(parseSection(content, 'Previous Context Artifacts')),
+    contextMode: preparedContext['context mode'] || null,
+    taskContextId: preparedContext['task context id'] || null,
+    basedOnCommit: preparedContext['based on commit'] || null,
+    workingSetId: workingSet['working set id'] || null,
+    expansionProtocol: {
+      broadSearchByDefault: parseBooleanValue(expansionProtocol['broad search by default']),
+      neighborCallsiteAllowed: parseBooleanValue(expansionProtocol['neighbor callsite allowed']),
+      crossDomainAllowed: parseBooleanValue(expansionProtocol['cross-domain allowed']),
+      repoWideAllowed: parseBooleanValue(expansionProtocol['repo-wide allowed'])
+    }
   };
 }
 

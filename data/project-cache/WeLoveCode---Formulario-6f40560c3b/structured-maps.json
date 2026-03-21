@@ -1,0 +1,3788 @@
+{
+  "schemaVersion": "ecc.structured-maps.v1",
+  "generatedAt": "2026-03-21T10:24:13.200Z",
+  "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+  "mode": "balanced",
+  "sourceOfTruthPolicy": "code > maps > markdown > task pack summary",
+  "routeToModelMap": {
+    "schemaVersion": "ecc.route-to-model-map.v1",
+    "sourceOfTruth": [
+      "repo code",
+      "routes map",
+      "API contract analysis",
+      "data model analysis"
+    ],
+    "fields": [
+      "endpoint",
+      "path",
+      "entities",
+      "supportingFiles",
+      "confidence",
+      "evidence",
+      "state"
+    ],
+    "invalidationRules": [
+      "invalidate when route files, backend support files, schema files, or analysis mode change"
+    ],
+    "generatedAt": "2026-03-21T10:24:12.278Z",
+    "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+    "mode": "balanced",
+    "confidence": "medium",
+    "confidenceScore": 0.75,
+    "state": "partial",
+    "partialCount": 16,
+    "entries": [
+      {
+        "endpoint": "/auth",
+        "path": "src/app/api/auth/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [],
+        "supportingFiles": [],
+        "confidence": "medium",
+        "confidenceScore": 0.55,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/auth/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/auth/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server",
+            "@/lib/auth"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/auth/route.ts:dae5d91a28557d581c231d414e99d036475e38b9"
+          ]
+        }
+      },
+      {
+        "endpoint": "/client/preferences",
+        "path": "src/app/api/client/preferences/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [
+          "Quote"
+        ],
+        "supportingFiles": [],
+        "confidence": "high",
+        "confidenceScore": 0.8,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/client/preferences/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/client/preferences/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server",
+            "@/lib/auth"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/client/preferences/route.ts:946690b84dff122f2c0ae15b036828200793f6dc"
+          ]
+        }
+      },
+      {
+        "endpoint": "/client",
+        "path": "src/app/api/client/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [
+          "Client"
+        ],
+        "supportingFiles": [],
+        "confidence": "high",
+        "confidenceScore": 0.8,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/client/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/client/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server",
+            "@/lib/auth"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/client/route.ts:0a6bea8e75a2bda34be146b913915768337e5c0d"
+          ]
+        }
+      },
+      {
+        "endpoint": "/clients/ai",
+        "path": "src/app/api/clients/ai/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [
+          "Client",
+          "QuestionnaireResponse"
+        ],
+        "supportingFiles": [],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/clients/ai/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/clients/ai/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server",
+            "openai"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/clients/ai/route.ts:df3781a1039a5441fecd4516046877215d9a28b2"
+          ]
+        }
+      },
+      {
+        "endpoint": "/clients",
+        "path": "src/app/api/clients/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [
+          "Client",
+          "QuestionnaireResponse"
+        ],
+        "supportingFiles": [],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/clients/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/clients/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/clients/route.ts:661e7f216e3833d27ae0380f162a1f1af9547201"
+          ]
+        }
+      },
+      {
+        "endpoint": "/migrate",
+        "path": "src/app/api/migrate/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [],
+        "supportingFiles": [],
+        "confidence": "medium",
+        "confidenceScore": 0.55,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/migrate/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/migrate/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/migrate/route.ts:d7b4eb3e83dcde1227c53a47e1a68898c8196807"
+          ]
+        }
+      },
+      {
+        "endpoint": "/modules",
+        "path": "src/app/api/modules/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [
+          "QuoteModule",
+          "ModuleItem"
+        ],
+        "supportingFiles": [],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/modules/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/modules/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/modules/route.ts:8d9944058f4cd49aaa8aeb93b6638bf47b988978"
+          ]
+        }
+      },
+      {
+        "endpoint": "/modules/seed",
+        "path": "src/app/api/modules/seed/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [
+          "ModuleItem",
+          "QuoteModule"
+        ],
+        "supportingFiles": [],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/modules/seed/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/modules/seed/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/modules/seed/route.ts:87fb92315992607e5065b164eaa4388f274a63bf"
+          ]
+        }
+      },
+      {
+        "endpoint": "/questionnaire",
+        "path": "src/app/api/questionnaire/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [
+          "Client",
+          "QuestionnaireResponse"
+        ],
+        "supportingFiles": [],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/questionnaire/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/questionnaire/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/questionnaire/route.ts:c1658c1c100d5a36063b6c5e50acda051b082b27"
+          ]
+        }
+      },
+      {
+        "endpoint": "/quotes/ai",
+        "path": "src/app/api/quotes/ai/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [
+          "Client"
+        ],
+        "supportingFiles": [],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/quotes/ai/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/quotes/ai/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server",
+            "openai"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/quotes/ai/route.ts:ff3817b00b024495b0ef82f58352150424294ca2"
+          ]
+        }
+      },
+      {
+        "endpoint": "/quotes/pdf",
+        "path": "src/app/api/quotes/pdf/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [
+          "Quote"
+        ],
+        "supportingFiles": [],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/quotes/pdf/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/quotes/pdf/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server",
+            "jspdf",
+            "jspdf-autotable"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/quotes/pdf/route.ts:3a93053173d51ab53261dae9bc68c86c1ad6d56f"
+          ]
+        }
+      },
+      {
+        "endpoint": "/quotes/public",
+        "path": "src/app/api/quotes/public/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [
+          "Quote"
+        ],
+        "supportingFiles": [],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/quotes/public/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/quotes/public/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/quotes/public/route.ts:acc08e889bffc05a9c085f22a60ee37415b6b799"
+          ]
+        }
+      },
+      {
+        "endpoint": "/quotes",
+        "path": "src/app/api/quotes/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [
+          "Client",
+          "ModuleItem",
+          "Quote",
+          "QuoteSelectedItem"
+        ],
+        "supportingFiles": [],
+        "confidence": "medium",
+        "confidenceScore": 0.6,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/quotes/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/quotes/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/quotes/route.ts:a869ef51bbf22ac819dca405a0dbc91fbd7dd535"
+          ]
+        }
+      },
+      {
+        "endpoint": "/seed",
+        "path": "src/app/api/seed/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [
+          "Client"
+        ],
+        "supportingFiles": [],
+        "confidence": "medium",
+        "confidenceScore": 0.6,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/seed/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/seed/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/seed/route.ts:6108bd008b9fcbab58d2439506e26b7c33bc1980"
+          ]
+        }
+      },
+      {
+        "endpoint": "/services",
+        "path": "src/app/api/services/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [
+          "Service"
+        ],
+        "supportingFiles": [],
+        "confidence": "medium",
+        "confidenceScore": 0.6,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/services/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/services/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "next/server",
+            "@/lib/prisma"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/services/route.ts:84d4921bb8536439d0ec76f4c9c67676d2fb1e94"
+          ]
+        }
+      },
+      {
+        "endpoint": "/stages",
+        "path": "src/app/api/stages/route.ts",
+        "kind": "nextjs-app-route",
+        "entities": [],
+        "supportingFiles": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/stages/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/stages/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/stages/route.ts:a6feaf0544171c41fd141a44639d03600d22a3ed"
+          ]
+        }
+      }
+    ]
+  },
+  "entityUsageMap": {
+    "schemaVersion": "ecc.entity-usage-map.v1",
+    "sourceOfTruth": [
+      "repo code",
+      "data model analysis",
+      "route-to-model map",
+      "screen-to-api map"
+    ],
+    "fields": [
+      "entity",
+      "endpoints",
+      "modules",
+      "screens",
+      "keyFiles",
+      "confidence",
+      "evidence",
+      "state"
+    ],
+    "invalidationRules": [
+      "invalidate when schema files, backend support files, frontend screens, or route-to-model map change"
+    ],
+    "generatedAt": "2026-03-21T10:24:12.287Z",
+    "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+    "mode": "balanced",
+    "confidence": "medium",
+    "confidenceScore": 0.6,
+    "state": "partial",
+    "entities": [
+      {
+        "entity": "User",
+        "endpoints": [],
+        "modules": [],
+        "screens": [],
+        "keyFiles": [
+          "prisma/schema.prisma"
+        ],
+        "confidence": "low",
+        "confidenceScore": 0.45,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "entity": "Client",
+        "endpoints": [
+          "/client",
+          "/clients/ai",
+          "/clients",
+          "/questionnaire",
+          "/quotes/ai",
+          "/quotes",
+          "/seed"
+        ],
+        "modules": [],
+        "screens": [
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/page.tsx",
+          "src/app/cliente/page.tsx"
+        ],
+        "keyFiles": [
+          "prisma/schema.prisma",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts",
+          "src/app/api/clients/route.ts",
+          "src/app/api/questionnaire/route.ts",
+          "src/app/api/quotes/ai/route.ts",
+          "src/app/api/quotes/route.ts",
+          "src/app/api/seed/route.ts",
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/page.tsx",
+          "src/app/cliente/page.tsx"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.8,
+        "state": "ready",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma",
+            "src/app/api/client/route.ts",
+            "src/app/api/clients/ai/route.ts",
+            "src/app/api/clients/route.ts",
+            "src/app/api/questionnaire/route.ts",
+            "src/app/api/quotes/ai/route.ts",
+            "src/app/api/quotes/route.ts",
+            "src/app/api/seed/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/client/route.ts",
+            "src/app/api/clients/ai/route.ts",
+            "src/app/api/clients/route.ts",
+            "src/app/api/questionnaire/route.ts",
+            "src/app/api/quotes/ai/route.ts",
+            "src/app/api/quotes/route.ts",
+            "src/app/api/seed/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177",
+            "src/app/api/client/route.ts:0a6bea8e75a2bda34be146b913915768337e5c0d",
+            "src/app/api/clients/ai/route.ts:df3781a1039a5441fecd4516046877215d9a28b2",
+            "src/app/api/clients/route.ts:661e7f216e3833d27ae0380f162a1f1af9547201",
+            "src/app/api/questionnaire/route.ts:c1658c1c100d5a36063b6c5e50acda051b082b27",
+            "src/app/api/quotes/ai/route.ts:ff3817b00b024495b0ef82f58352150424294ca2",
+            "src/app/api/quotes/route.ts:a869ef51bbf22ac819dca405a0dbc91fbd7dd535",
+            "src/app/api/seed/route.ts:6108bd008b9fcbab58d2439506e26b7c33bc1980"
+          ]
+        }
+      },
+      {
+        "entity": "Service",
+        "endpoints": [
+          "/services"
+        ],
+        "modules": [],
+        "screens": [
+          "src/app/admin/page.tsx"
+        ],
+        "keyFiles": [
+          "prisma/schema.prisma",
+          "src/app/api/services/route.ts",
+          "src/app/admin/page.tsx"
+        ],
+        "confidence": "medium",
+        "confidenceScore": 0.7,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma",
+            "src/app/api/services/route.ts",
+            "src/app/admin/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/services/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177",
+            "src/app/api/services/route.ts:84d4921bb8536439d0ec76f4c9c67676d2fb1e94",
+            "src/app/admin/page.tsx:2ee068781bcb2d470be939815f82538dfdecbb90"
+          ]
+        }
+      },
+      {
+        "entity": "QuoteModule",
+        "endpoints": [
+          "/modules",
+          "/modules/seed"
+        ],
+        "modules": [],
+        "screens": [],
+        "keyFiles": [
+          "prisma/schema.prisma",
+          "src/app/api/modules/route.ts",
+          "src/app/api/modules/seed/route.ts"
+        ],
+        "confidence": "medium",
+        "confidenceScore": 0.65,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma",
+            "src/app/api/modules/route.ts",
+            "src/app/api/modules/seed/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/modules/route.ts",
+            "src/app/api/modules/seed/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177",
+            "src/app/api/modules/route.ts:8d9944058f4cd49aaa8aeb93b6638bf47b988978",
+            "src/app/api/modules/seed/route.ts:87fb92315992607e5065b164eaa4388f274a63bf"
+          ]
+        }
+      },
+      {
+        "entity": "ModuleItem",
+        "endpoints": [
+          "/modules",
+          "/modules/seed",
+          "/quotes"
+        ],
+        "modules": [],
+        "screens": [],
+        "keyFiles": [
+          "prisma/schema.prisma",
+          "src/app/api/modules/route.ts",
+          "src/app/api/modules/seed/route.ts",
+          "src/app/api/quotes/route.ts"
+        ],
+        "confidence": "medium",
+        "confidenceScore": 0.65,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma",
+            "src/app/api/modules/route.ts",
+            "src/app/api/modules/seed/route.ts",
+            "src/app/api/quotes/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/modules/route.ts",
+            "src/app/api/modules/seed/route.ts",
+            "src/app/api/quotes/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177",
+            "src/app/api/modules/route.ts:8d9944058f4cd49aaa8aeb93b6638bf47b988978",
+            "src/app/api/modules/seed/route.ts:87fb92315992607e5065b164eaa4388f274a63bf",
+            "src/app/api/quotes/route.ts:a869ef51bbf22ac819dca405a0dbc91fbd7dd535"
+          ]
+        }
+      },
+      {
+        "entity": "Quote",
+        "endpoints": [
+          "/client/preferences",
+          "/quotes/pdf",
+          "/quotes/public",
+          "/quotes"
+        ],
+        "modules": [],
+        "screens": [
+          "src/app/cliente/page.tsx"
+        ],
+        "keyFiles": [
+          "prisma/schema.prisma",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/quotes/pdf/route.ts",
+          "src/app/api/quotes/public/route.ts",
+          "src/app/api/quotes/route.ts",
+          "src/app/cliente/page.tsx"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.8,
+        "state": "ready",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma",
+            "src/app/api/client/preferences/route.ts",
+            "src/app/api/quotes/pdf/route.ts",
+            "src/app/api/quotes/public/route.ts",
+            "src/app/api/quotes/route.ts",
+            "src/app/cliente/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/client/preferences/route.ts",
+            "src/app/api/quotes/pdf/route.ts",
+            "src/app/api/quotes/public/route.ts",
+            "src/app/api/quotes/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177",
+            "src/app/api/client/preferences/route.ts:946690b84dff122f2c0ae15b036828200793f6dc",
+            "src/app/api/quotes/pdf/route.ts:3a93053173d51ab53261dae9bc68c86c1ad6d56f",
+            "src/app/api/quotes/public/route.ts:acc08e889bffc05a9c085f22a60ee37415b6b799",
+            "src/app/api/quotes/route.ts:a869ef51bbf22ac819dca405a0dbc91fbd7dd535",
+            "src/app/cliente/page.tsx:15cea6fa153ddea72a8b833101106b86c207cd0b"
+          ]
+        }
+      },
+      {
+        "entity": "QuoteVersion",
+        "endpoints": [],
+        "modules": [],
+        "screens": [],
+        "keyFiles": [
+          "prisma/schema.prisma"
+        ],
+        "confidence": "low",
+        "confidenceScore": 0.45,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "entity": "QuoteSelectedModule",
+        "endpoints": [],
+        "modules": [],
+        "screens": [],
+        "keyFiles": [
+          "prisma/schema.prisma"
+        ],
+        "confidence": "low",
+        "confidenceScore": 0.45,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "entity": "QuoteSelectedItem",
+        "endpoints": [
+          "/quotes"
+        ],
+        "modules": [],
+        "screens": [],
+        "keyFiles": [
+          "prisma/schema.prisma",
+          "src/app/api/quotes/route.ts"
+        ],
+        "confidence": "medium",
+        "confidenceScore": 0.65,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma",
+            "src/app/api/quotes/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/quotes/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177",
+            "src/app/api/quotes/route.ts:a869ef51bbf22ac819dca405a0dbc91fbd7dd535"
+          ]
+        }
+      },
+      {
+        "entity": "QuoteStage",
+        "endpoints": [],
+        "modules": [],
+        "screens": [],
+        "keyFiles": [
+          "prisma/schema.prisma"
+        ],
+        "confidence": "low",
+        "confidenceScore": 0.45,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "entity": "ClientFeedback",
+        "endpoints": [],
+        "modules": [],
+        "screens": [],
+        "keyFiles": [
+          "prisma/schema.prisma"
+        ],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "entity": "QuestionnaireResponse",
+        "endpoints": [
+          "/clients/ai",
+          "/clients",
+          "/questionnaire"
+        ],
+        "modules": [],
+        "screens": [
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/page.tsx",
+          "src/app/cliente/page.tsx"
+        ],
+        "keyFiles": [
+          "prisma/schema.prisma",
+          "src/app/api/clients/ai/route.ts",
+          "src/app/api/clients/route.ts",
+          "src/app/api/questionnaire/route.ts",
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/page.tsx",
+          "src/app/cliente/page.tsx"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.8,
+        "state": "ready",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma",
+            "src/app/api/clients/ai/route.ts",
+            "src/app/api/clients/route.ts",
+            "src/app/api/questionnaire/route.ts",
+            "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+            "src/app/admin/page.tsx",
+            "src/app/cliente/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/clients/ai/route.ts",
+            "src/app/api/clients/route.ts",
+            "src/app/api/questionnaire/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177",
+            "src/app/api/clients/ai/route.ts:df3781a1039a5441fecd4516046877215d9a28b2",
+            "src/app/api/clients/route.ts:661e7f216e3833d27ae0380f162a1f1af9547201",
+            "src/app/api/questionnaire/route.ts:c1658c1c100d5a36063b6c5e50acda051b082b27",
+            "src/app/admin/cotizador/[clientId]/ajustes/page.tsx:7ca91065f7d6ebea5da49f37521bab2b0e4912ff",
+            "src/app/admin/page.tsx:2ee068781bcb2d470be939815f82538dfdecbb90",
+            "src/app/cliente/page.tsx:15cea6fa153ddea72a8b833101106b86c207cd0b"
+          ]
+        }
+      }
+    ],
+    "screenEntries": [
+      {
+        "screen": "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+        "endpoints": [
+          "/clients"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/admin/cotizador/[clientId]/ajustes/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/clients/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/admin/cotizador/[clientId]/ajustes/page.tsx:7ca91065f7d6ebea5da49f37521bab2b0e4912ff"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/admin/cotizador/[clientId]/page.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/admin/cotizador/[clientId]/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/admin/cotizador/[clientId]/page.tsx:99c93b38e388a298eab5773675fee2fef99bce00"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+        "endpoints": [
+          "/stages"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/admin/cotizador/[clientId]/roadmap/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/stages/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/admin/cotizador/[clientId]/roadmap/page.tsx:6d045b39d22801d31ab80c45f45a344816c967f5"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/admin/page.tsx",
+        "endpoints": [
+          "/auth",
+          "/clients",
+          "/services",
+          "/clients/ai",
+          "/questionnaire"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/admin/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/auth/route.ts",
+            "src/app/api/clients/route.ts",
+            "src/app/api/services/route.ts",
+            "src/app/api/clients/ai/route.ts",
+            "src/app/api/questionnaire/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/admin/page.tsx:2ee068781bcb2d470be939815f82538dfdecbb90"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/blog/[slug]/page.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/blog/[slug]/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/blog/[slug]/page.tsx:ffc5c4f7ec41b1152a84fbf62c97719606198512"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/blog/page.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/blog/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/blog/page.tsx:c9296cc7ab01eee8041bebb2b844b6131c31dd37"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/cliente/page.tsx",
+        "endpoints": [
+          "/client",
+          "/auth",
+          "/questionnaire",
+          "/client/preferences"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/cliente/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/client/route.ts",
+            "src/app/api/auth/route.ts",
+            "src/app/api/questionnaire/route.ts",
+            "src/app/api/client/preferences/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/cliente/page.tsx:15cea6fa153ddea72a8b833101106b86c207cd0b"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/cotizacion-marco&carlos/layout.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/cotizacion-marco&carlos/layout.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/cotizacion-marco&carlos/layout.tsx:8badfe8586b26f2349885040cf402c3cef6091c9"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/cotizacion-marco&carlos/page.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/cotizacion-marco&carlos/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/cotizacion-marco&carlos/page.tsx:f987bc6dbf5e6562731f71b9ea785aa4a76ac85f"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/cotizacion/[token]/page.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.45,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/cotizacion/[token]/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/cotizacion/[token]/page.tsx:543cf326fdc7483bf0f3839758547672dcc3e330"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/layout.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/layout.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/layout.tsx:d8f9187f23605a9055c076658c04d4a5d6992d75"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/login/page.tsx",
+        "endpoints": [
+          "/auth"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/login/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/auth/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/login/page.tsx:5bf9d2a71b09686e9cadb332cd6b2394342f14eb"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/Analytics.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/Analytics.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/Analytics.tsx:ba2ad7b869f68b261c0fd0368f7cde9895ce998c"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/BreadcrumbSchema.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/BreadcrumbSchema.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/BreadcrumbSchema.tsx:a16a1fdeb93b838523ca3243872fb05f12b1ff94"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/CounterAnimation.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/CounterAnimation.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/CounterAnimation.tsx:71a7d25b45748991262e32668eaed012071426bc"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/ExamplesCarousel.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/ExamplesCarousel.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/ExamplesCarousel.tsx:f6bdba2c56b1a629c2cd6b6720e1ea9dad58bbd9"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/FAQSchema.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/FAQSchema.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/FAQSchema.tsx:8c8ef604184e3f67930f8ce64d7913ed5fbf7d98"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/InfiniteCarousel.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/InfiniteCarousel.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/InfiniteCarousel.tsx:8f80b77485d72c2d96327af05900e84e7297365f"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/LazyImage.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/LazyImage.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/LazyImage.tsx:718f758ad59dcbcdab53a00819f5421ae8cbd826"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/LazyVideo.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/LazyVideo.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/LazyVideo.tsx:3a564c68c3a2620246d1946c99a24c0e435d9765"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/LocalBusinessSchema.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/LocalBusinessSchema.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/LocalBusinessSchema.tsx:9ef4a251b96134b2d87cf170210cca5e5578c651"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/PaymentOptionsSection.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/PaymentOptionsSection.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/PaymentOptionsSection.tsx:0b81699588c0815f81413253eefce038563fd379"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/PortfolioSection.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/PortfolioSection.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/PortfolioSection.tsx:6a9fcd99d6f3c0c892aeb68a53e4f78a54f2a5c9"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/ProjectForm.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/ProjectForm.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/ProjectForm.tsx:41b3346a72951d2912f386a1cbf3da7a38362770"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/ProjectsCarousel.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/ProjectsCarousel.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/ProjectsCarousel.tsx:9fb05176d19d5bb7369a6dca9e93e36e9bebcaa0"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/ServiceIcons.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/ServiceIcons.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/ServiceIcons.tsx:f9ff7c906294ec8952e21392de888f4c6126de41"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/ServicesSection.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/ServicesSection.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/ServicesSection.tsx:0df5f78a50f4ee004fd15ba1887e07f8a6cbe988"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/StatsBar.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/StatsBar.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/StatsBar.tsx:af012f1f668d803697b4728ca27c7725e34050fc"
+          ]
+        }
+      }
+    ]
+  },
+  "hotspots": {
+    "schemaVersion": "ecc.hotspots-map.v1",
+    "sourceOfTruth": [
+      "repo code",
+      "AI context analysis",
+      "route-to-model map",
+      "entity-usage map",
+      "risk-zones map"
+    ],
+    "fields": [
+      "target",
+      "kind",
+      "impact",
+      "reasons",
+      "confidence",
+      "evidence",
+      "state"
+    ],
+    "invalidationRules": [
+      "invalidate when entrypoints, routes, entity usage, or risk zones change"
+    ],
+    "generatedAt": "2026-03-21T10:24:13.199Z",
+    "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+    "mode": "balanced",
+    "confidence": "low",
+    "confidenceScore": 0.52,
+    "state": "partial",
+    "entries": [
+      {
+        "target": "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+        "kind": "entrypoint",
+        "impact": "high",
+        "confidence": "high",
+        "confidenceScore": 0.8,
+        "state": "partial",
+        "reasons": [
+          "entrypoint",
+          "entity-linked:Client",
+          "risk-zone:admin-critical-flow"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/admin/cotizador/[clientId]/ajustes/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/admin/cotizador/[clientId]/ajustes/page.tsx:7ca91065f7d6ebea5da49f37521bab2b0e4912ff"
+          ]
+        }
+      },
+      {
+        "target": "src/app/admin/page.tsx",
+        "kind": "entrypoint",
+        "impact": "high",
+        "confidence": "high",
+        "confidenceScore": 0.8,
+        "state": "partial",
+        "reasons": [
+          "entrypoint",
+          "entity-linked:Client",
+          "risk-zone:admin-critical-flow"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/admin/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/admin/page.tsx:2ee068781bcb2d470be939815f82538dfdecbb90"
+          ]
+        }
+      },
+      {
+        "target": "src/app/api/client/preferences/route.ts",
+        "kind": "delicate-zone",
+        "impact": "high",
+        "confidence": "medium",
+        "confidenceScore": 0.75,
+        "state": "partial",
+        "reasons": [
+          "route-linked:/client/preferences",
+          "entity-linked:Quote",
+          "risk-zone:auth"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/client/preferences/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/client/preferences/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/client/preferences/route.ts:946690b84dff122f2c0ae15b036828200793f6dc"
+          ]
+        }
+      },
+      {
+        "target": "src/app/api/client/route.ts",
+        "kind": "delicate-zone",
+        "impact": "high",
+        "confidence": "medium",
+        "confidenceScore": 0.75,
+        "state": "partial",
+        "reasons": [
+          "route-linked:/client",
+          "entity-linked:Client",
+          "risk-zone:auth"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/client/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/client/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/client/route.ts:0a6bea8e75a2bda34be146b913915768337e5c0d"
+          ]
+        }
+      },
+      {
+        "target": "src/app/api/clients/ai/route.ts",
+        "kind": "delicate-zone",
+        "impact": "high",
+        "confidence": "medium",
+        "confidenceScore": 0.75,
+        "state": "partial",
+        "reasons": [
+          "route-linked:/clients/ai",
+          "entity-linked:Client",
+          "risk-zone:auth",
+          "risk-zone:ai-integration"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/clients/ai/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/clients/ai/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/clients/ai/route.ts:df3781a1039a5441fecd4516046877215d9a28b2"
+          ]
+        }
+      },
+      {
+        "target": "src/app/api/clients/route.ts",
+        "kind": "delicate-zone",
+        "impact": "high",
+        "confidence": "medium",
+        "confidenceScore": 0.75,
+        "state": "partial",
+        "reasons": [
+          "route-linked:/clients",
+          "entity-linked:Client",
+          "risk-zone:auth"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/clients/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/clients/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/clients/route.ts:661e7f216e3833d27ae0380f162a1f1af9547201"
+          ]
+        }
+      },
+      {
+        "target": "src/app/admin/cotizador/[clientId]/page.tsx",
+        "kind": "entrypoint",
+        "impact": "medium",
+        "confidence": "medium",
+        "confidenceScore": 0.65,
+        "state": "partial",
+        "reasons": [
+          "entrypoint",
+          "risk-zone:admin-critical-flow"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/admin/cotizador/[clientId]/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/admin/cotizador/[clientId]/page.tsx:99c93b38e388a298eab5773675fee2fef99bce00"
+          ]
+        }
+      },
+      {
+        "target": "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+        "kind": "entrypoint",
+        "impact": "medium",
+        "confidence": "medium",
+        "confidenceScore": 0.65,
+        "state": "partial",
+        "reasons": [
+          "entrypoint",
+          "risk-zone:admin-critical-flow"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/admin/cotizador/[clientId]/roadmap/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/admin/cotizador/[clientId]/roadmap/page.tsx:6d045b39d22801d31ab80c45f45a344816c967f5"
+          ]
+        }
+      },
+      {
+        "target": "src/app/cliente/page.tsx",
+        "kind": "entrypoint",
+        "impact": "medium",
+        "confidence": "medium",
+        "confidenceScore": 0.65,
+        "state": "partial",
+        "reasons": [
+          "entrypoint",
+          "entity-linked:Client"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/cliente/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/cliente/page.tsx:15cea6fa153ddea72a8b833101106b86c207cd0b"
+          ]
+        }
+      },
+      {
+        "target": "src/app/login/page.tsx",
+        "kind": "entrypoint",
+        "impact": "medium",
+        "confidence": "medium",
+        "confidenceScore": 0.65,
+        "state": "partial",
+        "reasons": [
+          "entrypoint",
+          "risk-zone:auth"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/login/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/login/page.tsx:5bf9d2a71b09686e9cadb332cd6b2394342f14eb"
+          ]
+        }
+      },
+      {
+        "target": "prisma/schema.prisma",
+        "kind": "delicate-zone",
+        "impact": "medium",
+        "confidence": "medium",
+        "confidenceScore": 0.6,
+        "state": "partial",
+        "reasons": [
+          "entity-linked:User",
+          "risk-zone:migrations"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "target": "src/app/api/auth/route.ts",
+        "kind": "delicate-zone",
+        "impact": "medium",
+        "confidence": "medium",
+        "confidenceScore": 0.6,
+        "state": "partial",
+        "reasons": [
+          "route-linked:/auth",
+          "risk-zone:auth"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/auth/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/auth/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/auth/route.ts:dae5d91a28557d581c231d414e99d036475e38b9"
+          ]
+        }
+      },
+      {
+        "target": "src/app/api/migrate/route.ts",
+        "kind": "delicate-zone",
+        "impact": "medium",
+        "confidence": "medium",
+        "confidenceScore": 0.6,
+        "state": "partial",
+        "reasons": [
+          "route-linked:/migrate",
+          "risk-zone:auth"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/migrate/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/migrate/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/migrate/route.ts:d7b4eb3e83dcde1227c53a47e1a68898c8196807"
+          ]
+        }
+      },
+      {
+        "target": "src/app/blog/[slug]/page.tsx",
+        "kind": "entrypoint",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.5,
+        "state": "partial",
+        "reasons": [
+          "entrypoint"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/blog/[slug]/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/blog/[slug]/page.tsx:ffc5c4f7ec41b1152a84fbf62c97719606198512"
+          ]
+        }
+      },
+      {
+        "target": "src/app/blog/page.tsx",
+        "kind": "entrypoint",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.5,
+        "state": "partial",
+        "reasons": [
+          "entrypoint"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/blog/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/blog/page.tsx:c9296cc7ab01eee8041bebb2b844b6131c31dd37"
+          ]
+        }
+      },
+      {
+        "target": "src/app/cotizacion-marco&carlos/layout.tsx",
+        "kind": "entrypoint",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.5,
+        "state": "partial",
+        "reasons": [
+          "entrypoint"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/cotizacion-marco&carlos/layout.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/cotizacion-marco&carlos/layout.tsx:8badfe8586b26f2349885040cf402c3cef6091c9"
+          ]
+        }
+      },
+      {
+        "target": "src/app/cotizacion-marco&carlos/page.tsx",
+        "kind": "entrypoint",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.5,
+        "state": "partial",
+        "reasons": [
+          "entrypoint"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/cotizacion-marco&carlos/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/cotizacion-marco&carlos/page.tsx:f987bc6dbf5e6562731f71b9ea785aa4a76ac85f"
+          ]
+        }
+      },
+      {
+        "target": "src/app/cotizacion/[token]/page.tsx",
+        "kind": "entrypoint",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.5,
+        "state": "partial",
+        "reasons": [
+          "entrypoint"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/cotizacion/[token]/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/cotizacion/[token]/page.tsx:543cf326fdc7483bf0f3839758547672dcc3e330"
+          ]
+        }
+      },
+      {
+        "target": "src/app/layout.tsx",
+        "kind": "entrypoint",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.5,
+        "state": "partial",
+        "reasons": [
+          "entrypoint"
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/layout.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/layout.tsx:d8f9187f23605a9055c076658c04d4a5d6992d75"
+          ]
+        }
+      },
+      {
+        "target": "admin: 4 frontend files",
+        "kind": "central-module",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.3,
+        "state": "needs_review",
+        "reasons": [],
+        "evidence": {
+          "sourcePaths": [
+            "admin: 4 frontend files"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": []
+        }
+      },
+      {
+        "target": "api:client (2 routes)",
+        "kind": "central-module",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.3,
+        "state": "needs_review",
+        "reasons": [],
+        "evidence": {
+          "sourcePaths": [
+            "api:client (2 routes)"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": []
+        }
+      },
+      {
+        "target": "api:clients (2 routes)",
+        "kind": "central-module",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.3,
+        "state": "needs_review",
+        "reasons": [],
+        "evidence": {
+          "sourcePaths": [
+            "api:clients (2 routes)"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": []
+        }
+      },
+      {
+        "target": "api:modules (2 routes)",
+        "kind": "central-module",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.3,
+        "state": "needs_review",
+        "reasons": [],
+        "evidence": {
+          "sourcePaths": [
+            "api:modules (2 routes)"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": []
+        }
+      },
+      {
+        "target": "api:quotes (4 routes)",
+        "kind": "central-module",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.3,
+        "state": "needs_review",
+        "reasons": [],
+        "evidence": {
+          "sourcePaths": [
+            "api:quotes (4 routes)"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": []
+        }
+      },
+      {
+        "target": "data:Client",
+        "kind": "central-module",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.3,
+        "state": "needs_review",
+        "reasons": [],
+        "evidence": {
+          "sourcePaths": [
+            "data:Client"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": []
+        }
+      },
+      {
+        "target": "data:ModuleItem",
+        "kind": "central-module",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.3,
+        "state": "needs_review",
+        "reasons": [],
+        "evidence": {
+          "sourcePaths": [
+            "data:ModuleItem"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": []
+        }
+      },
+      {
+        "target": "data:QuestionnaireResponse",
+        "kind": "central-module",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.3,
+        "state": "needs_review",
+        "reasons": [],
+        "evidence": {
+          "sourcePaths": [
+            "data:QuestionnaireResponse"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": []
+        }
+      },
+      {
+        "target": "data:QuoteModule",
+        "kind": "central-module",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.3,
+        "state": "needs_review",
+        "reasons": [],
+        "evidence": {
+          "sourcePaths": [
+            "data:QuoteModule"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": []
+        }
+      },
+      {
+        "target": "shared: 43 frontend files",
+        "kind": "central-module",
+        "impact": "low",
+        "confidence": "low",
+        "confidenceScore": 0.3,
+        "state": "needs_review",
+        "reasons": [],
+        "evidence": {
+          "sourcePaths": [
+            "shared: 43 frontend files"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": []
+        }
+      }
+    ]
+  },
+  "screenToApiMap": {
+    "schemaVersion": "ecc.screen-to-api-map.v1",
+    "sourceOfTruth": [
+      "repo code",
+      "frontend analysis",
+      "routes map"
+    ],
+    "fields": [
+      "screen",
+      "endpoints",
+      "confidence",
+      "evidence",
+      "state"
+    ],
+    "invalidationRules": [
+      "invalidate when frontend screens/components or route files change"
+    ],
+    "generatedAt": "2026-03-21T10:24:12.287Z",
+    "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+    "mode": "balanced",
+    "confidence": "low",
+    "confidenceScore": 0.45,
+    "state": "partial",
+    "entries": [
+      {
+        "screen": "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+        "endpoints": [
+          "/clients"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/admin/cotizador/[clientId]/ajustes/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/clients/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/admin/cotizador/[clientId]/ajustes/page.tsx:7ca91065f7d6ebea5da49f37521bab2b0e4912ff"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/admin/cotizador/[clientId]/page.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/admin/cotizador/[clientId]/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/admin/cotizador/[clientId]/page.tsx:99c93b38e388a298eab5773675fee2fef99bce00"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+        "endpoints": [
+          "/stages"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/admin/cotizador/[clientId]/roadmap/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/stages/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/admin/cotizador/[clientId]/roadmap/page.tsx:6d045b39d22801d31ab80c45f45a344816c967f5"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/admin/page.tsx",
+        "endpoints": [
+          "/auth",
+          "/clients",
+          "/services",
+          "/clients/ai",
+          "/questionnaire"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/admin/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/auth/route.ts",
+            "src/app/api/clients/route.ts",
+            "src/app/api/services/route.ts",
+            "src/app/api/clients/ai/route.ts",
+            "src/app/api/questionnaire/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/admin/page.tsx:2ee068781bcb2d470be939815f82538dfdecbb90"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/blog/[slug]/page.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/blog/[slug]/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/blog/[slug]/page.tsx:ffc5c4f7ec41b1152a84fbf62c97719606198512"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/blog/page.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/blog/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/blog/page.tsx:c9296cc7ab01eee8041bebb2b844b6131c31dd37"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/cliente/page.tsx",
+        "endpoints": [
+          "/client",
+          "/auth",
+          "/questionnaire",
+          "/client/preferences"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/cliente/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/client/route.ts",
+            "src/app/api/auth/route.ts",
+            "src/app/api/questionnaire/route.ts",
+            "src/app/api/client/preferences/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/cliente/page.tsx:15cea6fa153ddea72a8b833101106b86c207cd0b"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/cotizacion-marco&carlos/layout.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/cotizacion-marco&carlos/layout.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/cotizacion-marco&carlos/layout.tsx:8badfe8586b26f2349885040cf402c3cef6091c9"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/cotizacion-marco&carlos/page.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/cotizacion-marco&carlos/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/cotizacion-marco&carlos/page.tsx:f987bc6dbf5e6562731f71b9ea785aa4a76ac85f"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/cotizacion/[token]/page.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.45,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/cotizacion/[token]/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/cotizacion/[token]/page.tsx:543cf326fdc7483bf0f3839758547672dcc3e330"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/layout.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/layout.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/layout.tsx:d8f9187f23605a9055c076658c04d4a5d6992d75"
+          ]
+        }
+      },
+      {
+        "screen": "src/app/login/page.tsx",
+        "endpoints": [
+          "/auth"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/login/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/auth/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/login/page.tsx:5bf9d2a71b09686e9cadb332cd6b2394342f14eb"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/Analytics.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/Analytics.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/Analytics.tsx:ba2ad7b869f68b261c0fd0368f7cde9895ce998c"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/BreadcrumbSchema.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/BreadcrumbSchema.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/BreadcrumbSchema.tsx:a16a1fdeb93b838523ca3243872fb05f12b1ff94"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/CounterAnimation.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/CounterAnimation.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/CounterAnimation.tsx:71a7d25b45748991262e32668eaed012071426bc"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/ExamplesCarousel.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/ExamplesCarousel.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/ExamplesCarousel.tsx:f6bdba2c56b1a629c2cd6b6720e1ea9dad58bbd9"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/FAQSchema.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/FAQSchema.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/FAQSchema.tsx:8c8ef604184e3f67930f8ce64d7913ed5fbf7d98"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/InfiniteCarousel.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/InfiniteCarousel.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/InfiniteCarousel.tsx:8f80b77485d72c2d96327af05900e84e7297365f"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/LazyImage.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/LazyImage.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/LazyImage.tsx:718f758ad59dcbcdab53a00819f5421ae8cbd826"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/LazyVideo.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/LazyVideo.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/LazyVideo.tsx:3a564c68c3a2620246d1946c99a24c0e435d9765"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/LocalBusinessSchema.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/LocalBusinessSchema.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/LocalBusinessSchema.tsx:9ef4a251b96134b2d87cf170210cca5e5578c651"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/PaymentOptionsSection.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/PaymentOptionsSection.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/PaymentOptionsSection.tsx:0b81699588c0815f81413253eefce038563fd379"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/PortfolioSection.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/PortfolioSection.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/PortfolioSection.tsx:6a9fcd99d6f3c0c892aeb68a53e4f78a54f2a5c9"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/ProjectForm.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/ProjectForm.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/ProjectForm.tsx:41b3346a72951d2912f386a1cbf3da7a38362770"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/ProjectsCarousel.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/ProjectsCarousel.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/ProjectsCarousel.tsx:9fb05176d19d5bb7369a6dca9e93e36e9bebcaa0"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/ServiceIcons.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/ServiceIcons.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/ServiceIcons.tsx:f9ff7c906294ec8952e21392de888f4c6126de41"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/ServicesSection.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/ServicesSection.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/ServicesSection.tsx:0df5f78a50f4ee004fd15ba1887e07f8a6cbe988"
+          ]
+        }
+      },
+      {
+        "screen": "src/components/StatsBar.tsx",
+        "endpoints": [],
+        "confidence": "low",
+        "confidenceScore": 0.35,
+        "state": "needs_review",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/StatsBar.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/StatsBar.tsx:af012f1f668d803697b4728ca27c7725e34050fc"
+          ]
+        }
+      }
+    ]
+  },
+  "riskZones": {
+    "schemaVersion": "ecc.risk-zones-map.v1",
+    "sourceOfTruth": [
+      "repo code",
+      "file classification",
+      "API contract analysis",
+      "data map"
+    ],
+    "fields": [
+      "kind",
+      "severity",
+      "targets",
+      "reasons",
+      "confidence",
+      "evidence",
+      "state"
+    ],
+    "invalidationRules": [
+      "invalidate when auth, billing, admin, migration, PDF, or AI integration files change"
+    ],
+    "generatedAt": "2026-03-21T10:24:13.196Z",
+    "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+    "mode": "balanced",
+    "confidence": "medium",
+    "confidenceScore": 0.75,
+    "state": "partial",
+    "zones": [
+      {
+        "kind": "auth",
+        "severity": "high",
+        "targets": [
+          ".windsurf/workflows/login.md",
+          "src/app/api/auth/route.ts",
+          "src/app/login/page.tsx",
+          "src/lib/auth.ts",
+          "src/middleware.ts",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts",
+          "src/app/api/clients/route.ts",
+          "src/app/api/migrate/route.ts",
+          "src/app/api/modules/route.ts",
+          "src/app/api/modules/seed/route.ts"
+        ],
+        "reasons": [
+          "Auth-sensitive flows exist or auth inference appears in route contracts."
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.82,
+        "state": "ready",
+        "evidence": {
+          "sourcePaths": [
+            ".windsurf/workflows/login.md",
+            "src/app/api/auth/route.ts",
+            "src/app/login/page.tsx",
+            "src/lib/auth.ts",
+            "src/middleware.ts",
+            "src/app/api/client/preferences/route.ts",
+            "src/app/api/client/route.ts",
+            "src/app/api/clients/ai/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/auth/route.ts",
+            "src/app/api/client/preferences/route.ts",
+            "src/app/api/client/route.ts",
+            "src/app/api/clients/ai/route.ts",
+            "src/app/api/clients/route.ts",
+            "src/app/api/migrate/route.ts",
+            "src/app/api/modules/route.ts",
+            "src/app/api/modules/seed/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            ".windsurf/workflows/login.md:da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "src/app/api/auth/route.ts:dae5d91a28557d581c231d414e99d036475e38b9",
+            "src/app/login/page.tsx:5bf9d2a71b09686e9cadb332cd6b2394342f14eb",
+            "src/lib/auth.ts:48e0cd9a3a1d4e02ff784dab5bd54b75d85e29aa",
+            "src/middleware.ts:55c22b682fd50143d4b8b3be5626abf17e6d7ea8",
+            "src/app/api/client/preferences/route.ts:946690b84dff122f2c0ae15b036828200793f6dc",
+            "src/app/api/client/route.ts:0a6bea8e75a2bda34be146b913915768337e5c0d",
+            "src/app/api/clients/ai/route.ts:df3781a1039a5441fecd4516046877215d9a28b2"
+          ]
+        }
+      },
+      {
+        "kind": "billing-payments",
+        "severity": "high",
+        "targets": [
+          "src/components/PaymentOptionsSection.tsx"
+        ],
+        "reasons": [
+          "Billing or payment-like areas are expensive to break."
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.78,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/components/PaymentOptionsSection.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/components/PaymentOptionsSection.tsx:0b81699588c0815f81413253eefce038563fd379"
+          ]
+        }
+      },
+      {
+        "kind": "admin-critical-flow",
+        "severity": "medium",
+        "targets": [
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/cotizador/[clientId]/page.tsx",
+          "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+          "src/app/admin/page.tsx"
+        ],
+        "reasons": [
+          "Admin surfaces often have elevated blast radius."
+        ],
+        "confidence": "medium",
+        "confidenceScore": 0.74,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+            "src/app/admin/cotizador/[clientId]/page.tsx",
+            "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+            "src/app/admin/page.tsx"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/admin/cotizador/[clientId]/ajustes/page.tsx:7ca91065f7d6ebea5da49f37521bab2b0e4912ff",
+            "src/app/admin/cotizador/[clientId]/page.tsx:99c93b38e388a298eab5773675fee2fef99bce00",
+            "src/app/admin/cotizador/[clientId]/roadmap/page.tsx:6d045b39d22801d31ab80c45f45a344816c967f5",
+            "src/app/admin/page.tsx:2ee068781bcb2d470be939815f82538dfdecbb90"
+          ]
+        }
+      },
+      {
+        "kind": "migrations",
+        "severity": "medium",
+        "targets": [
+          "prisma/migrations/20260211193603_init/migration.sql",
+          "prisma/migrations/20260217215510_new_pricing_fields/migration.sql",
+          "prisma/migrations/20260217231503_phase_per_item/migration.sql",
+          "prisma/migrations/migration_lock.toml",
+          "prisma/schema.prisma"
+        ],
+        "reasons": [
+          "Schema or migration files imply persistent data risk."
+        ],
+        "confidence": "medium",
+        "confidenceScore": 0.76,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/migrations/20260211193603_init/migration.sql",
+            "prisma/migrations/20260217215510_new_pricing_fields/migration.sql",
+            "prisma/migrations/20260217231503_phase_per_item/migration.sql",
+            "prisma/migrations/migration_lock.toml",
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/migrations/20260211193603_init/migration.sql",
+            "prisma/migrations/20260217215510_new_pricing_fields/migration.sql",
+            "prisma/migrations/20260217231503_phase_per_item/migration.sql",
+            "prisma/migrations/migration_lock.toml",
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/migrations/20260211193603_init/migration.sql:dd0fa1b1f45c5653264b715d58db59ce71c04d6f",
+            "prisma/migrations/20260217215510_new_pricing_fields/migration.sql:5982328e8a62196cf4ac021edfbfef9e50e1ac1e",
+            "prisma/migrations/20260217231503_phase_per_item/migration.sql:5d64c3c0a4eecb44a8f9599d2ff72072df5b6a50",
+            "prisma/migrations/migration_lock.toml:4e645320de2551d1097ca37e246bc6de904a4832",
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "kind": "pdf",
+        "severity": "medium",
+        "targets": [
+          "src/app/api/quotes/pdf/route.ts",
+          "package-lock.json",
+          "package.json"
+        ],
+        "reasons": [
+          "PDF generation/export code is often brittle and user-visible."
+        ],
+        "confidence": "medium",
+        "confidenceScore": 0.71,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/quotes/pdf/route.ts",
+            "package-lock.json",
+            "package.json"
+          ],
+          "routeFiles": [
+            "src/app/api/quotes/pdf/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/quotes/pdf/route.ts:3a93053173d51ab53261dae9bc68c86c1ad6d56f",
+            "package-lock.json:39baa1fe00f9b6be52df894ce39493de2c92a06c",
+            "package.json:2aa1ed8c89b3579bca75ca4e1cbb10410a6427a9"
+          ]
+        }
+      },
+      {
+        "kind": "ai-integration",
+        "severity": "medium",
+        "targets": [
+          "AI_CONTEXT/00-START-HERE.md",
+          "AI_CONTEXT/01-PROJECT-OVERVIEW.md",
+          "AI_CONTEXT/02-ARCHITECTURE.md",
+          "AI_CONTEXT/03-BACKEND.md",
+          "AI_CONTEXT/04-FRONTEND.md",
+          "AI_CONTEXT/05-DATA-MODELS.md",
+          "AI_CONTEXT/06-API-CONTRACTS.md",
+          "AI_CONTEXT/07-DECISIONS-ADR.md",
+          "AI_CONTEXT/08-RECENT-CHANGES.md",
+          "AI_CONTEXT/09-OPEN-ISSUES.md",
+          "src/app/api/clients/ai/route.ts",
+          "src/app/api/questionnaire/route.ts"
+        ],
+        "reasons": [
+          "AI integrations usually depend on external APIs and prompt assumptions."
+        ],
+        "confidence": "medium",
+        "confidenceScore": 0.72,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "AI_CONTEXT/00-START-HERE.md",
+            "AI_CONTEXT/01-PROJECT-OVERVIEW.md",
+            "AI_CONTEXT/02-ARCHITECTURE.md",
+            "AI_CONTEXT/03-BACKEND.md",
+            "AI_CONTEXT/04-FRONTEND.md",
+            "AI_CONTEXT/05-DATA-MODELS.md",
+            "AI_CONTEXT/06-API-CONTRACTS.md",
+            "AI_CONTEXT/07-DECISIONS-ADR.md"
+          ],
+          "routeFiles": [
+            "src/app/api/clients/ai/route.ts",
+            "src/app/api/questionnaire/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "AI_CONTEXT/00-START-HERE.md:37243596a005924aa6beecb2c73bb30587f972e3",
+            "AI_CONTEXT/01-PROJECT-OVERVIEW.md:5f767101d03b8a874c899d6dddb6e4de8278f29a",
+            "AI_CONTEXT/02-ARCHITECTURE.md:40cd2bb53fff9325943f8991e4e7498931ffc9b7",
+            "AI_CONTEXT/03-BACKEND.md:d7d866d1b35bcab22d386a7bba69b32daaf3f22d",
+            "AI_CONTEXT/04-FRONTEND.md:f6d2e6c9ba666febcb80882555fe454c1a96357f",
+            "AI_CONTEXT/05-DATA-MODELS.md:d14aaf64a3152496d8a150bb2a4c67edbf85ebd0",
+            "AI_CONTEXT/06-API-CONTRACTS.md:c938ae58620d981adad3eff63da0dc69f8cbccea",
+            "AI_CONTEXT/07-DECISIONS-ADR.md:47537b6532a512fd54d6e9a95b71f76eabceaa29"
+          ]
+        }
+      }
+    ]
+  },
+  "dependencyClusters": {
+    "schemaVersion": "ecc.dependency-clusters-map.v1",
+    "sourceOfTruth": [
+      "entity-usage map",
+      "route-to-model map",
+      "repo code"
+    ],
+    "fields": [
+      "cluster",
+      "files",
+      "reasons",
+      "confidence",
+      "evidence",
+      "state"
+    ],
+    "invalidationRules": [
+      "invalidate when route/entity usage links change"
+    ],
+    "generatedAt": "2026-03-21T10:24:13.200Z",
+    "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+    "mode": "balanced",
+    "confidence": "medium",
+    "confidenceScore": 0.7,
+    "state": "partial",
+    "clusters": [
+      {
+        "cluster": "entity:Client",
+        "files": [
+          "prisma/schema.prisma",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts",
+          "src/app/api/clients/route.ts",
+          "src/app/api/questionnaire/route.ts",
+          "src/app/api/quotes/ai/route.ts",
+          "src/app/api/quotes/route.ts",
+          "src/app/api/seed/route.ts",
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/page.tsx",
+          "src/app/cliente/page.tsx"
+        ],
+        "reasons": [
+          "Client fans out into endpoints",
+          "linked screens detected"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.9,
+        "state": "ready",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma",
+            "src/app/api/client/route.ts",
+            "src/app/api/clients/ai/route.ts",
+            "src/app/api/clients/route.ts",
+            "src/app/api/questionnaire/route.ts",
+            "src/app/api/quotes/ai/route.ts",
+            "src/app/api/quotes/route.ts",
+            "src/app/api/seed/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/client/route.ts",
+            "src/app/api/clients/ai/route.ts",
+            "src/app/api/clients/route.ts",
+            "src/app/api/questionnaire/route.ts",
+            "src/app/api/quotes/ai/route.ts",
+            "src/app/api/quotes/route.ts",
+            "src/app/api/seed/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177",
+            "src/app/api/client/route.ts:0a6bea8e75a2bda34be146b913915768337e5c0d",
+            "src/app/api/clients/ai/route.ts:df3781a1039a5441fecd4516046877215d9a28b2",
+            "src/app/api/clients/route.ts:661e7f216e3833d27ae0380f162a1f1af9547201",
+            "src/app/api/questionnaire/route.ts:c1658c1c100d5a36063b6c5e50acda051b082b27",
+            "src/app/api/quotes/ai/route.ts:ff3817b00b024495b0ef82f58352150424294ca2",
+            "src/app/api/quotes/route.ts:a869ef51bbf22ac819dca405a0dbc91fbd7dd535",
+            "src/app/api/seed/route.ts:6108bd008b9fcbab58d2439506e26b7c33bc1980"
+          ]
+        }
+      },
+      {
+        "cluster": "entity:Service",
+        "files": [
+          "prisma/schema.prisma",
+          "src/app/api/services/route.ts",
+          "src/app/admin/page.tsx"
+        ],
+        "reasons": [
+          "Service fans out into endpoints",
+          "linked screens detected"
+        ],
+        "confidence": "medium",
+        "confidenceScore": 0.62,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma",
+            "src/app/api/services/route.ts",
+            "src/app/admin/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/services/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177",
+            "src/app/api/services/route.ts:84d4921bb8536439d0ec76f4c9c67676d2fb1e94",
+            "src/app/admin/page.tsx:2ee068781bcb2d470be939815f82538dfdecbb90"
+          ]
+        }
+      },
+      {
+        "cluster": "entity:QuoteModule",
+        "files": [
+          "prisma/schema.prisma",
+          "src/app/api/modules/route.ts",
+          "src/app/api/modules/seed/route.ts"
+        ],
+        "reasons": [
+          "QuoteModule fans out into endpoints"
+        ],
+        "confidence": "medium",
+        "confidenceScore": 0.62,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma",
+            "src/app/api/modules/route.ts",
+            "src/app/api/modules/seed/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/modules/route.ts",
+            "src/app/api/modules/seed/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177",
+            "src/app/api/modules/route.ts:8d9944058f4cd49aaa8aeb93b6638bf47b988978",
+            "src/app/api/modules/seed/route.ts:87fb92315992607e5065b164eaa4388f274a63bf"
+          ]
+        }
+      },
+      {
+        "cluster": "entity:ModuleItem",
+        "files": [
+          "prisma/schema.prisma",
+          "src/app/api/modules/route.ts",
+          "src/app/api/modules/seed/route.ts",
+          "src/app/api/quotes/route.ts"
+        ],
+        "reasons": [
+          "ModuleItem fans out into endpoints"
+        ],
+        "confidence": "medium",
+        "confidenceScore": 0.66,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma",
+            "src/app/api/modules/route.ts",
+            "src/app/api/modules/seed/route.ts",
+            "src/app/api/quotes/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/modules/route.ts",
+            "src/app/api/modules/seed/route.ts",
+            "src/app/api/quotes/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177",
+            "src/app/api/modules/route.ts:8d9944058f4cd49aaa8aeb93b6638bf47b988978",
+            "src/app/api/modules/seed/route.ts:87fb92315992607e5065b164eaa4388f274a63bf",
+            "src/app/api/quotes/route.ts:a869ef51bbf22ac819dca405a0dbc91fbd7dd535"
+          ]
+        }
+      },
+      {
+        "cluster": "entity:Quote",
+        "files": [
+          "prisma/schema.prisma",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/quotes/pdf/route.ts",
+          "src/app/api/quotes/public/route.ts",
+          "src/app/api/quotes/route.ts",
+          "src/app/cliente/page.tsx"
+        ],
+        "reasons": [
+          "Quote fans out into endpoints",
+          "linked screens detected"
+        ],
+        "confidence": "medium",
+        "confidenceScore": 0.74,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma",
+            "src/app/api/client/preferences/route.ts",
+            "src/app/api/quotes/pdf/route.ts",
+            "src/app/api/quotes/public/route.ts",
+            "src/app/api/quotes/route.ts",
+            "src/app/cliente/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/client/preferences/route.ts",
+            "src/app/api/quotes/pdf/route.ts",
+            "src/app/api/quotes/public/route.ts",
+            "src/app/api/quotes/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177",
+            "src/app/api/client/preferences/route.ts:946690b84dff122f2c0ae15b036828200793f6dc",
+            "src/app/api/quotes/pdf/route.ts:3a93053173d51ab53261dae9bc68c86c1ad6d56f",
+            "src/app/api/quotes/public/route.ts:acc08e889bffc05a9c085f22a60ee37415b6b799",
+            "src/app/api/quotes/route.ts:a869ef51bbf22ac819dca405a0dbc91fbd7dd535",
+            "src/app/cliente/page.tsx:15cea6fa153ddea72a8b833101106b86c207cd0b"
+          ]
+        }
+      },
+      {
+        "cluster": "entity:QuoteSelectedItem",
+        "files": [
+          "prisma/schema.prisma",
+          "src/app/api/quotes/route.ts"
+        ],
+        "reasons": [
+          "QuoteSelectedItem fans out into endpoints"
+        ],
+        "confidence": "medium",
+        "confidenceScore": 0.58,
+        "state": "partial",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma",
+            "src/app/api/quotes/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/quotes/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177",
+            "src/app/api/quotes/route.ts:a869ef51bbf22ac819dca405a0dbc91fbd7dd535"
+          ]
+        }
+      },
+      {
+        "cluster": "entity:QuestionnaireResponse",
+        "files": [
+          "prisma/schema.prisma",
+          "src/app/api/clients/ai/route.ts",
+          "src/app/api/clients/route.ts",
+          "src/app/api/questionnaire/route.ts",
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/page.tsx",
+          "src/app/cliente/page.tsx"
+        ],
+        "reasons": [
+          "QuestionnaireResponse fans out into endpoints",
+          "linked screens detected"
+        ],
+        "confidence": "high",
+        "confidenceScore": 0.78,
+        "state": "ready",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma",
+            "src/app/api/clients/ai/route.ts",
+            "src/app/api/clients/route.ts",
+            "src/app/api/questionnaire/route.ts",
+            "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+            "src/app/admin/page.tsx",
+            "src/app/cliente/page.tsx"
+          ],
+          "routeFiles": [
+            "src/app/api/clients/ai/route.ts",
+            "src/app/api/clients/route.ts",
+            "src/app/api/questionnaire/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177",
+            "src/app/api/clients/ai/route.ts:df3781a1039a5441fecd4516046877215d9a28b2",
+            "src/app/api/clients/route.ts:661e7f216e3833d27ae0380f162a1f1af9547201",
+            "src/app/api/questionnaire/route.ts:c1658c1c100d5a36063b6c5e50acda051b082b27",
+            "src/app/admin/cotizador/[clientId]/ajustes/page.tsx:7ca91065f7d6ebea5da49f37521bab2b0e4912ff",
+            "src/app/admin/page.tsx:2ee068781bcb2d470be939815f82538dfdecbb90",
+            "src/app/cliente/page.tsx:15cea6fa153ddea72a8b833101106b86c207cd0b"
+          ]
+        }
+      }
+    ]
+  },
+  "confidenceMap": {
+    "schemaVersion": "ecc.confidence-map.v1",
+    "sourceOfTruth": [
+      "AI context critic",
+      "structured maps"
+    ],
+    "fields": [
+      "target",
+      "type",
+      "confidence",
+      "confidenceScore",
+      "state"
+    ],
+    "invalidationRules": [
+      "invalidate when docs or structured maps change"
+    ],
+    "generatedAt": "2026-03-21T10:24:13.200Z",
+    "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+    "mode": "balanced",
+    "confidence": "medium",
+    "confidenceScore": 0.74,
+    "state": "partial",
+    "entries": [
+      {
+        "target": "AI_CONTEXT/00-START-HERE.md",
+        "type": "doc",
+        "confidence": "high",
+        "confidenceScore": 0.84,
+        "state": "ready"
+      },
+      {
+        "target": "AI_CONTEXT/01-PROJECT-OVERVIEW.md",
+        "type": "doc",
+        "confidence": "high",
+        "confidenceScore": 0.78,
+        "state": "ready"
+      },
+      {
+        "target": "AI_CONTEXT/02-ARCHITECTURE.md",
+        "type": "doc",
+        "confidence": "high",
+        "confidenceScore": 0.8,
+        "state": "ready"
+      },
+      {
+        "target": "AI_CONTEXT/03-BACKEND.md",
+        "type": "doc",
+        "confidence": "high",
+        "confidenceScore": 0.84,
+        "state": "ready"
+      },
+      {
+        "target": "AI_CONTEXT/04-FRONTEND.md",
+        "type": "doc",
+        "confidence": "high",
+        "confidenceScore": 0.79,
+        "state": "ready"
+      },
+      {
+        "target": "AI_CONTEXT/05-DATA-MODELS.md",
+        "type": "doc",
+        "confidence": "high",
+        "confidenceScore": 0.84,
+        "state": "ready"
+      },
+      {
+        "target": "AI_CONTEXT/06-API-CONTRACTS.md",
+        "type": "doc",
+        "confidence": "high",
+        "confidenceScore": 0.86,
+        "state": "ready"
+      },
+      {
+        "target": "AI_CONTEXT/07-DECISIONS-ADR.md",
+        "type": "doc",
+        "confidence": "high",
+        "confidenceScore": 0.78,
+        "state": "ready"
+      },
+      {
+        "target": "AI_CONTEXT/08-RECENT-CHANGES.md",
+        "type": "doc",
+        "confidence": "high",
+        "confidenceScore": 0.79,
+        "state": "ready"
+      },
+      {
+        "target": "AI_CONTEXT/09-OPEN-ISSUES.md",
+        "type": "doc",
+        "confidence": "high",
+        "confidenceScore": 0.86,
+        "state": "ready"
+      },
+      {
+        "target": "startHere",
+        "type": "section",
+        "confidence": "high",
+        "confidenceScore": 0.78,
+        "state": "partial"
+      },
+      {
+        "target": "architecture",
+        "type": "section",
+        "confidence": "medium",
+        "confidenceScore": 0.63,
+        "state": "partial"
+      },
+      {
+        "target": "backend",
+        "type": "section",
+        "confidence": "medium",
+        "confidenceScore": 0.63,
+        "state": "partial"
+      },
+      {
+        "target": "frontend",
+        "type": "section",
+        "confidence": "medium",
+        "confidenceScore": 0.75,
+        "state": "partial"
+      },
+      {
+        "target": "data",
+        "type": "section",
+        "confidence": "medium",
+        "confidenceScore": 0.75,
+        "state": "partial"
+      },
+      {
+        "target": "api",
+        "type": "section",
+        "confidence": "high",
+        "confidenceScore": 0.78,
+        "state": "partial"
+      },
+      {
+        "target": "routeToModelMap",
+        "type": "map",
+        "confidence": "medium",
+        "confidenceScore": 0.75,
+        "state": "partial"
+      },
+      {
+        "target": "entityUsageMap",
+        "type": "map",
+        "confidence": "medium",
+        "confidenceScore": 0.6,
+        "state": "partial"
+      },
+      {
+        "target": "hotspots",
+        "type": "map",
+        "confidence": "low",
+        "confidenceScore": 0.52,
+        "state": "partial"
+      },
+      {
+        "target": "screenToApiMap",
+        "type": "map",
+        "confidence": "low",
+        "confidenceScore": 0.45,
+        "state": "partial"
+      },
+      {
+        "target": "riskZones",
+        "type": "map",
+        "confidence": "medium",
+        "confidenceScore": 0.75,
+        "state": "partial"
+      },
+      {
+        "target": "dependencyClusters",
+        "type": "map",
+        "confidence": "medium",
+        "confidenceScore": 0.7,
+        "state": "partial"
+      }
+    ]
+  },
+  "readiness": {
+    "decision": "partial",
+    "confidence": "medium",
+    "confidenceScore": 0.64,
+    "issues": [],
+    "warnings": []
+  }
+}

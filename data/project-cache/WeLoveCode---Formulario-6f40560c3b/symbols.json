@@ -1,0 +1,715 @@
+{
+  "schemaVersion": "ecc.symbols.v1",
+  "generatedAt": "2026-03-21T10:24:12.239Z",
+  "repoRoot": "C:\\Users\\UsX\\Desktop\\Proyectos - Desarrollo web\\WeLoveCode - Formulario",
+  "files": [
+    {
+      "path": "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+      "exports": [],
+      "functions": [
+        "AjustesPage"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/admin/cotizador/[clientId]/page.tsx",
+      "exports": [],
+      "functions": [
+        "CotizadorPage",
+        "RichTip",
+        "Tip"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+      "exports": [],
+      "functions": [
+        "RoadmapPage"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/admin/page.tsx",
+      "exports": [],
+      "functions": [
+        "AdminPage"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/auth/route.ts",
+      "exports": [
+        "DELETE",
+        "GET",
+        "PATCH",
+        "POST"
+      ],
+      "functions": [
+        "DELETE",
+        "GET",
+        "PATCH",
+        "POST"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/client/preferences/route.ts",
+      "exports": [
+        "POST"
+      ],
+      "functions": [
+        "POST"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/client/route.ts",
+      "exports": [
+        "GET"
+      ],
+      "functions": [
+        "GET"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/clients/ai/route.ts",
+      "exports": [
+        "POST"
+      ],
+      "functions": [
+        "POST"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/clients/route.ts",
+      "exports": [
+        "DELETE",
+        "GET",
+        "POST",
+        "PUT"
+      ],
+      "functions": [
+        "DELETE",
+        "GET",
+        "POST",
+        "PUT"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/migrate/route.ts",
+      "exports": [
+        "POST"
+      ],
+      "functions": [
+        "POST"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/modules/route.ts",
+      "exports": [
+        "GET",
+        "PUT"
+      ],
+      "functions": [
+        "GET",
+        "PUT"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/modules/seed/route.ts",
+      "exports": [
+        "POST"
+      ],
+      "functions": [
+        "POST"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/questionnaire/route.ts",
+      "exports": [
+        "GET",
+        "PATCH",
+        "POST"
+      ],
+      "functions": [
+        "GET",
+        "PATCH",
+        "POST"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/quotes/ai/route.ts",
+      "exports": [
+        "POST"
+      ],
+      "functions": [
+        "POST"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/quotes/pdf/route.ts",
+      "exports": [
+        "GET"
+      ],
+      "functions": [
+        "GET"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/quotes/public/route.ts",
+      "exports": [
+        "GET"
+      ],
+      "functions": [
+        "GET"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/quotes/route.ts",
+      "exports": [
+        "DELETE",
+        "GET",
+        "PATCH",
+        "POST"
+      ],
+      "functions": [
+        "DELETE",
+        "GET",
+        "PATCH",
+        "POST"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/seed/route.ts",
+      "exports": [
+        "POST"
+      ],
+      "functions": [
+        "POST"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/services/route.ts",
+      "exports": [
+        "DELETE",
+        "GET",
+        "POST",
+        "PUT"
+      ],
+      "functions": [
+        "DELETE",
+        "GET",
+        "POST",
+        "PUT",
+        "seedIfEmpty"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/api/stages/route.ts",
+      "exports": [
+        "DELETE",
+        "GET",
+        "PATCH",
+        "POST"
+      ],
+      "functions": [
+        "DELETE",
+        "GET",
+        "PATCH",
+        "POST"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/blog/[slug]/page.tsx",
+      "exports": [
+        "generateMetadata",
+        "generateStaticParams"
+      ],
+      "functions": [
+        "BlogPost",
+        "generateMetadata",
+        "generateStaticParams"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/blog/page.tsx",
+      "exports": [
+        "metadata"
+      ],
+      "functions": [
+        "BlogPage"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/cliente/page.tsx",
+      "exports": [],
+      "functions": [
+        "ClienteDashboard"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/ClientLayout.tsx",
+      "exports": [],
+      "functions": [
+        "ClientLayout"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/cotizacion-marco&carlos/layout.tsx",
+      "exports": [
+        "metadata"
+      ],
+      "functions": [
+        "CotizacionLayout"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/cotizacion-marco&carlos/page.tsx",
+      "exports": [],
+      "functions": [
+        "CotizacionVentasOnline"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/cotizacion/[token]/page.tsx",
+      "exports": [],
+      "functions": [
+        "CotizacionPage",
+        "ScopeDetail"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "exports": [
+        "metadata",
+        "viewport"
+      ],
+      "functions": [
+        "RootLayout",
+        "gtag"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/login/page.tsx",
+      "exports": [],
+      "functions": [
+        "LoginPage"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/nosotros/page.tsx",
+      "exports": [],
+      "functions": [
+        "NosotrosPage"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/not-found.tsx",
+      "exports": [],
+      "functions": [
+        "NotFound"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/page.tsx",
+      "exports": [],
+      "functions": [
+        "Home"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/precios/page.tsx",
+      "exports": [
+        "metadata"
+      ],
+      "functions": [
+        "PreciosPage"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/proyectos/[id]/page.tsx",
+      "exports": [
+        "generateStaticParams"
+      ],
+      "functions": [
+        "ProjectDetailPage",
+        "generateStaticParams",
+        "getFeatureIcon"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/proyectos/page.tsx",
+      "exports": [
+        "metadata"
+      ],
+      "functions": [
+        "ProyectosPage"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/q/[token]/page.tsx",
+      "exports": [],
+      "functions": [
+        "QuestionnairePage"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/robots.ts",
+      "exports": [],
+      "functions": [
+        "robots"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/servicios/[id]/page.tsx",
+      "exports": [
+        "generateMetadata",
+        "generateStaticParams"
+      ],
+      "functions": [
+        "ServiceDetailPage",
+        "generateMetadata",
+        "generateStaticParams"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/sitemap.ts",
+      "exports": [],
+      "functions": [
+        "sitemap"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/wa/page.tsx",
+      "exports": [],
+      "functions": [
+        "WhatsAppTracker",
+        "WhatsAppTrackerContent"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/whatsapp-redirect/page.tsx",
+      "exports": [],
+      "functions": [
+        "WhatsAppRedirect",
+        "WhatsAppRedirectContent"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/app/whatsapp-sent/page.tsx",
+      "exports": [],
+      "functions": [
+        "WhatsAppSent",
+        "WhatsAppSentContent"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/Analytics.tsx",
+      "exports": [
+        "Analytics",
+        "trackCTAClick",
+        "trackEmailClick",
+        "trackEvent",
+        "trackFormSubmit",
+        "trackPhoneClick",
+        "trackProjectView",
+        "trackServiceView",
+        "trackWhatsAppClick"
+      ],
+      "functions": [
+        "Analytics",
+        "AnalyticsContent"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/BreadcrumbSchema.tsx",
+      "exports": [],
+      "functions": [
+        "BreadcrumbSchema"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/CounterAnimation.tsx",
+      "exports": [],
+      "functions": [
+        "CounterAnimation"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ExamplesCarousel.tsx",
+      "exports": [],
+      "functions": [
+        "ExamplesCarousel"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/FAQSchema.tsx",
+      "exports": [],
+      "functions": [
+        "FAQSchema"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/InfiniteCarousel.tsx",
+      "exports": [],
+      "functions": [
+        "InfiniteCarousel"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/LazyImage.tsx",
+      "exports": [],
+      "functions": [
+        "LazyImage"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/LazyVideo.tsx",
+      "exports": [],
+      "functions": [
+        "LazyVideo"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/LocalBusinessSchema.tsx",
+      "exports": [],
+      "functions": [
+        "LocalBusinessSchema"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/PaymentOptionsSection.tsx",
+      "exports": [],
+      "functions": [
+        "PaymentOptionsSection"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/PortfolioSection.tsx",
+      "exports": [],
+      "functions": [
+        "PortfolioSection",
+        "StatsRow"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ProjectForm.tsx",
+      "exports": [],
+      "functions": [
+        "ProjectForm"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ProjectsCarousel.tsx",
+      "exports": [],
+      "functions": [
+        "ProjectsCarousel"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/ServiceIcons.tsx",
+      "exports": [
+        "ServiceIcons",
+        "ServiceIconsLarge"
+      ],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/components/ServicesSection.tsx",
+      "exports": [],
+      "functions": [
+        "ServicesSection"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/StatsBar.tsx",
+      "exports": [],
+      "functions": [
+        "StatsBar"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/TechCarousel.tsx",
+      "exports": [],
+      "functions": [
+        "TechCarousel"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/TechnologiesSection.tsx",
+      "exports": [],
+      "functions": [
+        "TechnologiesSection"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/TestimonialsModal.tsx",
+      "exports": [],
+      "functions": [
+        "TestimonialsModal"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/TypewriterHero.tsx",
+      "exports": [],
+      "functions": [
+        "TypewriterHero"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/WhatsAppFloatingButton.tsx",
+      "exports": [],
+      "functions": [
+        "WhatsAppFloatingButton"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/components/WhatsAppModal.tsx",
+      "exports": [],
+      "functions": [
+        "WhatsAppModal"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/data/packages.ts",
+      "exports": [
+        "getPackageById",
+        "getPackageByName",
+        "packages"
+      ],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/data/projects.ts",
+      "exports": [
+        "projects"
+      ],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/data/services.ts",
+      "exports": [
+        "services"
+      ],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/hooks/useCountAnimation.ts",
+      "exports": [
+        "useCountAnimation"
+      ],
+      "functions": [
+        "useCountAnimation"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/hooks/useScrollAnimation.ts",
+      "exports": [
+        "useScrollAnimation"
+      ],
+      "functions": [
+        "useScrollAnimation"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/lib/auth.ts",
+      "exports": [
+        "createSessionToken",
+        "hashPassword",
+        "parseSessionToken",
+        "verifyPassword"
+      ],
+      "functions": [
+        "createSessionToken",
+        "hashPassword",
+        "parseSessionToken",
+        "verifyPassword"
+      ],
+      "classes": []
+    },
+    {
+      "path": "src/lib/prisma.ts",
+      "exports": [
+        "prisma"
+      ],
+      "functions": [],
+      "classes": []
+    },
+    {
+      "path": "src/middleware.ts",
+      "exports": [
+        "config",
+        "middleware"
+      ],
+      "functions": [
+        "middleware",
+        "parseSession"
+      ],
+      "classes": []
+    }
+  ]
+}

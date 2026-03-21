@@ -13,6 +13,10 @@ $ARGUMENTS
 - **Dirty Prototype Refactoring**: Treat Codex/Gemini Unified Diff as "dirty prototype", must refactor to production-grade code
 - **Stop-Loss Mechanism**: Do not proceed to next phase until current phase output is validated
 - **Prerequisite**: Only execute after user explicitly replies "Y" to `/ccg:plan` output (if missing, must confirm first)
+- **Prepared Context First**: Execution starts from `PreparedContextPackage`, `WorkingSet`, recommended docs, and prior artifacts
+- **Working Set Transport First**: Real execution must prefer the bounded `seedPaths` transport derived from `WorkingSet`
+- **Controlled Expansion Before Search**: If context is missing, request expansion before any broad search or repo rediscovery
+- **Legacy Flow Compatibility**: Direct task execution can still work, but it is no longer the preferred route for new tasks
 
 ---
 
@@ -27,7 +31,7 @@ Bash({
 ROLE_FILE: <role prompt path>
 <TASK>
 Requirement: <task description>
-Context: <plan content + target files>
+Context: <plan content + PreparedContextPackage + WorkingSet + target files>
 </TASK>
 OUTPUT: Unified Diff Patch ONLY. Strictly prohibit any actual modifications.
 EOF",
@@ -42,7 +46,7 @@ Bash({
 ROLE_FILE: <role prompt path>
 <TASK>
 Requirement: <task description>
-Context: <plan content + target files>
+Context: <plan content + PreparedContextPackage + WorkingSet + target files>
 </TASK>
 OUTPUT: Unified Diff Patch ONLY. Strictly prohibit any actual modifications.
 EOF",
@@ -118,11 +122,17 @@ TaskOutput({ task_id: "<task_id>", block: true, timeout: 600000 })
    - If plan file path provided, read and parse
    - Extract: task type, implementation steps, key files, SESSION_ID
 
-3. **Pre-Execution Confirmation**:
+3. **Load Execution Context**:
+   - Prefer an existing `PreparedContextPackage` generated during planning
+   - If missing but the task is new, create one first with `node scripts/context-prepare.js`
+   - Read the `WorkingSet`, recommended `AI_CONTEXT`, and previous artifacts before implementation
+   - Carry the current budget and controlled expansion policy into execution
+
+4. **Pre-Execution Confirmation**:
    - If input is "direct task description" or plan missing `SESSION_ID` / key files: confirm with user first
    - If cannot confirm user replied "Y" to plan: must confirm again before proceeding
 
-4. **Task Type Routing**:
+5. **Task Type Routing**:
 
    | Task Type | Detection | Route |
    |-----------|-----------|-------|
@@ -132,11 +142,25 @@ TaskOutput({ task_id: "<task_id>", block: true, timeout: 600000 })
 
 ---
 
-### Phase 1: Quick Context Retrieval
+### Phase 1: Context Load and Bounded Execution Context
 
 `[Mode: Retrieval]`
 
-**If ace-tool MCP is available**, use it for quick context retrieval:
+Primary path:
+
+1. Read `PreparedContextPackage`
+2. Start from `WorkingSet`
+3. Use transported `seedPaths` as the bounded execution surface
+4. Read recommended `AI_CONTEXT` docs first
+5. Reuse previous artifacts if they reduce rediscovery
+
+If context is still insufficient, request controlled expansion:
+
+```bash
+node scripts/context-expand.js --prepared-context .claude/plan/task-context.json --request '{"mode":"narrow","paths":["path/to/file.ts"],"reason":"Need one additional dependency for execution"}' --write .claude/plan/task-context-expanded.json
+```
+
+**If ace-tool MCP is available**, use it only after the prepared context path has been exhausted or expansion was denied:
 
 Based on "Key Files" list in plan, call `mcp__ace-tool__search_context`:
 
@@ -148,15 +172,17 @@ mcp__ace-tool__search_context({
 ```
 
 **Retrieval Strategy**:
-- Extract target paths from plan's "Key Files" table
+- Extract target paths from `WorkingSet` and the plan's "Key Files" table
 - Build semantic query covering: entry files, dependency modules, related type definitions
-- If results insufficient, add 1-2 recursive retrievals
+- If results insufficient, add 1-2 recursive retrievals only after controlled expansion has been considered
 
 **If ace-tool MCP is NOT available**, use Claude Code built-in tools as fallback:
 1. **Glob**: Find target files from plan's "Key Files" table (e.g., `Glob("src/components/**/*.tsx")`)
 2. **Grep**: Search for key symbols, function names, type definitions across the codebase
 3. **Read**: Read the discovered files to gather complete context
 4. **Task (Explore agent)**: For broader exploration, use `Task` with `subagent_type: "Explore"`
+
+This fallback is compatibility-only and is not the default route for a new task.
 
 **After Retrieval**:
 - Organize retrieved code snippets
@@ -181,6 +207,7 @@ mcp__ace-tool__search_context({
 4. **Gemini is frontend design authority, its CSS/React/Vue prototype is the final visual baseline**
 5. **WARNING**: Ignore Gemini's backend logic suggestions
 6. If plan contains `GEMINI_SESSION`: prefer `resume <GEMINI_SESSION>`
+7. Start from `WorkingSet`, recommended docs, and prior artifacts before any broader retrieval
 
 #### Route B: Backend/Logic/Algorithms → Codex
 
@@ -189,6 +216,7 @@ mcp__ace-tool__search_context({
 3. OUTPUT: `Unified Diff Patch ONLY. Strictly prohibit any actual modifications.`
 4. **Codex is backend logic authority, leverage its logical reasoning and debug capabilities**
 5. If plan contains `CODEX_SESSION`: prefer `resume <CODEX_SESSION>`
+6. Start from `WorkingSet`, recommended docs, and prior artifacts before any broader retrieval
 
 #### Route C: Fullstack → Parallel Calls
 

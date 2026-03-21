@@ -1,0 +1,1696 @@
+{
+  "schemaVersion": "ecc.repo-fingerprint.v1",
+  "generatedAt": "2026-03-21T10:24:12.064Z",
+  "repoRoot": "C:\\Users\\UsX\\Desktop\\Proyectos - Desarrollo web\\WeLoveCode - Formulario",
+  "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+  "aggregateHash": "b7907503c34cc82479f94947242cd2e3ac3dc2f0",
+  "fileCount": 281,
+  "files": [
+    {
+      "path": ".env",
+      "mtimeMs": 1770838330850.1042,
+      "size": 814,
+      "sha1": "49d91cc11b30d7d48ba794dc75eefbdba8edd7b3"
+    },
+    {
+      "path": ".eslintrc.json",
+      "mtimeMs": 1747689250528.366,
+      "size": 40,
+      "sha1": "75e677e7192205173354ae9375c1d25ef78b0cec"
+    },
+    {
+      "path": ".gitignore",
+      "mtimeMs": 1770838503585.252,
+      "size": 419,
+      "sha1": "8103eb7907192b9e9f52598daa64d36f09b2e624"
+    },
+    {
+      "path": ".windsurf/workflows/login.md",
+      "mtimeMs": 1770889020626.6018,
+      "size": 0,
+      "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "AI_CONTEXT/00-START-HERE.md",
+      "mtimeMs": 1774081183868.8005,
+      "size": 2662,
+      "sha1": "37243596a005924aa6beecb2c73bb30587f972e3"
+    },
+    {
+      "path": "AI_CONTEXT/01-PROJECT-OVERVIEW.md",
+      "mtimeMs": 1774081183872.9329,
+      "size": 2562,
+      "sha1": "5f767101d03b8a874c899d6dddb6e4de8278f29a"
+    },
+    {
+      "path": "AI_CONTEXT/02-ARCHITECTURE.md",
+      "mtimeMs": 1774081183873.955,
+      "size": 1503,
+      "sha1": "40cd2bb53fff9325943f8991e4e7498931ffc9b7"
+    },
+    {
+      "path": "AI_CONTEXT/03-BACKEND.md",
+      "mtimeMs": 1774081183875.0217,
+      "size": 2835,
+      "sha1": "d7d866d1b35bcab22d386a7bba69b32daaf3f22d"
+    },
+    {
+      "path": "AI_CONTEXT/04-FRONTEND.md",
+      "mtimeMs": 1774081183876.0461,
+      "size": 2428,
+      "sha1": "f6d2e6c9ba666febcb80882555fe454c1a96357f"
+    },
+    {
+      "path": "AI_CONTEXT/05-DATA-MODELS.md",
+      "mtimeMs": 1774081183878.1753,
+      "size": 3644,
+      "sha1": "d14aaf64a3152496d8a150bb2a4c67edbf85ebd0"
+    },
+    {
+      "path": "AI_CONTEXT/06-API-CONTRACTS.md",
+      "mtimeMs": 1774081183879.7563,
+      "size": 5244,
+      "sha1": "c938ae58620d981adad3eff63da0dc69f8cbccea"
+    },
+    {
+      "path": "AI_CONTEXT/07-DECISIONS-ADR.md",
+      "mtimeMs": 1774081183881.1077,
+      "size": 1179,
+      "sha1": "47537b6532a512fd54d6e9a95b71f76eabceaa29"
+    },
+    {
+      "path": "AI_CONTEXT/08-RECENT-CHANGES.md",
+      "mtimeMs": 1774081183882.1338,
+      "size": 1382,
+      "sha1": "a09aee150badeaa85f4d861e1100d380a54d26d5"
+    },
+    {
+      "path": "AI_CONTEXT/09-OPEN-ISSUES.md",
+      "mtimeMs": 1774081183883.1475,
+      "size": 965,
+      "sha1": "4b51f3016557141b51a9b1ae8d8cbc341c4d0ca7"
+    },
+    {
+      "path": "CAMBIOS-FINALES.md",
+      "mtimeMs": 1763623845030.4038,
+      "size": 5286,
+      "sha1": "71ab2d6dce03bea04b7abbdf491e24db3d872ee0"
+    },
+    {
+      "path": "DEPLOYMENT_GUIDE.md",
+      "mtimeMs": 1758060312959.0354,
+      "size": 2223,
+      "sha1": "a8eaf22eb000963c95ce5c32d8f99b358ef529ef"
+    },
+    {
+      "path": "DEPLOYMENT-CHECKLIST.md",
+      "mtimeMs": 1763621404630.4941,
+      "size": 8287,
+      "sha1": "60034a6c3f1a1ba5f300e08f7eb6d8515f38bb88"
+    },
+    {
+      "path": "MEJORAS-FINALES-COMPLETAS.md",
+      "mtimeMs": 1763623278026.274,
+      "size": 8940,
+      "sha1": "e84b771c06e6069609008f2d04300927cf68b343"
+    },
+    {
+      "path": "MEJORAS-IMPLEMENTADAS.md",
+      "mtimeMs": 1763621352813.633,
+      "size": 8437,
+      "sha1": "59a09f8a2e7143df34f45650e64c9bc2010ebed6"
+    },
+    {
+      "path": "netlify.toml",
+      "mtimeMs": 1770838774485.069,
+      "size": 172,
+      "sha1": "e9fd7a54c8394d428d092249a4feb887b3fe273e"
+    },
+    {
+      "path": "next-env.d.ts",
+      "mtimeMs": 1747689250609.7559,
+      "size": 201,
+      "sha1": "06e5b053de5e90cae065a2ac8a57758316aeb8ea"
+    },
+    {
+      "path": "next.config.mjs",
+      "mtimeMs": 1770838584248.7278,
+      "size": 1625,
+      "sha1": "670f4458169544e7eda2ac79aee8ce18a88ccf98"
+    },
+    {
+      "path": "OPTIMIZACIONES.md",
+      "mtimeMs": 1764110747654.655,
+      "size": 8503,
+      "sha1": "e642faae9c9329674d2a9f1fec9cf506dde7917a"
+    },
+    {
+      "path": "package-lock.json",
+      "mtimeMs": 1771361867641.7104,
+      "size": 218253,
+      "sha1": "39baa1fe00f9b6be52df894ce39493de2c92a06c"
+    },
+    {
+      "path": "package.json",
+      "mtimeMs": 1771361867565.2122,
+      "size": 722,
+      "sha1": "2aa1ed8c89b3579bca75ca4e1cbb10410a6427a9"
+    },
+    {
+      "path": "PERFORMANCE-OPTIMIZATION.md",
+      "mtimeMs": 1763621149464.8933,
+      "size": 6749,
+      "sha1": "85710c00a728a1d20d6e76b6599e2a46d6d9b65b"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "mtimeMs": 1747689250580.9187,
+      "size": 135,
+      "sha1": "6f6d727c2eec648b9da91ae5b8f499b81c3f7c92"
+    },
+    {
+      "path": "prisma/migrations/20260211193603_init/migration.sql",
+      "mtimeMs": 1770838563046.04,
+      "size": 1575,
+      "sha1": "dd0fa1b1f45c5653264b715d58db59ce71c04d6f"
+    },
+    {
+      "path": "prisma/migrations/20260217215510_new_pricing_fields/migration.sql",
+      "mtimeMs": 1771365310368.421,
+      "size": 5194,
+      "sha1": "5982328e8a62196cf4ac021edfbfef9e50e1ac1e"
+    },
+    {
+      "path": "prisma/migrations/20260217231503_phase_per_item/migration.sql",
+      "mtimeMs": 1771370103189.8745,
+      "size": 316,
+      "sha1": "5d64c3c0a4eecb44a8f9599d2ff72072df5b6a50"
+    },
+    {
+      "path": "prisma/migrations/migration_lock.toml",
+      "mtimeMs": 1771370103189.8745,
+      "size": 126,
+      "sha1": "4e645320de2551d1097ca37e246bc6de904a4832"
+    },
+    {
+      "path": "prisma/schema.prisma",
+      "mtimeMs": 1771529850827.558,
+      "size": 8496,
+      "sha1": "40e1ec3089b259da683b3b59fc3ebd8587416177"
+    },
+    {
+      "path": "public/.htaccess",
+      "mtimeMs": 1763621162067.5222,
+      "size": 1703,
+      "sha1": "2d704f985980672f77fe49e031858ea852f81b94"
+    },
+    {
+      "path": "public/adriana-foto.webp",
+      "mtimeMs": 1764121808000,
+      "size": 28816,
+      "sha1": "2cc95f8a194951dc7d2e3e6e817fc4ce84aa7372"
+    },
+    {
+      "path": "public/antonio.webp",
+      "mtimeMs": 1764121808000,
+      "size": 23600,
+      "sha1": "a68edcf80584aa3f0c787d74972cc6d99fd5cc78"
+    },
+    {
+      "path": "public/arribo-app-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 33246,
+      "sha1": "d739ea6d21125df0b5ab02bd76089135deeb9396"
+    },
+    {
+      "path": "public/arribo-app-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 22720,
+      "sha1": "7a58f066dccb1cb4857769b07cf7d71ad7b689dc"
+    },
+    {
+      "path": "public/arribo-app-3.webp",
+      "mtimeMs": 1764121808000,
+      "size": 29870,
+      "sha1": "35d5584153ad24e06d0b06f4dfa29e3f50260f9e"
+    },
+    {
+      "path": "public/arribo-app-4.webp",
+      "mtimeMs": 1764121808000,
+      "size": 17580,
+      "sha1": "0a823bef619ab2571f3e6afafc39b5dedd812fc9"
+    },
+    {
+      "path": "public/arribo-app-icon.webp",
+      "mtimeMs": 1764121808000,
+      "size": 3556,
+      "sha1": "fd0707dbf506428a5616217b2a3bd914ca045e4c"
+    },
+    {
+      "path": "public/arribo-app-video.mp4",
+      "mtimeMs": 1761248759328.7742,
+      "size": 951058,
+      "sha1": "84a07330861b28d42a8492df0f136dd30eee2fb7"
+    },
+    {
+      "path": "public/background-image-systems.webp",
+      "mtimeMs": 1764121808000,
+      "size": 154614,
+      "sha1": "023207ac61c1c141f5e64257e3c8268f0dd8cff5"
+    },
+    {
+      "path": "public/chofer-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 47154,
+      "sha1": "4e99baa017dfad11776f5eb2eaf496448525f6fa"
+    },
+    {
+      "path": "public/client-app-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 48614,
+      "sha1": "2100cee654e64849a2575a4a2b9840d040454a85"
+    },
+    {
+      "path": "public/client-app-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 34090,
+      "sha1": "3506e155b35e1d6befbe7228d488ccdf23586e5a"
+    },
+    {
+      "path": "public/client-app-icon.webp",
+      "mtimeMs": 1764121808000,
+      "size": 94922,
+      "sha1": "fd62f9c34af67a3aa830018888067e65a5aec4bf"
+    },
+    {
+      "path": "public/client-app-video.mp4",
+      "mtimeMs": 1761249030283.9934,
+      "size": 836010,
+      "sha1": "a67d643116f29d2abb7b402fabcf963ef0624b9c"
+    },
+    {
+      "path": "public/client-laptop-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 177102,
+      "sha1": "778b5d78d8bb397265e31ef004320cb7cef4406a"
+    },
+    {
+      "path": "public/client-logo.webp",
+      "mtimeMs": 1764121808000,
+      "size": 15708,
+      "sha1": "3a659f8d6d0a21edc93b49ca5a4235c2a12c89df"
+    },
+    {
+      "path": "public/codigo-pantalla.webp",
+      "mtimeMs": 1764121808000,
+      "size": 283398,
+      "sha1": "f88b12b50c5f34c24b888403bb51ce307171b411"
+    },
+    {
+      "path": "public/favicon.ico",
+      "mtimeMs": 1757799280088.0913,
+      "size": 15406,
+      "sha1": "976aa33f69680fcff01de79e49e55d5bf6ac7d31"
+    },
+    {
+      "path": "public/fidelity-app-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 177876,
+      "sha1": "c9eb6e35de80aa510fdec3aa41ac63fabdf5e7d3"
+    },
+    {
+      "path": "public/fidelity-app-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 93068,
+      "sha1": "602580767f59a350fe71e34e5449637adef72598"
+    },
+    {
+      "path": "public/fidelity-app-icon-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 22442,
+      "sha1": "b85e56759bac96ee5b2cbdf663876c2be218f82e"
+    },
+    {
+      "path": "public/fidelity-app-icon.webp",
+      "mtimeMs": 1764121808000,
+      "size": 71292,
+      "sha1": "40072cbbb3c909543e3bac9c6d98812740f34d27"
+    },
+    {
+      "path": "public/fotos-viejas/adriana-foto.webp",
+      "mtimeMs": 1759353011264.2625,
+      "size": 216696,
+      "sha1": "e46e983ba491dabf0af0568474683a73424a9d01"
+    },
+    {
+      "path": "public/fotos-viejas/antonio.png",
+      "mtimeMs": 1763619470308.5154,
+      "size": 745977,
+      "sha1": "6499d8acba3ae35cc46957e344836e985339078c"
+    },
+    {
+      "path": "public/fotos-viejas/exposicion1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 167766,
+      "sha1": "2f68956d268baf6de36eee5ea245fa38949bfd9a"
+    },
+    {
+      "path": "public/fotos-viejas/exposicion2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 167766,
+      "sha1": "2f68956d268baf6de36eee5ea245fa38949bfd9a"
+    },
+    {
+      "path": "public/fotos-viejas/favicon.webp",
+      "mtimeMs": 1764121808000,
+      "size": 1480,
+      "sha1": "cb26558a2db1cd1461bbc0fc244f1449ae74e754"
+    },
+    {
+      "path": "public/fotos-viejas/jessica.png",
+      "mtimeMs": 1763619002797.0356,
+      "size": 1203195,
+      "sha1": "4b9cfbfc20d26177b246428a99dad36da3652843"
+    },
+    {
+      "path": "public/fotos-viejas/joan.png",
+      "mtimeMs": 1763619074394.9734,
+      "size": 588628,
+      "sha1": "6da116f2b12606ae757a85c324d900b32cbe9da0"
+    },
+    {
+      "path": "public/fotos-viejas/programadores1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 81070,
+      "sha1": "260d88d4b9d2b5228a2e08dfc37fc32a8b24db7d"
+    },
+    {
+      "path": "public/fotos-viejas/programadores2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 81070,
+      "sha1": "260d88d4b9d2b5228a2e08dfc37fc32a8b24db7d"
+    },
+    {
+      "path": "public/fotos-viejas/yoFoto.png",
+      "mtimeMs": 1759515586129.8225,
+      "size": 3083781,
+      "sha1": "8dd6801010a440846ff3c8b4f58ff8d5d3125548"
+    },
+    {
+      "path": "public/google-site-verification.html",
+      "mtimeMs": 1763621072593.2612,
+      "size": 403,
+      "sha1": "a1db479226916506afc5f4af36a8cc05ec78a15e"
+    },
+    {
+      "path": "public/icono-app.png",
+      "mtimeMs": 1757805633131.29,
+      "size": 172535,
+      "sha1": "94d659bfe2c1ab2684c574195980adcc38ab3986"
+    },
+    {
+      "path": "public/icono-app.webp",
+      "mtimeMs": 1764121808000,
+      "size": 10440,
+      "sha1": "c2851ffe132fb236b69c3545e35a1750956d1e98"
+    },
+    {
+      "path": "public/icono-welovecode.webp",
+      "mtimeMs": 1764121808000,
+      "size": 77648,
+      "sha1": "7aef3ba56323cd6ead816ca66faec557d7ba3163"
+    },
+    {
+      "path": "public/imagenes-comprimidas/arribo-app-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 33246,
+      "sha1": "d739ea6d21125df0b5ab02bd76089135deeb9396"
+    },
+    {
+      "path": "public/imagenes-comprimidas/arribo-app-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 22720,
+      "sha1": "7a58f066dccb1cb4857769b07cf7d71ad7b689dc"
+    },
+    {
+      "path": "public/imagenes-comprimidas/arribo-app-3.webp",
+      "mtimeMs": 1764121808000,
+      "size": 29870,
+      "sha1": "35d5584153ad24e06d0b06f4dfa29e3f50260f9e"
+    },
+    {
+      "path": "public/imagenes-comprimidas/arribo-app-4.webp",
+      "mtimeMs": 1764121808000,
+      "size": 17580,
+      "sha1": "0a823bef619ab2571f3e6afafc39b5dedd812fc9"
+    },
+    {
+      "path": "public/imagenes-comprimidas/arribo-app-icon.webp",
+      "mtimeMs": 1764121808000,
+      "size": 3556,
+      "sha1": "fd0707dbf506428a5616217b2a3bd914ca045e4c"
+    },
+    {
+      "path": "public/imagenes-comprimidas/background-image-systems.webp",
+      "mtimeMs": 1764121808000,
+      "size": 154614,
+      "sha1": "023207ac61c1c141f5e64257e3c8268f0dd8cff5"
+    },
+    {
+      "path": "public/imagenes-comprimidas/chofer-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 47154,
+      "sha1": "4e99baa017dfad11776f5eb2eaf496448525f6fa"
+    },
+    {
+      "path": "public/imagenes-comprimidas/client-app-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 48614,
+      "sha1": "2100cee654e64849a2575a4a2b9840d040454a85"
+    },
+    {
+      "path": "public/imagenes-comprimidas/client-app-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 34090,
+      "sha1": "3506e155b35e1d6befbe7228d488ccdf23586e5a"
+    },
+    {
+      "path": "public/imagenes-comprimidas/client-app-icon.webp",
+      "mtimeMs": 1764121808000,
+      "size": 94922,
+      "sha1": "fd62f9c34af67a3aa830018888067e65a5aec4bf"
+    },
+    {
+      "path": "public/imagenes-comprimidas/client-laptop-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 177102,
+      "sha1": "778b5d78d8bb397265e31ef004320cb7cef4406a"
+    },
+    {
+      "path": "public/imagenes-comprimidas/client-logo.webp",
+      "mtimeMs": 1764121808000,
+      "size": 15708,
+      "sha1": "3a659f8d6d0a21edc93b49ca5a4235c2a12c89df"
+    },
+    {
+      "path": "public/imagenes-comprimidas/codigo-pantalla.webp",
+      "mtimeMs": 1764121808000,
+      "size": 283398,
+      "sha1": "f88b12b50c5f34c24b888403bb51ce307171b411"
+    },
+    {
+      "path": "public/imagenes-comprimidas/exposicion.webp",
+      "mtimeMs": 1771315989990.466,
+      "size": 33856,
+      "sha1": "824cac41db30ebc134170fb74a6787c62f4a4a95"
+    },
+    {
+      "path": "public/imagenes-comprimidas/favicon.webp",
+      "mtimeMs": 1764121808000,
+      "size": 1480,
+      "sha1": "cb26558a2db1cd1461bbc0fc244f1449ae74e754"
+    },
+    {
+      "path": "public/imagenes-comprimidas/fidelity-app-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 177876,
+      "sha1": "c9eb6e35de80aa510fdec3aa41ac63fabdf5e7d3"
+    },
+    {
+      "path": "public/imagenes-comprimidas/fidelity-app-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 93068,
+      "sha1": "602580767f59a350fe71e34e5449637adef72598"
+    },
+    {
+      "path": "public/imagenes-comprimidas/fidelity-app-icon-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 22442,
+      "sha1": "b85e56759bac96ee5b2cbdf663876c2be218f82e"
+    },
+    {
+      "path": "public/imagenes-comprimidas/fidelity-app-icon.webp",
+      "mtimeMs": 1764121808000,
+      "size": 71292,
+      "sha1": "40072cbbb3c909543e3bac9c6d98812740f34d27"
+    },
+    {
+      "path": "public/imagenes-comprimidas/icono-app.webp",
+      "mtimeMs": 1764121808000,
+      "size": 10440,
+      "sha1": "c2851ffe132fb236b69c3545e35a1750956d1e98"
+    },
+    {
+      "path": "public/imagenes-comprimidas/icono-welovecode.webp",
+      "mtimeMs": 1764121808000,
+      "size": 77648,
+      "sha1": "7aef3ba56323cd6ead816ca66faec557d7ba3163"
+    },
+    {
+      "path": "public/imagenes-comprimidas/logo-app.webp",
+      "mtimeMs": 1764121808000,
+      "size": 12650,
+      "sha1": "218f6c0d3f2ff66a4afbfffa5d994974688973d5"
+    },
+    {
+      "path": "public/imagenes-comprimidas/logo-regalazo.webp",
+      "mtimeMs": 1764105347394.0999,
+      "size": 44008,
+      "sha1": "7c69d6881b94ac06f5854a853f399a0084f99863"
+    },
+    {
+      "path": "public/imagenes-comprimidas/Logo-s-fondo-blanco.webp",
+      "mtimeMs": 1764121808000,
+      "size": 41750,
+      "sha1": "213d54645bf034aff0984802a74adf9f74aaf780"
+    },
+    {
+      "path": "public/imagenes-comprimidas/Logo-s-fondo.webp",
+      "mtimeMs": 1764121808000,
+      "size": 37630,
+      "sha1": "74c82f937289098f258699d891bcc481c9bf8587"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-admin-0.webp",
+      "mtimeMs": 1764121808000,
+      "size": 59150,
+      "sha1": "8c104ce4c48ec515e1075b1fb60231626f535599"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-admin-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 155830,
+      "sha1": "baa7018b8d405b89aa98d4f89b797ff2adf8618a"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-app-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 110402,
+      "sha1": "7cb1857070c67c03fdcaf0d1935ea1149e175709"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-app-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 52160,
+      "sha1": "927d363ed4e57fdac7183987e6b253b0b7f60f7b"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-app-3.webp",
+      "mtimeMs": 1764121808000,
+      "size": 144212,
+      "sha1": "ee6d7f1696679795de3b1fe34d32c685a7853f29"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-app-5.webp",
+      "mtimeMs": 1764121808000,
+      "size": 49792,
+      "sha1": "e8247f577f2716afbeb710edc6779de8bb35f13c"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-app-7.webp",
+      "mtimeMs": 1764121808000,
+      "size": 50590,
+      "sha1": "3eda6742a5aa793173b9fd32720f55daad09d67e"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-app-8.webp",
+      "mtimeMs": 1764121808000,
+      "size": 74658,
+      "sha1": "f77e719f50075d70c56486acb79fbc3e1bc2b021"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-cliente.webp",
+      "mtimeMs": 1764121808000,
+      "size": 67384,
+      "sha1": "4fba47a00ce6d1cb06065b964d55d53812c22313"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-landing-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 95004,
+      "sha1": "580dc8208bb1c4fbfeb7b8d09ed2a3c889941b0f"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-logo.webp",
+      "mtimeMs": 1764121808000,
+      "size": 4362,
+      "sha1": "d7e869e6ca889177e3110c5d2f405af45a63f1d6"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-proveedor.webp",
+      "mtimeMs": 1764121808000,
+      "size": 91162,
+      "sha1": "2515c6f4b67708021c838fd43386cd01819d4526"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-web-laptop-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 38392,
+      "sha1": "e390b74a005b24c7dcb581a70d0d3cc5b093d47a"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-web-laptop-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 34196,
+      "sha1": "0b87c8ce7b94f8bc18f840f2fbf288858dd16b57"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-web-movil-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 46790,
+      "sha1": "cbf103a64a92b5ca6f4645c9b54f8b21e8a84c44"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-web-movil-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 81090,
+      "sha1": "437d9dd783a37e59cb2c572c54ce3e44a64eb7e9"
+    },
+    {
+      "path": "public/imagenes-comprimidas/mercado-web-movil-3.webp",
+      "mtimeMs": 1764121808000,
+      "size": 44726,
+      "sha1": "21f6f92f6e110de43ee4f2cac07f43676e4ebc5b"
+    },
+    {
+      "path": "public/imagenes-comprimidas/poramoralcampo-app.webp",
+      "mtimeMs": 1764121808000,
+      "size": 118100,
+      "sha1": "ab52b4dd64fdde90dc40369809d155f156e0be80"
+    },
+    {
+      "path": "public/imagenes-comprimidas/poramoralcampo-icono.webp",
+      "mtimeMs": 1764121808000,
+      "size": 12944,
+      "sha1": "2459a1b0783f9c71a5a7337c26a31b9e6fbf0358"
+    },
+    {
+      "path": "public/imagenes-comprimidas/poramoralcampo-logo-blanco.webp",
+      "mtimeMs": 1764121808000,
+      "size": 46480,
+      "sha1": "1fd82e533adbf55b615819e935a7ca6f43d0bca8"
+    },
+    {
+      "path": "public/imagenes-comprimidas/poramoralcampo-logo.webp",
+      "mtimeMs": 1764121808000,
+      "size": 63166,
+      "sha1": "854742383933e2704218761e554fa16497675d04"
+    },
+    {
+      "path": "public/imagenes-comprimidas/poramoralcampo-web.webp",
+      "mtimeMs": 1764121808000,
+      "size": 55392,
+      "sha1": "6ffb6d91621f7619c8a215edc3bdd9dd787b5ee8"
+    },
+    {
+      "path": "public/imagenes-comprimidas/programador-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 95470,
+      "sha1": "841d2a690ed39b0f00688e3ce1c3861388bc73ec"
+    },
+    {
+      "path": "public/imagenes-comprimidas/programadores.webp",
+      "mtimeMs": 1771314849136.6663,
+      "size": 170060,
+      "sha1": "17ac47cbe88bbed18d6c7079e85eafa033ff3962"
+    },
+    {
+      "path": "public/imagenes-comprimidas/programmer-cartoon.webp",
+      "mtimeMs": 1764121808000,
+      "size": 166094,
+      "sha1": "44d1df4106e6516ad5f270273eb196debfdf9768"
+    },
+    {
+      "path": "public/imagenes-comprimidas/programmer.webp",
+      "mtimeMs": 1764121808000,
+      "size": 173676,
+      "sha1": "322423d45998d748e9ee563b2ce093384a27b2a3"
+    },
+    {
+      "path": "public/imagenes-comprimidas/regalazo-web-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 41630,
+      "sha1": "ed803000f826b795dcbff3d876da54588c56ea5d"
+    },
+    {
+      "path": "public/imagenes-comprimidas/regalazo.webp",
+      "mtimeMs": 1764110030389.264,
+      "size": 4352,
+      "sha1": "89a161704cb30675e548aa26b56ae8c1d7b11b1c"
+    },
+    {
+      "path": "public/imagenes-comprimidas/renovacion-appicon.webp",
+      "mtimeMs": 1764121808000,
+      "size": 6776,
+      "sha1": "62ec7f813b7d7980c803a85df6333e9b3bcfac3e"
+    },
+    {
+      "path": "public/imagenes-comprimidas/renovacion-logo.webp",
+      "mtimeMs": 1764121808000,
+      "size": 173144,
+      "sha1": "28faebede3c87b0deb8b1a3c0f1539242a1fd781"
+    },
+    {
+      "path": "public/imagenes-comprimidas/renovacion-web.webp",
+      "mtimeMs": 1764121808000,
+      "size": 40106,
+      "sha1": "a76cbed4163da92b6ce11f5c51453391f19d609b"
+    },
+    {
+      "path": "public/imagenes-comprimidas/rilsa-logo.webp",
+      "mtimeMs": 1764121808000,
+      "size": 42570,
+      "sha1": "9646410670434142e00b6799e71ecb7d375a536f"
+    },
+    {
+      "path": "public/imagenes-comprimidas/rilsa-web-laptop-0.webp",
+      "mtimeMs": 1764121808000,
+      "size": 60788,
+      "sha1": "c372368aef0a7e93df53aa66932e210c23a1fea7"
+    },
+    {
+      "path": "public/imagenes-comprimidas/rilsa-web-laptop-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 62834,
+      "sha1": "cea5bdd445725b9cb8111b62094c94c6e438cd8e"
+    },
+    {
+      "path": "public/imagenes-comprimidas/rilsa-web-laptop-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 51872,
+      "sha1": "cfcc47aaf090942d9becc6830167ef1aab5135e5"
+    },
+    {
+      "path": "public/imagenes-comprimidas/rilsa-web-movil-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 66174,
+      "sha1": "ed0e134b283f60dd0687f5f318d76627faeca924"
+    },
+    {
+      "path": "public/imagenes-comprimidas/rilsa-web-movil-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 86736,
+      "sha1": "ec7643e2b4b19dccfd6bcb8001e5c532382727e4"
+    },
+    {
+      "path": "public/imagenes-comprimidas/rope-web-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 78250,
+      "sha1": "df552e153db38cd439a0a4e33572a3fc34ed00b2"
+    },
+    {
+      "path": "public/imagenes-comprimidas/rope.webp",
+      "mtimeMs": 1764110030404.438,
+      "size": 3024,
+      "sha1": "6789bf050b8c9b61455bd512698b0a545abb0e80"
+    },
+    {
+      "path": "public/imagenes-comprimidas/salad-web-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 35140,
+      "sha1": "2878e7d6f4f9633779901ef7507116c636acd7e3"
+    },
+    {
+      "path": "public/imagenes-comprimidas/somosgeek-web-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 45224,
+      "sha1": "0cc6b9f1f44ea73a716eade7d8f45f806158c9ce"
+    },
+    {
+      "path": "public/imagenes-comprimidas/somosgeek.webp",
+      "mtimeMs": 1764110030421.9307,
+      "size": 10340,
+      "sha1": "41470c05f546d7d06e87d71c9908bf6395effe58"
+    },
+    {
+      "path": "public/imagenes-comprimidas/WeLoveCode-logo-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 8512,
+      "sha1": "ceae63b005990a6a0e8404c6466bd17b5a3afb5e"
+    },
+    {
+      "path": "public/imagenes-comprimidas/WeLoveCode-logo.webp",
+      "mtimeMs": 1764121808000,
+      "size": 10308,
+      "sha1": "10065b772e138f5c55ef5df6580737f1f8f0a6e1"
+    },
+    {
+      "path": "public/imagenes-comprimidas/zephir-web-movil-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 71888,
+      "sha1": "d05c64fd4458cfefb5a17e15fd38012610c4b8ac"
+    },
+    {
+      "path": "public/imagenes-comprimidas/Zephir.webp",
+      "mtimeMs": 1764121808000,
+      "size": 71888,
+      "sha1": "d05c64fd4458cfefb5a17e15fd38012610c4b8ac"
+    },
+    {
+      "path": "public/jessica.webp",
+      "mtimeMs": 1764121808000,
+      "size": 51314,
+      "sha1": "8a0db8a1c408334d2e6b861add10da16c679df19"
+    },
+    {
+      "path": "public/joan.webp",
+      "mtimeMs": 1764121808000,
+      "size": 27202,
+      "sha1": "7c7900ca450321cc42ba6f6fd60ccc43bb305702"
+    },
+    {
+      "path": "public/logo-app.webp",
+      "mtimeMs": 1764121808000,
+      "size": 12650,
+      "sha1": "218f6c0d3f2ff66a4afbfffa5d994974688973d5"
+    },
+    {
+      "path": "public/logo-regalazo.webp",
+      "mtimeMs": 1764105347394.0999,
+      "size": 44008,
+      "sha1": "7c69d6881b94ac06f5854a853f399a0084f99863"
+    },
+    {
+      "path": "public/Logo-s-fondo-blanco.webp",
+      "mtimeMs": 1764121808000,
+      "size": 41750,
+      "sha1": "213d54645bf034aff0984802a74adf9f74aaf780"
+    },
+    {
+      "path": "public/Logo-s-fondo.webp",
+      "mtimeMs": 1764121808000,
+      "size": 37630,
+      "sha1": "74c82f937289098f258699d891bcc481c9bf8587"
+    },
+    {
+      "path": "public/manifest.json",
+      "mtimeMs": 1763621085058.9453,
+      "size": 1667,
+      "sha1": "32a03cbbac4812a2b590b8b5a3890d910812fecb"
+    },
+    {
+      "path": "public/mercado-admin-0.webp",
+      "mtimeMs": 1764121808000,
+      "size": 59150,
+      "sha1": "8c104ce4c48ec515e1075b1fb60231626f535599"
+    },
+    {
+      "path": "public/mercado-admin-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 155830,
+      "sha1": "baa7018b8d405b89aa98d4f89b797ff2adf8618a"
+    },
+    {
+      "path": "public/mercado-app-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 110402,
+      "sha1": "7cb1857070c67c03fdcaf0d1935ea1149e175709"
+    },
+    {
+      "path": "public/mercado-app-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 52160,
+      "sha1": "927d363ed4e57fdac7183987e6b253b0b7f60f7b"
+    },
+    {
+      "path": "public/mercado-app-3.webp",
+      "mtimeMs": 1764121808000,
+      "size": 144212,
+      "sha1": "ee6d7f1696679795de3b1fe34d32c685a7853f29"
+    },
+    {
+      "path": "public/mercado-app-5.webp",
+      "mtimeMs": 1764121808000,
+      "size": 49792,
+      "sha1": "e8247f577f2716afbeb710edc6779de8bb35f13c"
+    },
+    {
+      "path": "public/mercado-app-7.webp",
+      "mtimeMs": 1764121808000,
+      "size": 50590,
+      "sha1": "3eda6742a5aa793173b9fd32720f55daad09d67e"
+    },
+    {
+      "path": "public/mercado-app-8.webp",
+      "mtimeMs": 1764121808000,
+      "size": 74658,
+      "sha1": "f77e719f50075d70c56486acb79fbc3e1bc2b021"
+    },
+    {
+      "path": "public/mercado-cliente.webp",
+      "mtimeMs": 1764121808000,
+      "size": 67384,
+      "sha1": "4fba47a00ce6d1cb06065b964d55d53812c22313"
+    },
+    {
+      "path": "public/mercado-landing-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 95004,
+      "sha1": "580dc8208bb1c4fbfeb7b8d09ed2a3c889941b0f"
+    },
+    {
+      "path": "public/mercado-logo.svg",
+      "mtimeMs": 1757797845832.8333,
+      "size": 9787,
+      "sha1": "91695f8f6565702a70749924b55f0af24a6eae13"
+    },
+    {
+      "path": "public/mercado-logo.webp",
+      "mtimeMs": 1764121808000,
+      "size": 4362,
+      "sha1": "d7e869e6ca889177e3110c5d2f405af45a63f1d6"
+    },
+    {
+      "path": "public/mercado-proveedor.webp",
+      "mtimeMs": 1764121808000,
+      "size": 91162,
+      "sha1": "2515c6f4b67708021c838fd43386cd01819d4526"
+    },
+    {
+      "path": "public/mercado-web-laptop-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 38392,
+      "sha1": "e390b74a005b24c7dcb581a70d0d3cc5b093d47a"
+    },
+    {
+      "path": "public/mercado-web-laptop-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 34196,
+      "sha1": "0b87c8ce7b94f8bc18f840f2fbf288858dd16b57"
+    },
+    {
+      "path": "public/mercado-web-movil-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 46790,
+      "sha1": "cbf103a64a92b5ca6f4645c9b54f8b21e8a84c44"
+    },
+    {
+      "path": "public/mercado-web-movil-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 81090,
+      "sha1": "437d9dd783a37e59cb2c572c54ce3e44a64eb7e9"
+    },
+    {
+      "path": "public/mercado-web-movil-3.webp",
+      "mtimeMs": 1764121808000,
+      "size": 44726,
+      "sha1": "21f6f92f6e110de43ee4f2cac07f43676e4ebc5b"
+    },
+    {
+      "path": "public/mercadoalamano-app-video.mp4",
+      "mtimeMs": 1761248903095.5476,
+      "size": 933048,
+      "sha1": "7cf25a4b47e734b1801811e47e4af38e3b2028c6"
+    },
+    {
+      "path": "public/mercadoalamano-web-video.mp4",
+      "mtimeMs": 1761248481860.4082,
+      "size": 1918109,
+      "sha1": "9f8ae9646c1268f08293276189d880e9bbd01af0"
+    },
+    {
+      "path": "public/poramoralcampo-app.webp",
+      "mtimeMs": 1764121808000,
+      "size": 118100,
+      "sha1": "ab52b4dd64fdde90dc40369809d155f156e0be80"
+    },
+    {
+      "path": "public/poramoralcampo-icono.webp",
+      "mtimeMs": 1764121808000,
+      "size": 12944,
+      "sha1": "2459a1b0783f9c71a5a7337c26a31b9e6fbf0358"
+    },
+    {
+      "path": "public/poramoralcampo-logo-blanco.webp",
+      "mtimeMs": 1764121808000,
+      "size": 46480,
+      "sha1": "1fd82e533adbf55b615819e935a7ca6f43d0bca8"
+    },
+    {
+      "path": "public/poramoralcampo-logo.webp",
+      "mtimeMs": 1764121808000,
+      "size": 63166,
+      "sha1": "854742383933e2704218761e554fa16497675d04"
+    },
+    {
+      "path": "public/poramoralcampo-web.webp",
+      "mtimeMs": 1764121808000,
+      "size": 55392,
+      "sha1": "6ffb6d91621f7619c8a215edc3bdd9dd787b5ee8"
+    },
+    {
+      "path": "public/programador-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 95470,
+      "sha1": "841d2a690ed39b0f00688e3ce1c3861388bc73ec"
+    },
+    {
+      "path": "public/programmer-cartoon.webp",
+      "mtimeMs": 1764121808000,
+      "size": 166094,
+      "sha1": "44d1df4106e6516ad5f270273eb196debfdf9768"
+    },
+    {
+      "path": "public/programmer.webp",
+      "mtimeMs": 1764121808000,
+      "size": 173676,
+      "sha1": "322423d45998d748e9ee563b2ce093384a27b2a3"
+    },
+    {
+      "path": "public/regalazo-web-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 41630,
+      "sha1": "ed803000f826b795dcbff3d876da54588c56ea5d"
+    },
+    {
+      "path": "public/regalazo-web-video.mp4",
+      "mtimeMs": 1761248239074.3994,
+      "size": 1330622,
+      "sha1": "bad8f17463873b127976a6d1cc99bd69a9ec2c80"
+    },
+    {
+      "path": "public/regalazo.webp",
+      "mtimeMs": 1764110030389.264,
+      "size": 4352,
+      "sha1": "89a161704cb30675e548aa26b56ae8c1d7b11b1c"
+    },
+    {
+      "path": "public/renovacion-appicon.webp",
+      "mtimeMs": 1764121808000,
+      "size": 6776,
+      "sha1": "62ec7f813b7d7980c803a85df6333e9b3bcfac3e"
+    },
+    {
+      "path": "public/renovacion-logo.webp",
+      "mtimeMs": 1764121808000,
+      "size": 173144,
+      "sha1": "28faebede3c87b0deb8b1a3c0f1539242a1fd781"
+    },
+    {
+      "path": "public/renovacion-web.webp",
+      "mtimeMs": 1764121808000,
+      "size": 40106,
+      "sha1": "a76cbed4163da92b6ce11f5c51453391f19d609b"
+    },
+    {
+      "path": "public/rilsa-logo.webp",
+      "mtimeMs": 1764121808000,
+      "size": 42570,
+      "sha1": "9646410670434142e00b6799e71ecb7d375a536f"
+    },
+    {
+      "path": "public/rilsa-web-laptop-0.webp",
+      "mtimeMs": 1764121808000,
+      "size": 60788,
+      "sha1": "c372368aef0a7e93df53aa66932e210c23a1fea7"
+    },
+    {
+      "path": "public/rilsa-web-laptop-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 62834,
+      "sha1": "cea5bdd445725b9cb8111b62094c94c6e438cd8e"
+    },
+    {
+      "path": "public/rilsa-web-laptop-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 51872,
+      "sha1": "cfcc47aaf090942d9becc6830167ef1aab5135e5"
+    },
+    {
+      "path": "public/rilsa-web-movil-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 66174,
+      "sha1": "ed0e134b283f60dd0687f5f318d76627faeca924"
+    },
+    {
+      "path": "public/rilsa-web-movil-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 86736,
+      "sha1": "ec7643e2b4b19dccfd6bcb8001e5c532382727e4"
+    },
+    {
+      "path": "public/rope-web-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 78250,
+      "sha1": "df552e153db38cd439a0a4e33572a3fc34ed00b2"
+    },
+    {
+      "path": "public/rope-web-video.mp4",
+      "mtimeMs": 1761248599369.8865,
+      "size": 977168,
+      "sha1": "85d96bc15dc59d32dc397d2f3dc02c65b6f8286a"
+    },
+    {
+      "path": "public/rope.webp",
+      "mtimeMs": 1764110030404.438,
+      "size": 3024,
+      "sha1": "6789bf050b8c9b61455bd512698b0a545abb0e80"
+    },
+    {
+      "path": "public/salad-bowl-web-video.mp4",
+      "mtimeMs": 1761247918939.7014,
+      "size": 2621007,
+      "sha1": "a1ec133c50c15a7db6b54865b756e14546fafbd9"
+    },
+    {
+      "path": "public/salad-web-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 35140,
+      "sha1": "2878e7d6f4f9633779901ef7507116c636acd7e3"
+    },
+    {
+      "path": "public/somosgeek-web-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 45224,
+      "sha1": "0cc6b9f1f44ea73a716eade7d8f45f806158c9ce"
+    },
+    {
+      "path": "public/somosgeek-web-video.mp4",
+      "mtimeMs": 1761248416292.4678,
+      "size": 2045372,
+      "sha1": "8d566d9fb1ebe6b2803be0059326ec05677d9da9"
+    },
+    {
+      "path": "public/somosgeek.webp",
+      "mtimeMs": 1764110030421.9307,
+      "size": 10340,
+      "sha1": "41470c05f546d7d06e87d71c9908bf6395effe58"
+    },
+    {
+      "path": "public/WeLoveCode-logo-2.webp",
+      "mtimeMs": 1764121808000,
+      "size": 8512,
+      "sha1": "ceae63b005990a6a0e8404c6466bd17b5a3afb5e"
+    },
+    {
+      "path": "public/WeLoveCode-logo.webp",
+      "mtimeMs": 1764121808000,
+      "size": 10308,
+      "sha1": "10065b772e138f5c55ef5df6580737f1f8f0a6e1"
+    },
+    {
+      "path": "public/yoFoto.webp",
+      "mtimeMs": 1764121808000,
+      "size": 76982,
+      "sha1": "809ffb7418f9fd3a75d536b32e4c081e2fbf01f4"
+    },
+    {
+      "path": "public/zephir-web-movil-1.webp",
+      "mtimeMs": 1764121808000,
+      "size": 71888,
+      "sha1": "d05c64fd4458cfefb5a17e15fd38012610c4b8ac"
+    },
+    {
+      "path": "public/Zephir.webp",
+      "mtimeMs": 1764121808000,
+      "size": 71888,
+      "sha1": "d05c64fd4458cfefb5a17e15fd38012610c4b8ac"
+    },
+    {
+      "path": "README.md",
+      "mtimeMs": 1757960477558.9219,
+      "size": 799,
+      "sha1": "29ec875cba51635f900986a72f57ecb378b1278a"
+    },
+    {
+      "path": "SEO-MEJORAS.md",
+      "mtimeMs": 1760113303750.3396,
+      "size": 6425,
+      "sha1": "1626e6a8d9e651056280ae91a1c0f39344b23aec"
+    },
+    {
+      "path": "SEO-OPTIMIZATION-GUIDE.md",
+      "mtimeMs": 1763620561929.0034,
+      "size": 6845,
+      "sha1": "d5c33a3bf384cfe6e56bf3978f736a296ecfb8ee"
+    },
+    {
+      "path": "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+      "mtimeMs": 1771531687444.583,
+      "size": 19300,
+      "sha1": "7ca91065f7d6ebea5da49f37521bab2b0e4912ff"
+    },
+    {
+      "path": "src/app/admin/cotizador/[clientId]/page.tsx",
+      "mtimeMs": 1771531512413.2585,
+      "size": 98677,
+      "sha1": "99c93b38e388a298eab5773675fee2fef99bce00"
+    },
+    {
+      "path": "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+      "mtimeMs": 1771497390399.2854,
+      "size": 28518,
+      "sha1": "6d045b39d22801d31ab80c45f45a344816c967f5"
+    },
+    {
+      "path": "src/app/admin/page.tsx",
+      "mtimeMs": 1771531700899.151,
+      "size": 57323,
+      "sha1": "2ee068781bcb2d470be939815f82538dfdecbb90"
+    },
+    {
+      "path": "src/app/api/auth/route.ts",
+      "mtimeMs": 1771529756220.4856,
+      "size": 4640,
+      "sha1": "dae5d91a28557d581c231d414e99d036475e38b9"
+    },
+    {
+      "path": "src/app/api/client/preferences/route.ts",
+      "mtimeMs": 1771493473022.9004,
+      "size": 1843,
+      "sha1": "946690b84dff122f2c0ae15b036828200793f6dc"
+    },
+    {
+      "path": "src/app/api/client/route.ts",
+      "mtimeMs": 1771536837237.7646,
+      "size": 8545,
+      "sha1": "0a6bea8e75a2bda34be146b913915768337e5c0d"
+    },
+    {
+      "path": "src/app/api/clients/ai/route.ts",
+      "mtimeMs": 1771366315662.2446,
+      "size": 8428,
+      "sha1": "df3781a1039a5441fecd4516046877215d9a28b2"
+    },
+    {
+      "path": "src/app/api/clients/route.ts",
+      "mtimeMs": 1771529637046.0608,
+      "size": 2427,
+      "sha1": "661e7f216e3833d27ae0380f162a1f1af9547201"
+    },
+    {
+      "path": "src/app/api/migrate/route.ts",
+      "mtimeMs": 1771440700451.0513,
+      "size": 612,
+      "sha1": "d7b4eb3e83dcde1227c53a47e1a68898c8196807"
+    },
+    {
+      "path": "src/app/api/modules/route.ts",
+      "mtimeMs": 1771354741413.516,
+      "size": 948,
+      "sha1": "8d9944058f4cd49aaa8aeb93b6638bf47b988978"
+    },
+    {
+      "path": "src/app/api/modules/seed/route.ts",
+      "mtimeMs": 1771481481146.7595,
+      "size": 45105,
+      "sha1": "87fb92315992607e5065b164eaa4388f274a63bf"
+    },
+    {
+      "path": "src/app/api/questionnaire/route.ts",
+      "mtimeMs": 1770901873223.7668,
+      "size": 3166,
+      "sha1": "c1658c1c100d5a36063b6c5e50acda051b082b27"
+    },
+    {
+      "path": "src/app/api/quotes/ai/route.ts",
+      "mtimeMs": 1771479114402.966,
+      "size": 10166,
+      "sha1": "ff3817b00b024495b0ef82f58352150424294ca2"
+    },
+    {
+      "path": "src/app/api/quotes/pdf/route.ts",
+      "mtimeMs": 1771536959108.1091,
+      "size": 14925,
+      "sha1": "3a93053173d51ab53261dae9bc68c86c1ad6d56f"
+    },
+    {
+      "path": "src/app/api/quotes/public/route.ts",
+      "mtimeMs": 1771451306596.212,
+      "size": 5172,
+      "sha1": "acc08e889bffc05a9c085f22a60ee37415b6b799"
+    },
+    {
+      "path": "src/app/api/quotes/route.ts",
+      "mtimeMs": 1771531550288.2534,
+      "size": 16109,
+      "sha1": "a869ef51bbf22ac819dca405a0dbc91fbd7dd535"
+    },
+    {
+      "path": "src/app/api/seed/route.ts",
+      "mtimeMs": 1771316896044.9978,
+      "size": 3969,
+      "sha1": "6108bd008b9fcbab58d2439506e26b7c33bc1980"
+    },
+    {
+      "path": "src/app/api/services/route.ts",
+      "mtimeMs": 1770889400877.9863,
+      "size": 6654,
+      "sha1": "84d4921bb8536439d0ec76f4c9c67676d2fb1e94"
+    },
+    {
+      "path": "src/app/api/stages/route.ts",
+      "mtimeMs": 1771440726882.842,
+      "size": 5502,
+      "sha1": "a6feaf0544171c41fd141a44639d03600d22a3ed"
+    },
+    {
+      "path": "src/app/blog/[slug]/page.tsx",
+      "mtimeMs": 1763623774980.6548,
+      "size": 12383,
+      "sha1": "ffc5c4f7ec41b1152a84fbf62c97719606198512"
+    },
+    {
+      "path": "src/app/blog/page.tsx",
+      "mtimeMs": 1763623702813.8398,
+      "size": 5912,
+      "sha1": "c9296cc7ab01eee8041bebb2b844b6131c31dd37"
+    },
+    {
+      "path": "src/app/cliente/page.tsx",
+      "mtimeMs": 1771541613860.328,
+      "size": 90896,
+      "sha1": "15cea6fa153ddea72a8b833101106b86c207cd0b"
+    },
+    {
+      "path": "src/app/ClientLayout.tsx",
+      "mtimeMs": 1771488912024.767,
+      "size": 13646,
+      "sha1": "8862cd58ae023291ab80849c30fb66959ebe128a"
+    },
+    {
+      "path": "src/app/cotizacion-marco&carlos/layout.tsx",
+      "mtimeMs": 1770243489395.9055,
+      "size": 1320,
+      "sha1": "8badfe8586b26f2349885040cf402c3cef6091c9"
+    },
+    {
+      "path": "src/app/cotizacion-marco&carlos/page.tsx",
+      "mtimeMs": 1770247024726.5332,
+      "size": 18478,
+      "sha1": "f987bc6dbf5e6562731f71b9ea785aa4a76ac85f"
+    },
+    {
+      "path": "src/app/cotizacion/[token]/page.tsx",
+      "mtimeMs": 1771446808463.248,
+      "size": 21686,
+      "sha1": "543cf326fdc7483bf0f3839758547672dcc3e330"
+    },
+    {
+      "path": "src/app/favicon.ico",
+      "mtimeMs": 1757799280088.0913,
+      "size": 15406,
+      "sha1": "976aa33f69680fcff01de79e49e55d5bf6ac7d31"
+    },
+    {
+      "path": "src/app/globals.css",
+      "mtimeMs": 1771445406755.4905,
+      "size": 2791,
+      "sha1": "2a3b0f9207b2f7b30fa472e0d18eebdb463e7b5c"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "mtimeMs": 1764110667393.7996,
+      "size": 25995,
+      "sha1": "d8f9187f23605a9055c076658c04d4a5d6992d75"
+    },
+    {
+      "path": "src/app/login/page.tsx",
+      "mtimeMs": 1771445243709.4492,
+      "size": 5465,
+      "sha1": "5bf9d2a71b09686e9cadb332cd6b2394342f14eb"
+    },
+    {
+      "path": "src/app/nosotros/page.tsx",
+      "mtimeMs": 1764100593142.0662,
+      "size": 7411,
+      "sha1": "e0b703d95705b774e524e62c7494fee1c9233614"
+    },
+    {
+      "path": "src/app/not-found.tsx",
+      "mtimeMs": 1763621184567.0842,
+      "size": 2891,
+      "sha1": "669dc2e5ec77dd61ba0ec7af4760ccf1fc302b6b"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "mtimeMs": 1764110418630.2388,
+      "size": 3521,
+      "sha1": "04dbd618859a9fe98c7cac3e3e2f566a33a7a1af"
+    },
+    {
+      "path": "src/app/precios/page.tsx",
+      "mtimeMs": 1763625666659.5745,
+      "size": 34853,
+      "sha1": "12f62a8ee05a231084dff7888ec97788857a2ae6"
+    },
+    {
+      "path": "src/app/precios/precios-white.css",
+      "mtimeMs": 1763625414106.0715,
+      "size": 1687,
+      "sha1": "0cc88896f6b043fa1109eb892fc19a543ba3ef39"
+    },
+    {
+      "path": "src/app/proyectos/[id]/page.tsx",
+      "mtimeMs": 1764101147242.8386,
+      "size": 26420,
+      "sha1": "9fbc21677aa498e68c1ee3eec3c5596f267bc5c9"
+    },
+    {
+      "path": "src/app/proyectos/page.tsx",
+      "mtimeMs": 1761239167840.3582,
+      "size": 1455,
+      "sha1": "3ec63f3c814d4fef01e725c72bbc4a314c714e8b"
+    },
+    {
+      "path": "src/app/q/[token]/page.tsx",
+      "mtimeMs": 1771367726363.3154,
+      "size": 32867,
+      "sha1": "465c617d162cdddc76fdc8828044a72f23ae0bc7"
+    },
+    {
+      "path": "src/app/robots.ts",
+      "mtimeMs": 1760113255683.932,
+      "size": 260,
+      "sha1": "633fa733501bee4f85a4417ef92b7829814d5b64"
+    },
+    {
+      "path": "src/app/servicios/[id]/page.tsx",
+      "mtimeMs": 1764110517062.786,
+      "size": 45588,
+      "sha1": "740b4749e030822808317817f3d0d2ea9237ce84"
+    },
+    {
+      "path": "src/app/sitemap.ts",
+      "mtimeMs": 1763623783270.7202,
+      "size": 1531,
+      "sha1": "87d302e9c4ce11c7fc4fb006baa5c1dc8b7f7785"
+    },
+    {
+      "path": "src/app/wa/page.tsx",
+      "mtimeMs": 1758060307289.2244,
+      "size": 2540,
+      "sha1": "8a5a928fcdf46edfc72c5868c45b081a8c3a9d83"
+    },
+    {
+      "path": "src/app/whatsapp-redirect/page.tsx",
+      "mtimeMs": 1758060301487.8296,
+      "size": 1823,
+      "sha1": "294fe279f176344ccc640094e62247bfd4c10cb1"
+    },
+    {
+      "path": "src/app/whatsapp-sent/page.tsx",
+      "mtimeMs": 1759188138641.6006,
+      "size": 3548,
+      "sha1": "f139bdc2b93de1ce23e455c9f660e894f095d4fb"
+    },
+    {
+      "path": "src/components/Analytics.tsx",
+      "mtimeMs": 1763629361262.9988,
+      "size": 2189,
+      "sha1": "ba2ad7b869f68b261c0fd0368f7cde9895ce998c"
+    },
+    {
+      "path": "src/components/BreadcrumbSchema.tsx",
+      "mtimeMs": 1763621041328.3945,
+      "size": 659,
+      "sha1": "a16a1fdeb93b838523ca3243872fb05f12b1ff94"
+    },
+    {
+      "path": "src/components/CounterAnimation.tsx",
+      "mtimeMs": 1757797088478.0647,
+      "size": 1742,
+      "sha1": "71a7d25b45748991262e32668eaed012071426bc"
+    },
+    {
+      "path": "src/components/ExamplesCarousel.tsx",
+      "mtimeMs": 1764110502001.8733,
+      "size": 12933,
+      "sha1": "f6bdba2c56b1a629c2cd6b6720e1ea9dad58bbd9"
+    },
+    {
+      "path": "src/components/FAQSchema.tsx",
+      "mtimeMs": 1763623074174.044,
+      "size": 4164,
+      "sha1": "8c8ef604184e3f67930f8ce64d7913ed5fbf7d98"
+    },
+    {
+      "path": "src/components/InfiniteCarousel.tsx",
+      "mtimeMs": 1759868490480.654,
+      "size": 1725,
+      "sha1": "8f80b77485d72c2d96327af05900e84e7297365f"
+    },
+    {
+      "path": "src/components/LazyImage.tsx",
+      "mtimeMs": 1764110685046.7214,
+      "size": 2319,
+      "sha1": "718f758ad59dcbcdab53a00819f5421ae8cbd826"
+    },
+    {
+      "path": "src/components/LazyVideo.tsx",
+      "mtimeMs": 1764110646481.7412,
+      "size": 1980,
+      "sha1": "3a564c68c3a2620246d1946c99a24c0e435d9765"
+    },
+    {
+      "path": "src/components/LocalBusinessSchema.tsx",
+      "mtimeMs": 1764101129588.3093,
+      "size": 4957,
+      "sha1": "9ef4a251b96134b2d87cf170210cca5e5578c651"
+    },
+    {
+      "path": "src/components/PaymentOptionsSection.tsx",
+      "mtimeMs": 1763625187371.9646,
+      "size": 18395,
+      "sha1": "0b81699588c0815f81413253eefce038563fd379"
+    },
+    {
+      "path": "src/components/PortfolioSection.tsx",
+      "mtimeMs": 1764110526497.8777,
+      "size": 5354,
+      "sha1": "6a9fcd99d6f3c0c892aeb68a53e4f78a54f2a5c9"
+    },
+    {
+      "path": "src/components/ProjectForm.tsx",
+      "mtimeMs": 1761243878029.7207,
+      "size": 9649,
+      "sha1": "41b3346a72951d2912f386a1cbf3da7a38362770"
+    },
+    {
+      "path": "src/components/ProjectsCarousel.tsx",
+      "mtimeMs": 1764110475432.6567,
+      "size": 6528,
+      "sha1": "9fb05176d19d5bb7369a6dca9e93e36e9bebcaa0"
+    },
+    {
+      "path": "src/components/ServiceIcons.tsx",
+      "mtimeMs": 1760127077879.8755,
+      "size": 6104,
+      "sha1": "f9ff7c906294ec8952e21392de888f4c6126de41"
+    },
+    {
+      "path": "src/components/ServicesSection.tsx",
+      "mtimeMs": 1764110459891.7622,
+      "size": 9165,
+      "sha1": "0df5f78a50f4ee004fd15ba1887e07f8a6cbe988"
+    },
+    {
+      "path": "src/components/StatsBar.tsx",
+      "mtimeMs": 1761261171804.5947,
+      "size": 1990,
+      "sha1": "af012f1f668d803697b4728ca27c7725e34050fc"
+    },
+    {
+      "path": "src/components/TechCarousel.tsx",
+      "mtimeMs": 1761241788453.3228,
+      "size": 866,
+      "sha1": "b4260d43a179b06a9425f7409e038961231ca479"
+    },
+    {
+      "path": "src/components/TechnologiesSection.tsx",
+      "mtimeMs": 1761281262763.5752,
+      "size": 2147,
+      "sha1": "9cc72d3447c8f0491742fab284c4b29f595d1b56"
+    },
+    {
+      "path": "src/components/TestimonialsModal.tsx",
+      "mtimeMs": 1763623667095.0393,
+      "size": 4885,
+      "sha1": "c5c5f3fb2b5a82de495e5f50251889a6dcb8db7f"
+    },
+    {
+      "path": "src/components/TypewriterHero.tsx",
+      "mtimeMs": 1764110443960.4695,
+      "size": 11459,
+      "sha1": "28bc7b678fc2c5f8a88bd57ca47622dfb851a78e"
+    },
+    {
+      "path": "src/components/WhatsAppFloatingButton.tsx",
+      "mtimeMs": 1763621795662.499,
+      "size": 4049,
+      "sha1": "9b6ae0448a8317c45b0a66a05044da360cda2cb4"
+    },
+    {
+      "path": "src/components/WhatsAppModal.tsx",
+      "mtimeMs": 1757986620140.3752,
+      "size": 9451,
+      "sha1": "9efc24faf00b180ac680eb5c2d7648ef4a90f1e1"
+    },
+    {
+      "path": "src/data/packages.ts",
+      "mtimeMs": 1757986600621.219,
+      "size": 3155,
+      "sha1": "47154a75f2e14e4c6cc857b56fbef4d5e40c21ac"
+    },
+    {
+      "path": "src/data/projects.ts",
+      "mtimeMs": 1764110174876.942,
+      "size": 21473,
+      "sha1": "fd944f16b2338eaaa9f5e889fe5dc2e9e8d8574e"
+    },
+    {
+      "path": "src/data/services.ts",
+      "mtimeMs": 1764101146823.4695,
+      "size": 9677,
+      "sha1": "9b1ac6989a78f68f645b9d0dec43a86c653c556b"
+    },
+    {
+      "path": "src/hooks/useCountAnimation.ts",
+      "mtimeMs": 1759771669428.9126,
+      "size": 993,
+      "sha1": "d49e97020d1c8c92999607f4a1aa0ff90ae9884a"
+    },
+    {
+      "path": "src/hooks/useScrollAnimation.ts",
+      "mtimeMs": 1759771410077.1902,
+      "size": 672,
+      "sha1": "5d43d3e19c118f0f7c0a10cfa8f5db1b6c1b119d"
+    },
+    {
+      "path": "src/lib/auth.ts",
+      "mtimeMs": 1771440626015.9067,
+      "size": 1056,
+      "sha1": "48e0cd9a3a1d4e02ff784dab5bd54b75d85e29aa"
+    },
+    {
+      "path": "src/lib/prisma.ts",
+      "mtimeMs": 1770881318501.4226,
+      "size": 284,
+      "sha1": "ab806c691cd09934757e30afee99033f82c5fe7e"
+    },
+    {
+      "path": "src/middleware.ts",
+      "mtimeMs": 1771440672143.7678,
+      "size": 1814,
+      "sha1": "55c22b682fd50143d4b8b3be5626abf17e6d7ea8"
+    },
+    {
+      "path": "tailwind.config.ts",
+      "mtimeMs": 1761240284859.684,
+      "size": 3078,
+      "sha1": "d07485f52989fe2480d524268cd52c30813573b3"
+    },
+    {
+      "path": "tsconfig.json",
+      "mtimeMs": 1747689250847.8506,
+      "size": 578,
+      "sha1": "71beb4ab458ca43ab89af60332005d5eeb310700"
+    },
+    {
+      "path": "tsconfig.tsbuildinfo",
+      "mtimeMs": 1771541630955.4282,
+      "size": 114357,
+      "sha1": "52478074fad685242ccde1dab48a33542ecfc13f"
+    }
+  ]
+}

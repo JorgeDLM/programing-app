@@ -16,6 +16,8 @@ Structured development workflow with quality gates, MCP services, and multi-mode
 - Structured 6-phase workflow with quality gates
 - Multi-model collaboration: Codex (backend) + Gemini (frontend) + Claude (orchestration)
 - MCP service integration (ace-tool, optional) for enhanced capabilities
+- `PreparedContextPackage` + `WorkingSet` are the primary operational context path
+- Recommended `AI_CONTEXT` docs and previous artifacts must be consumed before broad exploration
 
 ## Your Role
 
@@ -26,6 +28,12 @@ You are the **Orchestrator**, coordinating a multi-model collaborative system (R
 - **Codex** – Backend logic, algorithms, debugging (**Backend authority, trustworthy**)
 - **Gemini** – Frontend UI/UX, visual design (**Frontend expert, backend opinions for reference only**)
 - **Claude (self)** – Orchestration, planning, execution, delivery
+
+**Context Rules**:
+- New tasks should enter through `node scripts/context-prepare.js`
+- Execution should start from `WorkingSet` and recommended docs
+- If context is missing, use `node scripts/context-expand.js` before any broad search
+- Broad search is compatibility-only, never the default operational path
 
 ---
 
@@ -109,6 +117,25 @@ Use external tmux/worktree orchestration when the work must be split across para
 node scripts/orchestrate-worktrees.js .claude/plan/workflow-e2e-test.json --execute
 ```
 
+Preferred plan contract for external orchestration:
+
+```json
+{
+  "sessionName": "feature-billing-fix",
+  "repoRoot": ".",
+  "contextTask": "$ARGUMENTS",
+  "launcherCommand": "echo run",
+  "workers": [
+    {
+      "name": "Backend",
+      "task": "Implement the bounded backend changes first"
+    }
+  ]
+}
+```
+
+`orchestrate-worktrees` will prepare context automatically when `contextTask` is present.
+
 ---
 
 ## Execution Workflow
@@ -120,8 +147,10 @@ node scripts/orchestrate-worktrees.js .claude/plan/workflow-e2e-test.json --exec
 `[Mode: Research]` - Understand requirements and gather context:
 
 1. **Prompt Enhancement** (if ace-tool MCP available): Call `mcp__ace-tool__enhance_prompt`, **replace original $ARGUMENTS with enhanced result for all subsequent Codex/Gemini calls**. If unavailable, use `$ARGUMENTS` as-is.
-2. **Context Retrieval** (if ace-tool MCP available): Call `mcp__ace-tool__search_context`. If unavailable, use built-in tools: `Glob` for file discovery, `Grep` for symbol search, `Read` for context gathering, `Task` (Explore agent) for deeper exploration.
-3. **Requirement Completeness Score** (0-10):
+2. **Prepared Context Bootstrap**: Generate or load a `PreparedContextPackage` with `node scripts/context-prepare.js`, then work from `WorkingSet`, recommended docs, and previous artifacts first.
+3. **Controlled Expansion**: If bounded context is insufficient, request `node scripts/context-expand.js` before any broad search.
+4. **Compatibility Retrieval Only If Needed**: If ace-tool MCP is available, call `mcp__ace-tool__search_context` only after the prepared context path is exhausted or denied. If unavailable, use built-in tools only as fallback.
+5. **Requirement Completeness Score** (0-10):
    - Goal clarity (0-3), Expected outcome (0-3), Scope boundaries (0-2), Constraints (0-2)
    - ≥7: Continue | <7: Stop, ask clarifying questions
 
@@ -132,6 +161,14 @@ node scripts/orchestrate-worktrees.js .claude/plan/workflow-e2e-test.json --exec
 **Parallel Calls** (`run_in_background: true`):
 - Codex: Use analyzer prompt, output technical feasibility, solutions, risks
 - Gemini: Use analyzer prompt, output UI feasibility, solutions, UX evaluation
+
+Each model should receive the bounded context package first:
+
+- `PreparedContextPackage`
+- `WorkingSet`
+- recommended docs
+- previous artifacts
+- expansion budget / protocol
 
 Wait for results with `TaskOutput`. **Save SESSION_ID** (`CODEX_SESSION` and `GEMINI_SESSION`).
 
@@ -152,6 +189,13 @@ Wait for results with `TaskOutput`.
 **Follow the `IMPORTANT` instructions in `Multi-Model Call Specification` above**
 
 **Claude Synthesis**: Adopt Codex backend plan + Gemini frontend plan, save to `.claude/plan/task-name.md` after user approval.
+
+The synthesized plan should keep the context contract explicit:
+
+- where the `PreparedContextPackage` came from
+- what the current `WorkingSet` is
+- what docs are recommended
+- how controlled expansion should be requested during execution
 
 ### Phase 4: Implementation
 
@@ -189,3 +233,5 @@ Wait for results with `TaskOutput`. Integrate review feedback, execute optimizat
 1. Phase sequence cannot be skipped (unless user explicitly instructs)
 2. External models have **zero filesystem write access**, all modifications by Claude
 3. **Force stop** when score < 7 or user does not approve
+4. `PreparedContextPackage` and `WorkingSet` are the preferred path for new tasks
+5. Broad search is never the default operational path

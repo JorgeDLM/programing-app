@@ -1,0 +1,346 @@
+{
+  "schemaVersion": "ecc.tree-summary.v1",
+  "generatedAt": "2026-03-21T10:24:12.212Z",
+  "repoRoot": "C:\\Users\\UsX\\Desktop\\Proyectos - Desarrollo web\\WeLoveCode - Formulario",
+  "totalFiles": 281,
+  "topLevel": [
+    {
+      "name": "public",
+      "fileCount": 168
+    },
+    {
+      "name": "src",
+      "fileCount": 75
+    },
+    {
+      "name": "AI_CONTEXT",
+      "fileCount": 10
+    },
+    {
+      "name": "prisma",
+      "fileCount": 5
+    },
+    {
+      "name": ".env",
+      "fileCount": 1
+    },
+    {
+      "name": ".eslintrc.json",
+      "fileCount": 1
+    },
+    {
+      "name": ".gitignore",
+      "fileCount": 1
+    },
+    {
+      "name": ".windsurf",
+      "fileCount": 1
+    },
+    {
+      "name": "CAMBIOS-FINALES.md",
+      "fileCount": 1
+    },
+    {
+      "name": "DEPLOYMENT_GUIDE.md",
+      "fileCount": 1
+    },
+    {
+      "name": "DEPLOYMENT-CHECKLIST.md",
+      "fileCount": 1
+    },
+    {
+      "name": "MEJORAS-FINALES-COMPLETAS.md",
+      "fileCount": 1
+    },
+    {
+      "name": "MEJORAS-IMPLEMENTADAS.md",
+      "fileCount": 1
+    },
+    {
+      "name": "netlify.toml",
+      "fileCount": 1
+    },
+    {
+      "name": "next-env.d.ts",
+      "fileCount": 1
+    },
+    {
+      "name": "next.config.mjs",
+      "fileCount": 1
+    },
+    {
+      "name": "OPTIMIZACIONES.md",
+      "fileCount": 1
+    },
+    {
+      "name": "package-lock.json",
+      "fileCount": 1
+    },
+    {
+      "name": "package.json",
+      "fileCount": 1
+    },
+    {
+      "name": "PERFORMANCE-OPTIMIZATION.md",
+      "fileCount": 1
+    },
+    {
+      "name": "postcss.config.mjs",
+      "fileCount": 1
+    },
+    {
+      "name": "README.md",
+      "fileCount": 1
+    },
+    {
+      "name": "SEO-MEJORAS.md",
+      "fileCount": 1
+    },
+    {
+      "name": "SEO-OPTIMIZATION-GUIDE.md",
+      "fileCount": 1
+    },
+    {
+      "name": "tailwind.config.ts",
+      "fileCount": 1
+    },
+    {
+      "name": "tsconfig.json",
+      "fileCount": 1
+    },
+    {
+      "name": "tsconfig.tsbuildinfo",
+      "fileCount": 1
+    }
+  ],
+  "directories": [
+    {
+      "path": "public",
+      "fileCount": 168
+    },
+    {
+      "path": "src",
+      "fileCount": 75
+    },
+    {
+      "path": "public/imagenes-comprimidas",
+      "fileCount": 71
+    },
+    {
+      "path": "src/app",
+      "fileCount": 45
+    },
+    {
+      "path": "src/components",
+      "fileCount": 22
+    },
+    {
+      "path": "src/app/api",
+      "fileCount": 16
+    },
+    {
+      "path": "AI_CONTEXT",
+      "fileCount": 10
+    },
+    {
+      "path": "public/fotos-viejas",
+      "fileCount": 10
+    },
+    {
+      "path": "prisma",
+      "fileCount": 5
+    },
+    {
+      "path": "prisma/migrations",
+      "fileCount": 4
+    },
+    {
+      "path": "src/app/admin",
+      "fileCount": 4
+    },
+    {
+      "path": "src/app/api/quotes",
+      "fileCount": 4
+    },
+    {
+      "path": "src/app/admin/cotizador",
+      "fileCount": 3
+    },
+    {
+      "path": "src/app/admin/cotizador/[clientId]",
+      "fileCount": 3
+    },
+    {
+      "path": "src/data",
+      "fileCount": 3
+    },
+    {
+      "path": "src/app/api/client",
+      "fileCount": 2
+    },
+    {
+      "path": "src/app/api/clients",
+      "fileCount": 2
+    },
+    {
+      "path": "src/app/api/modules",
+      "fileCount": 2
+    },
+    {
+      "path": "src/app/blog",
+      "fileCount": 2
+    },
+    {
+      "path": "src/app/cotizacion-marco&carlos",
+      "fileCount": 2
+    },
+    {
+      "path": "src/app/precios",
+      "fileCount": 2
+    },
+    {
+      "path": "src/app/proyectos",
+      "fileCount": 2
+    },
+    {
+      "path": "src/hooks",
+      "fileCount": 2
+    },
+    {
+      "path": "src/lib",
+      "fileCount": 2
+    },
+    {
+      "path": ".windsurf",
+      "fileCount": 1
+    },
+    {
+      "path": ".windsurf/workflows",
+      "fileCount": 1
+    },
+    {
+      "path": "prisma/migrations/20260211193603_init",
+      "fileCount": 1
+    },
+    {
+      "path": "prisma/migrations/20260217215510_new_pricing_fields",
+      "fileCount": 1
+    },
+    {
+      "path": "prisma/migrations/20260217231503_phase_per_item",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/admin/cotizador/[clientId]/ajustes",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/admin/cotizador/[clientId]/roadmap",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/api/auth",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/api/client/preferences",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/api/clients/ai",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/api/migrate",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/api/modules/seed",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/api/questionnaire",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/api/quotes/ai",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/api/quotes/pdf",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/api/quotes/public",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/api/seed",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/api/services",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/api/stages",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/blog/[slug]",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/cliente",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/cotizacion",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/cotizacion/[token]",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/login",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/nosotros",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/proyectos/[id]",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/q",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/q/[token]",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/servicios",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/servicios/[id]",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/wa",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/whatsapp-redirect",
+      "fileCount": 1
+    },
+    {
+      "path": "src/app/whatsapp-sent",
+      "fileCount": 1
+    }
+  ]
+}

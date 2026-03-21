@@ -50,6 +50,50 @@ function buildSessionBannerCommand(sessionName, coordinationDir) {
   return `printf '%s\\n' ${shellQuote(`Session: ${sessionName}`)} ${shellQuote(`Coordination: ${coordinationDir}`)}`;
 }
 
+function unique(values) {
+  return [...new Set((Array.isArray(values) ? values : []).filter(Boolean))];
+}
+
+function getWorkingSetTransport() {
+  return require('./context/working-set-transport');
+}
+
+function getWorkingSetManager() {
+  return require('./context/working-set-manager');
+}
+
+function resolveConfiguredPreparedContext(config = {}) {
+  if (config.preparedContext && config.preparedContext.workingSet) {
+    return config.preparedContext;
+  }
+
+  return null;
+}
+
+function resolveConfiguredWorkingSet(config = {}, repoRoot) {
+  if (config.preparedContext && config.preparedContext.workingSet) {
+    return getWorkingSetManager().hydrateWorkingSet({
+      ...config.preparedContext.workingSet,
+      repoRoot: config.preparedContext.repo && config.preparedContext.repo.root
+        ? config.preparedContext.repo.root
+        : repoRoot
+    }, {
+      persist: false
+    });
+  }
+
+  if (config.workingSet) {
+    return getWorkingSetManager().hydrateWorkingSet({
+      ...config.workingSet,
+      repoRoot: config.workingSet.repoRoot || config.workingSet.repo && config.workingSet.repo.root || repoRoot
+    }, {
+      persist: false
+    });
+  }
+
+  return null;
+}
+
 function normalizeSeedPaths(seedPaths, repoRoot) {
   const resolvedRepoRoot = path.resolve(repoRoot);
   const entries = Array.isArray(seedPaths) ? seedPaths : [];
@@ -106,11 +150,71 @@ function overlaySeedPaths({ repoRoot, seedPaths, worktreePath }) {
 }
 
 function buildWorkerArtifacts(workerPlan) {
+  const preparedContext = workerPlan.preparedContext || null;
+  const contextRuntime = workerPlan.contextRuntime || {};
+  const recommendedDocs = unique(workerPlan.recommendedDocs || preparedContext && preparedContext.recommendedDocs || []);
+  const relatedArtifacts = unique(workerPlan.relatedArtifacts || []);
+  const allowedExpansion = workerPlan.workingSet && workerPlan.workingSet.allowedExpansion
+    ? workerPlan.workingSet.allowedExpansion
+    : contextRuntime.expansionProtocol && contextRuntime.expansionProtocol.allowedExpansion || {};
   const seededPathsSection = workerPlan.seedPaths.length > 0
     ? [
         '',
         '## Seeded Local Overlays',
         ...workerPlan.seedPaths.map(seedPath => `- \`${seedPath}\``)
+      ]
+    : [];
+  const workingSetSection = workerPlan.workingSet
+    ? [
+        '',
+        '## Enforced Working Set',
+        `- Working set id: \`${workerPlan.workingSet.workingSetId || workerPlan.workingSet.id}\``,
+        `- Files in working set: ${workerPlan.workingSet.files.length}`,
+        `- Expansions remaining: ${workerPlan.workingSet.budget.expansionsRemaining}`,
+        `- Broad searches remaining: ${workerPlan.workingSet.budget.broadSearchesRemaining}`,
+        `- Total files max: ${workerPlan.workingSet.budget.totalFilesMax}`
+      ]
+    : [];
+  const preparedContextSection = preparedContext
+    ? [
+        '',
+        '## Prepared Context',
+        `- Context mode: \`${contextRuntime.contextMode || 'prepared-context'}\``,
+        `- Task context id: \`${preparedContext.taskContextId || contextRuntime.taskContextId || 'n/a'}\``,
+        `- Based on commit: \`${preparedContext.basedOnCommit || preparedContext.cache && preparedContext.cache.basedOnCommit || 'unknown'}\``
+      ]
+    : contextRuntime.contextMode
+      ? [
+          '',
+          '## Prepared Context',
+          `- Context mode: \`${contextRuntime.contextMode}\``,
+          `- Task context id: \`${contextRuntime.taskContextId || 'n/a'}\``
+        ]
+      : [];
+  const recommendedDocsSection = recommendedDocs.length > 0
+    ? [
+        '',
+        '## Recommended AI_CONTEXT',
+        ...recommendedDocs.map(docPath => `- \`${docPath}\``)
+      ]
+    : [];
+  const relatedArtifactsSection = relatedArtifacts.length > 0
+    ? [
+        '',
+        '## Previous Context Artifacts',
+        ...relatedArtifacts.slice(0, 12).map(artifactId => `- \`${artifactId}\``)
+      ]
+    : [];
+  const expansionProtocolSection = workerPlan.workingSet || contextRuntime.expansionProtocol
+    ? [
+        '',
+        '## Expansion Protocol',
+        '- Start with the enforced working set and recommended docs first.',
+        '- If context is insufficient, request controlled expansion before any broad search.',
+        `- Broad search by default: \`${contextRuntime.expansionProtocol && contextRuntime.expansionProtocol.broadSearchByDefault === true}\``,
+        `- Neighbor callsite allowed: \`${Boolean(allowedExpansion.neighborCallsite)}\``,
+        `- Cross-domain allowed: \`${Boolean(allowedExpansion.crossDomain)}\``,
+        `- Repo-wide allowed: \`${Boolean(allowedExpansion.repoWide)}\``
       ]
     : [];
 
@@ -128,6 +232,11 @@ function buildWorkerArtifacts(workerPlan) {
           `- Branch: \`${workerPlan.branchName}\``,
           `- Launcher status file: \`${workerPlan.statusFilePath}\``,
           `- Launcher handoff file: \`${workerPlan.handoffFilePath}\``,
+          ...preparedContextSection,
+          ...workingSetSection,
+          ...recommendedDocsSection,
+          ...relatedArtifactsSection,
+          ...expansionProtocolSection,
           ...seededPathsSection,
           '',
           '## Objective',
@@ -176,7 +285,10 @@ function buildOrchestrationPlan(config = {}) {
   const repoRoot = path.resolve(config.repoRoot || process.cwd());
   const repoName = path.basename(repoRoot);
   const workers = Array.isArray(config.workers) ? config.workers : [];
+  const sharedPreparedContext = resolveConfiguredPreparedContext(config);
+  const sharedWorkingSet = resolveConfiguredWorkingSet(config, repoRoot);
   const globalSeedPaths = normalizeSeedPaths(config.seedPaths, repoRoot);
+  const seenWorkerSlugs = new Set();
   const sessionName = slugify(config.sessionName || repoName, 'session');
   const worktreeRoot = path.resolve(config.worktreeRoot || path.dirname(repoRoot));
   const coordinationRoot = path.resolve(
@@ -197,6 +309,12 @@ function buildOrchestrationPlan(config = {}) {
 
     const workerName = worker.name || `worker-${index + 1}`;
     const workerSlug = slugify(workerName, `worker-${index + 1}`);
+
+    if (seenWorkerSlugs.has(workerSlug)) {
+      throw new Error('buildOrchestrationPlan requires workers to have unique slugs');
+    }
+
+    seenWorkerSlugs.add(workerSlug);
     const branchName = `orchestrator-${sessionName}-${workerSlug}`;
     const worktreePath = path.join(worktreeRoot, `${repoName}-${sessionName}-${workerSlug}`);
     const workerCoordinationDir = path.join(coordinationDir, workerSlug);
@@ -204,9 +322,27 @@ function buildOrchestrationPlan(config = {}) {
     const handoffFilePath = path.join(workerCoordinationDir, 'handoff.md');
     const statusFilePath = path.join(workerCoordinationDir, 'status.md');
     const launcherCommand = worker.launcherCommand || defaultLauncher;
+    const workerPreparedContext = resolveConfiguredPreparedContext(worker) || sharedPreparedContext;
     const workerSeedPaths = normalizeSeedPaths(worker.seedPaths, repoRoot);
-    const seedPaths = normalizeSeedPaths([...globalSeedPaths, ...workerSeedPaths], repoRoot);
-    const templateVariables = {
+    const workerWorkingSet = resolveConfiguredWorkingSet(worker, repoRoot) || sharedWorkingSet;
+    const workerTransport = workerWorkingSet
+      ? getWorkingSetTransport().applyWorkingSetToWorker({ seedPaths: [...globalSeedPaths, ...workerSeedPaths] }, workerWorkingSet, repoRoot)
+      : { seedPaths: normalizeSeedPaths([...globalSeedPaths, ...workerSeedPaths], repoRoot) };
+    const seedPaths = normalizeSeedPaths(workerTransport.seedPaths, repoRoot);
+    const recommendedDocs = unique(
+      worker.recommendedDocs
+      || workerPreparedContext && workerPreparedContext.recommendedDocs
+      || workerWorkingSet && workerWorkingSet.docs
+      || []
+    );
+    const relatedArtifacts = unique([
+      ...(Array.isArray(worker.relatedArtifacts) ? worker.relatedArtifacts : []),
+      ...(workerPreparedContext && workerPreparedContext.artifacts && workerPreparedContext.artifacts.previousTaskContexts ? workerPreparedContext.artifacts.previousTaskContexts : []),
+      ...(workerPreparedContext && workerPreparedContext.artifacts && workerPreparedContext.artifacts.previousTaskArtifacts ? workerPreparedContext.artifacts.previousTaskArtifacts : []),
+      ...(workerPreparedContext && workerPreparedContext.artifacts && workerPreparedContext.artifacts.previousSessionArtifacts ? workerPreparedContext.artifacts.previousSessionArtifacts : []),
+      ...(workerWorkingSet && workerWorkingSet.relatedArtifacts ? workerWorkingSet.relatedArtifacts : [])
+    ]);
+    const templateVariables = buildTemplateVariables({
       branch_name: branchName,
       handoff_file: handoffFilePath,
       repo_root: repoRoot,
@@ -216,7 +352,7 @@ function buildOrchestrationPlan(config = {}) {
       worker_name: workerName,
       worker_slug: workerSlug,
       worktree_path: worktreePath
-    };
+    });
 
     if (!launcherCommand) {
       throw new Error(`Worker ${workerName} is missing a launcherCommand`);
@@ -231,9 +367,15 @@ function buildOrchestrationPlan(config = {}) {
       gitCommand: formatCommand('git', gitArgs),
       handoffFilePath,
       launchCommand: renderTemplate(launcherCommand, templateVariables),
+      preparedContext: workerPreparedContext,
       repoRoot,
+      recommendedDocs,
+      relatedArtifacts,
       sessionName,
       seedPaths,
+      contextRuntime: worker.contextRuntime || config.contextRuntime || null,
+      workingSetId: workerWorkingSet && (workerWorkingSet.workingSetId || workerWorkingSet.id),
+      workingSet: workerWorkingSet,
       statusFilePath,
       task: worker.task.trim(),
       taskFilePath,
@@ -295,7 +437,10 @@ function buildOrchestrationPlan(config = {}) {
 
   return {
     baseRef,
+    cacheRoot: config.cacheRoot || null,
     coordinationDir,
+    contextRuntime: config.contextRuntime || null,
+    preparedContext: sharedPreparedContext || null,
     replaceExisting: Boolean(config.replaceExisting),
     repoRoot,
     sessionName,

@@ -93,7 +93,19 @@ test('dmux adapter normalizes orchestration snapshots into canonical form', () =
           },
           task: {
             objective: 'Inspect seeded files.',
-            seedPaths: ['scripts/orchestrate-worktrees.js']
+            seedPaths: ['scripts/orchestrate-worktrees.js'],
+            recommendedDocs: ['AI_CONTEXT/03-BACKEND.md'],
+            relatedArtifacts: ['task-artifact-1'],
+            contextMode: 'prepared-context',
+            taskContextId: 'task-context-123',
+            basedOnCommit: 'abc123',
+            workingSetId: 'ws-123',
+            expansionProtocol: {
+              broadSearchByDefault: false,
+              neighborCallsiteAllowed: true,
+              crossDomainAllowed: false,
+              repoWideAllowed: false
+            }
           },
           handoff: {
             summary: ['Pending'],
@@ -126,6 +138,9 @@ test('dmux adapter normalizes orchestration snapshots into canonical form', () =
     assert.strictEqual(snapshot.session.sourceTarget.type, 'session');
     assert.strictEqual(snapshot.aggregates.workerCount, 1);
     assert.strictEqual(snapshot.workers[0].runtime.kind, 'tmux-pane');
+    assert.strictEqual(snapshot.workers[0].intent.contextMode, 'prepared-context');
+    assert.strictEqual(snapshot.workers[0].intent.workingSetId, 'ws-123');
+    assert.deepStrictEqual(snapshot.workers[0].intent.recommendedDocs, ['AI_CONTEXT/03-BACKEND.md']);
     assert.strictEqual(snapshot.workers[0].outputs.remainingRisks[0], 'No screenshot yet');
     assert.strictEqual(persisted.latest.session.state, 'active');
     assert.strictEqual(persisted.latest.adapterId, 'dmux-tmux');

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "ecc.db-map.v1",
+  "generatedAt": "2026-03-21T10:24:12.221Z",
+  "repoRoot": "C:\\Users\\UsX\\Desktop\\Proyectos - Desarrollo web\\WeLoveCode - Formulario",
+  "prismaFiles": [
+    "prisma/schema.prisma"
+  ],
+  "migrationFiles": [
+    "prisma/migrations/20260211193603_init/migration.sql",
+    "prisma/migrations/20260217215510_new_pricing_fields/migration.sql",
+    "prisma/migrations/20260217231503_phase_per_item/migration.sql",
+    "prisma/migrations/migration_lock.toml"
+  ],
+  "modelFiles": []
+}

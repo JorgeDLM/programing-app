@@ -387,7 +387,14 @@ function normalizeDmuxSnapshot(snapshot, sourceTarget) {
     },
     intent: {
       objective: worker.task.objective || '',
-      seedPaths: Array.isArray(worker.task.seedPaths) ? worker.task.seedPaths : []
+      seedPaths: Array.isArray(worker.task.seedPaths) ? worker.task.seedPaths : [],
+      recommendedDocs: Array.isArray(worker.task.recommendedDocs) ? worker.task.recommendedDocs : [],
+      relatedArtifacts: Array.isArray(worker.task.relatedArtifacts) ? worker.task.relatedArtifacts : [],
+      contextMode: worker.task.contextMode || null,
+      taskContextId: worker.task.taskContextId || null,
+      basedOnCommit: worker.task.basedOnCommit || null,
+      workingSetId: worker.task.workingSetId || null,
+      expansionProtocol: worker.task.expansionProtocol || null
     },
     outputs: {
       summary: Array.isArray(worker.handoff.summary) ? worker.handoff.summary : [],

@@ -57,6 +57,27 @@ test('parseWorkerTask extracts objective and seeded overlays', () => {
   const task = parseWorkerTask([
     '# Worker Task',
     '',
+    '## Prepared Context',
+    '- Context mode: `prepared-context`',
+    '- Task context id: `task-context-123`',
+    '- Based on commit: `abc123`',
+    '',
+    '## Enforced Working Set',
+    '- Working set id: `ws-123`',
+    '- Files in working set: 2',
+    '',
+    '## Recommended AI_CONTEXT',
+    '- `AI_CONTEXT/03-BACKEND.md`',
+    '',
+    '## Previous Context Artifacts',
+    '- `task-artifact-1`',
+    '',
+    '## Expansion Protocol',
+    '- Broad search by default: `false`',
+    '- Neighbor callsite allowed: `true`',
+    '- Cross-domain allowed: `false`',
+    '- Repo-wide allowed: `false`',
+    '',
     '## Seeded Local Overlays',
     '- `scripts/orchestrate-worktrees.js`',
     '- `commands/orchestrate.md`',
@@ -70,6 +91,14 @@ test('parseWorkerTask extracts objective and seeded overlays', () => {
     'commands/orchestrate.md'
   ]);
   assert.strictEqual(task.objective, 'Verify seeded files and summarize status.');
+  assert.strictEqual(task.contextMode, 'prepared-context');
+  assert.strictEqual(task.taskContextId, 'task-context-123');
+  assert.strictEqual(task.basedOnCommit, 'abc123');
+  assert.strictEqual(task.workingSetId, 'ws-123');
+  assert.deepStrictEqual(task.recommendedDocs, ['AI_CONTEXT/03-BACKEND.md']);
+  assert.deepStrictEqual(task.relatedArtifacts, ['task-artifact-1']);
+  assert.strictEqual(task.expansionProtocol.broadSearchByDefault, false);
+  assert.strictEqual(task.expansionProtocol.neighborCallsiteAllowed, true);
 });
 
 test('parseWorkerHandoff extracts summary, validation, and risks', () => {

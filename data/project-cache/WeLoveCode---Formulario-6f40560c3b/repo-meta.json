@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "ecc.repo-meta.v1",
+  "generatedAt": "2026-03-21T10:24:12.239Z",
+  "indexVersion": "ecc.repo-index.v1",
+  "repoRoot": "C:\\Users\\UsX\\Desktop\\Proyectos - Desarrollo web\\WeLoveCode - Formulario",
+  "repoSlug": "WeLoveCode---Formulario-6f40560c3b",
+  "cacheDir": "C:\\Users\\UsX\\Desktop\\Proyectos - Desarrollo web\\Programing-app\\programing-app\\data\\project-cache\\WeLoveCode---Formulario-6f40560c3b",
+  "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+  "aggregateHash": "b7907503c34cc82479f94947242cd2e3ac3dc2f0",
+  "fileCount": 281,
+  "primary": "nextjs"
+}

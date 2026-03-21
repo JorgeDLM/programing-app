@@ -138,6 +138,89 @@ test('buildOrchestrationPlan normalizes global and worker seed paths', () => {
   ]);
 });
 
+test('buildOrchestrationPlan applies preparedContext working set through seedPaths', () => {
+  const plan = buildOrchestrationPlan({
+    repoRoot: '/tmp/ecc',
+    sessionName: 'working-set-seeded',
+    launcherCommand: 'echo run',
+    preparedContext: {
+      repo: {
+        root: '/tmp/ecc',
+        slug: 'ecc'
+      },
+      intentType: 'bugfix',
+      expectedDomains: ['backend'],
+      scopeHypothesis: 'bugfix:backend',
+      recommendedDocs: ['AI_CONTEXT/00-START-HERE.md'],
+      workingSet: {
+        workingSetId: 'ws-test',
+        id: 'ws-test',
+        files: ['src/server/fix.ts'],
+        docs: ['AI_CONTEXT/00-START-HERE.md'],
+        artifacts: [],
+        relatedArtifacts: [],
+        reasons: [{ path: 'src/server/fix.ts', reason: 'mentioned_in_task' }],
+        budget: {
+          broadSearchesMax: 2,
+          broadSearchesUsed: 0,
+          broadSearchesRemaining: 2,
+          initialFilesMax: 10,
+          expansionsMax: 2,
+          expansionsUsed: 0,
+          expansionsRemaining: 2,
+          totalFilesMax: 18,
+          currentFilesCount: 1,
+          repoWideExpansionAllowed: false,
+          crossDomainExpansionAllowed: false,
+          neighborCallsiteExpansionAllowed: true,
+          allowedExpansion: {
+            repoWide: false,
+            crossDomain: false,
+            neighborCallsite: true
+          }
+        },
+        allowedExpansion: {
+          repoWide: false,
+          crossDomain: false,
+          neighborCallsite: true
+        }
+      },
+      allowedExpansion: {
+        broadSearchesMax: 2,
+        broadSearchesUsed: 0,
+        broadSearchesRemaining: 2,
+        initialFilesMax: 10,
+        expansionsMax: 2,
+        expansionsUsed: 0,
+        expansionsRemaining: 2,
+        totalFilesMax: 18,
+        currentFilesCount: 1,
+        repoWideExpansionAllowed: false,
+        crossDomainExpansionAllowed: false,
+        neighborCallsiteExpansionAllowed: true,
+        allowedExpansion: {
+          repoWide: false,
+          crossDomain: false,
+          neighborCallsite: true
+        }
+      }
+    },
+    workers: [
+      {
+        name: 'Fixer',
+        task: 'Resolve the backend regression',
+        seedPaths: ['commands/multi-execute.md']
+      }
+    ]
+  });
+
+  assert.strictEqual(plan.workerPlans[0].workingSetId, 'ws-test');
+  assert.ok(plan.workerPlans[0].seedPaths.includes('src/server/fix.ts'));
+  assert.ok(plan.workerPlans[0].seedPaths.includes('AI_CONTEXT/00-START-HERE.md'));
+  assert.ok(plan.workerPlans[0].seedPaths.includes('commands/multi-execute.md'));
+  assert.strictEqual(plan.workerPlans[0].workingSet.budget.totalFilesMax, 18);
+});
+
 test('buildOrchestrationPlan rejects worker names that collapse to the same slug', () => {
   assert.throws(
     () => buildOrchestrationPlan({

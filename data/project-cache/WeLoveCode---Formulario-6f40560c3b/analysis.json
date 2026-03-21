@@ -1,0 +1,5095 @@
+{
+  "schemaVersion": "ecc.ai-context-analysis.v2",
+  "generatedAt": "2026-03-21T10:24:12.266Z",
+  "mode": "balanced",
+  "repoRoot": "C:\\Users\\UsX\\Desktop\\Proyectos - Desarrollo web\\WeLoveCode - Formulario",
+  "packageInfo": {
+    "name": "welove-code",
+    "description": ""
+  },
+  "readmeSummary": "**$50M generados. 3 clientes por mes. Solo los mejores.** Convertimos tu idea en una máquina de hacer dinero en 90 días. - **Landing** - $12K (era $20K)",
+  "startHere": {
+    "taskRouter": [
+      "frontend/ui -> 04-FRONTEND.md, then 02-ARCHITECTURE.md",
+      "backend/api -> 03-BACKEND.md, then 06-API-CONTRACTS.md",
+      "data/db -> 05-DATA-MODELS.md, then 03-BACKEND.md",
+      "fullstack -> 00-START-HERE.md, 01-PROJECT-OVERVIEW.md, 02-ARCHITECTURE.md, then domain docs",
+      "cambios delicados -> 02-ARCHITECTURE.md, 07-DECISIONS-ADR.md, 09-OPEN-ISSUES.md"
+    ],
+    "rules": [
+      "Código real sigue siendo source of truth.",
+      "Empieza por prepared context y working set cuando existan.",
+      "No hagas broad search primero si el mapa ya cubre el dominio.",
+      "Si una sección está en partial o low confidence, baja al código citado."
+    ],
+    "entryPoints": [
+      "src/app/cotizacion-marco&carlos/layout.tsx",
+      "src/app/layout.tsx",
+      "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+      "src/app/admin/cotizador/[clientId]/page.tsx",
+      "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+      "src/app/admin/page.tsx",
+      "src/app/blog/[slug]/page.tsx",
+      "src/app/blog/page.tsx",
+      "src/app/cliente/page.tsx",
+      "src/app/cotizacion-marco&carlos/page.tsx",
+      "src/app/cotizacion/[token]/page.tsx",
+      "src/app/login/page.tsx"
+    ],
+    "hotspots": [
+      "shared: 43 frontend files",
+      "admin: 4 frontend files",
+      "api:quotes (4 routes)",
+      "api:client (2 routes)",
+      "api:clients (2 routes)",
+      "api:modules (2 routes)",
+      "data:Client",
+      "data:QuestionnaireResponse",
+      "data:ModuleItem",
+      "data:QuoteModule"
+    ],
+    "evidence": {
+      "sourcePaths": [
+        "src/app/cotizacion-marco&carlos/layout.tsx",
+        "src/app/layout.tsx",
+        "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+        "src/app/admin/cotizador/[clientId]/page.tsx",
+        "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+        "src/app/admin/page.tsx",
+        "src/app/blog/[slug]/page.tsx",
+        "src/app/blog/page.tsx"
+      ],
+      "routeFiles": [
+        "src/app/api/auth/route.ts",
+        "src/app/api/client/preferences/route.ts",
+        "src/app/api/client/route.ts",
+        "src/app/api/clients/ai/route.ts",
+        "src/app/api/clients/route.ts",
+        "src/app/api/migrate/route.ts",
+        "src/app/api/modules/route.ts",
+        "src/app/api/modules/seed/route.ts"
+      ],
+      "schemaRefs": [
+        "prisma/schema.prisma"
+      ],
+      "importsSeen": [],
+      "symbolsSeen": [],
+      "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+      "sourceFingerprint": [
+        "src/app/cotizacion-marco&carlos/layout.tsx:8badfe8586b26f2349885040cf402c3cef6091c9",
+        "src/app/layout.tsx:d8f9187f23605a9055c076658c04d4a5d6992d75",
+        "src/app/admin/cotizador/[clientId]/ajustes/page.tsx:7ca91065f7d6ebea5da49f37521bab2b0e4912ff",
+        "src/app/admin/cotizador/[clientId]/page.tsx:99c93b38e388a298eab5773675fee2fef99bce00",
+        "src/app/admin/cotizador/[clientId]/roadmap/page.tsx:6d045b39d22801d31ab80c45f45a344816c967f5",
+        "src/app/admin/page.tsx:2ee068781bcb2d470be939815f82538dfdecbb90",
+        "src/app/blog/[slug]/page.tsx:ffc5c4f7ec41b1152a84fbf62c97719606198512",
+        "src/app/blog/page.tsx:c9296cc7ab01eee8041bebb2b844b6131c31dd37"
+      ]
+    }
+  },
+  "overview": {
+    "narrative": "**$50M generados. 3 clientes por mes. Solo los mejores.** Convertimos tu idea en una máquina de hacer dinero en 90 días. - **Landing** - $12K (era $20K)",
+    "mainFlow": "Main flow appears to go through quotes routes, then backend helpers/data access, with Client, QuestionnaireResponse, ModuleItem, QuoteModule, QuoteSelectedModule involved.",
+    "mainAreas": [
+      "Frontend surface: 12 page/layout entries and 16 components detected.",
+      "Backend/API surface: 16 route handlers across 10 domains.",
+      "Data layer: 12 schema models and 0 enums detected."
+    ],
+    "surfaces": [
+      {
+        "surface": "shared",
+        "files": [
+          "src/app/blog/[slug]/page.tsx",
+          "src/app/blog/page.tsx",
+          "src/app/cliente/page.tsx",
+          "src/app/cotizacion-marco&carlos/layout.tsx",
+          "src/app/cotizacion-marco&carlos/page.tsx",
+          "src/app/cotizacion/[token]/page.tsx",
+          "src/app/layout.tsx",
+          "src/app/login/page.tsx"
+        ]
+      },
+      {
+        "surface": "admin",
+        "files": [
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/cotizador/[clientId]/page.tsx",
+          "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+          "src/app/admin/page.tsx"
+        ]
+      }
+    ],
+    "importantModules": [
+      "quotes (4 routes)",
+      "client (2 routes)",
+      "clients (2 routes)",
+      "modules (2 routes)",
+      "auth (1 routes)",
+      "migrate (1 routes)",
+      "questionnaire (1 routes)",
+      "seed (1 routes)",
+      "shared: 43 frontend files",
+      "admin: 4 frontend files",
+      "data:Client",
+      "data:QuestionnaireResponse"
+    ],
+    "entryPoints": [
+      "src/app/cotizacion-marco&carlos/layout.tsx",
+      "src/app/layout.tsx",
+      "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+      "src/app/admin/cotizador/[clientId]/page.tsx",
+      "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+      "src/app/admin/page.tsx",
+      "src/app/blog/[slug]/page.tsx",
+      "src/app/blog/page.tsx",
+      "src/app/cliente/page.tsx",
+      "src/app/cotizacion-marco&carlos/page.tsx",
+      "src/app/cotizacion/[token]/page.tsx",
+      "src/app/login/page.tsx"
+    ],
+    "hotspots": [
+      "shared: 43 frontend files",
+      "admin: 4 frontend files",
+      "api:quotes (4 routes)",
+      "api:client (2 routes)",
+      "api:clients (2 routes)",
+      "api:modules (2 routes)",
+      "data:Client",
+      "data:QuestionnaireResponse",
+      "data:ModuleItem",
+      "data:QuoteModule"
+    ],
+    "evidence": {
+      "sourcePaths": [
+        "src/app/cotizacion-marco&carlos/layout.tsx",
+        "src/app/layout.tsx",
+        "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+        "src/app/admin/cotizador/[clientId]/page.tsx",
+        "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+        "src/app/admin/page.tsx",
+        "src/app/blog/[slug]/page.tsx",
+        "src/app/blog/page.tsx"
+      ],
+      "routeFiles": [
+        "src/app/api/auth/route.ts",
+        "src/app/api/client/preferences/route.ts",
+        "src/app/api/client/route.ts",
+        "src/app/api/clients/ai/route.ts",
+        "src/app/api/clients/route.ts",
+        "src/app/api/migrate/route.ts",
+        "src/app/api/modules/route.ts",
+        "src/app/api/modules/seed/route.ts"
+      ],
+      "schemaRefs": [
+        "prisma/schema.prisma"
+      ],
+      "importsSeen": [],
+      "symbolsSeen": [],
+      "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+      "sourceFingerprint": [
+        "src/app/cotizacion-marco&carlos/layout.tsx:8badfe8586b26f2349885040cf402c3cef6091c9",
+        "src/app/layout.tsx:d8f9187f23605a9055c076658c04d4a5d6992d75",
+        "src/app/admin/cotizador/[clientId]/ajustes/page.tsx:7ca91065f7d6ebea5da49f37521bab2b0e4912ff",
+        "src/app/admin/cotizador/[clientId]/page.tsx:99c93b38e388a298eab5773675fee2fef99bce00",
+        "src/app/admin/cotizador/[clientId]/roadmap/page.tsx:6d045b39d22801d31ab80c45f45a344816c967f5",
+        "src/app/admin/page.tsx:2ee068781bcb2d470be939815f82538dfdecbb90",
+        "src/app/blog/[slug]/page.tsx:ffc5c4f7ec41b1152a84fbf62c97719606198512",
+        "src/app/blog/page.tsx:c9296cc7ab01eee8041bebb2b844b6131c31dd37"
+      ]
+    }
+  },
+  "architecture": {
+    "boundaries": {
+      "frontend": 28,
+      "backend": 16,
+      "api": 16,
+      "data": 12
+    },
+    "frontendSurface": [
+      "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+      "src/app/admin/cotizador/[clientId]/page.tsx",
+      "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+      "src/app/admin/page.tsx",
+      "src/app/blog/[slug]/page.tsx",
+      "src/app/blog/page.tsx",
+      "src/app/cliente/page.tsx",
+      "src/app/cotizacion-marco&carlos/layout.tsx",
+      "src/app/cotizacion-marco&carlos/page.tsx",
+      "src/app/cotizacion/[token]/page.tsx",
+      "src/app/layout.tsx",
+      "src/app/login/page.tsx"
+    ],
+    "backendSurface": [
+      "src/app/api/auth/route.ts",
+      "src/app/api/client/preferences/route.ts",
+      "src/app/api/client/route.ts",
+      "src/app/api/clients/ai/route.ts",
+      "src/app/api/clients/route.ts",
+      "src/app/api/migrate/route.ts",
+      "src/app/api/modules/route.ts",
+      "src/app/api/modules/seed/route.ts",
+      "src/app/api/questionnaire/route.ts",
+      "src/app/api/quotes/ai/route.ts",
+      "src/app/api/quotes/pdf/route.ts",
+      "src/app/api/quotes/public/route.ts",
+      "src/app/api/quotes/route.ts",
+      "src/app/api/seed/route.ts",
+      "src/app/api/services/route.ts",
+      "src/app/api/stages/route.ts"
+    ],
+    "dataLayer": [
+      "prisma/schema.prisma"
+    ],
+    "sharedUtilities": [],
+    "requestFlow": "Observed request flow: public route -> route handler -> helper/service or direct data access -> JSON response.",
+    "criticalZones": [
+      "Authenticated or mutating API handlers should be reviewed first.",
+      "Core data entities: Client, QuestionnaireResponse, ModuleItem, QuoteModule, QuoteSelectedModule.",
+      "Hot frontend surfaces: shared: 43 frontend files | admin: 4 frontend files."
+    ],
+    "contradictions": [],
+    "lowConfidenceZones": [],
+    "confidenceBySection": {
+      "boundaries": "high",
+      "requestFlow": "medium",
+      "sharedUtilities": "low"
+    },
+    "evidence": {
+      "sourcePaths": [
+        "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+        "src/app/admin/cotizador/[clientId]/page.tsx",
+        "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+        "src/app/admin/page.tsx",
+        "src/app/api/auth/route.ts",
+        "src/app/api/client/preferences/route.ts",
+        "src/app/api/client/route.ts",
+        "src/app/api/clients/ai/route.ts"
+      ],
+      "routeFiles": [
+        "src/app/api/auth/route.ts",
+        "src/app/api/client/preferences/route.ts",
+        "src/app/api/client/route.ts",
+        "src/app/api/clients/ai/route.ts",
+        "src/app/api/clients/route.ts",
+        "src/app/api/migrate/route.ts",
+        "src/app/api/modules/route.ts",
+        "src/app/api/modules/seed/route.ts"
+      ],
+      "schemaRefs": [
+        "prisma/schema.prisma"
+      ],
+      "importsSeen": [
+        "react",
+        "next/navigation",
+        "next/image",
+        "@/lib/prisma",
+        "next/server",
+        "@/lib/auth",
+        "openai"
+      ],
+      "symbolsSeen": [
+        "src/app/admin/cotizador/[clientId]/ajustes/page.tsx#fn:AjustesPage",
+        "src/app/admin/cotizador/[clientId]/page.tsx#fn:CotizadorPage",
+        "src/app/admin/cotizador/[clientId]/page.tsx#fn:RichTip",
+        "src/app/admin/cotizador/[clientId]/page.tsx#fn:Tip",
+        "src/app/admin/cotizador/[clientId]/roadmap/page.tsx#fn:RoadmapPage",
+        "src/app/admin/page.tsx#fn:AdminPage",
+        "src/app/api/auth/route.ts#export:DELETE",
+        "src/app/api/auth/route.ts#export:GET",
+        "src/app/api/auth/route.ts#export:PATCH",
+        "src/app/api/auth/route.ts#export:POST"
+      ],
+      "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+      "sourceFingerprint": [
+        "src/app/admin/cotizador/[clientId]/ajustes/page.tsx:7ca91065f7d6ebea5da49f37521bab2b0e4912ff",
+        "src/app/admin/cotizador/[clientId]/page.tsx:99c93b38e388a298eab5773675fee2fef99bce00",
+        "src/app/admin/cotizador/[clientId]/roadmap/page.tsx:6d045b39d22801d31ab80c45f45a344816c967f5",
+        "src/app/admin/page.tsx:2ee068781bcb2d470be939815f82538dfdecbb90",
+        "src/app/api/auth/route.ts:dae5d91a28557d581c231d414e99d036475e38b9",
+        "src/app/api/client/preferences/route.ts:946690b84dff122f2c0ae15b036828200793f6dc",
+        "src/app/api/client/route.ts:0a6bea8e75a2bda34be146b913915768337e5c0d",
+        "src/app/api/clients/ai/route.ts:df3781a1039a5441fecd4516046877215d9a28b2"
+      ]
+    }
+  },
+  "backend": {
+    "backendFiles": [
+      "src/app/api/auth/route.ts",
+      "src/app/api/client/preferences/route.ts",
+      "src/app/api/client/route.ts",
+      "src/app/api/clients/ai/route.ts",
+      "src/app/api/clients/route.ts",
+      "src/app/api/migrate/route.ts",
+      "src/app/api/modules/route.ts",
+      "src/app/api/modules/seed/route.ts",
+      "src/app/api/questionnaire/route.ts",
+      "src/app/api/quotes/ai/route.ts",
+      "src/app/api/quotes/pdf/route.ts",
+      "src/app/api/quotes/public/route.ts",
+      "src/app/api/quotes/route.ts",
+      "src/app/api/seed/route.ts",
+      "src/app/api/services/route.ts",
+      "src/app/api/stages/route.ts"
+    ],
+    "routeGroups": [
+      {
+        "domain": "quotes",
+        "routes": [
+          {
+            "path": "src/app/api/quotes/route.ts",
+            "endpoint": "/quotes",
+            "kind": "nextjs-app-route",
+            "domain": "quotes",
+            "methods": [
+              "GET",
+              "POST",
+              "PATCH",
+              "DELETE"
+            ],
+            "purpose": "Handles write operations for /quotes.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": [
+                "clientId",
+                "quoteId"
+              ]
+            },
+            "responseKeys": [
+              "error",
+              "success"
+            ],
+            "sideEffects": [
+              "prisma.quote.findUnique",
+              "prisma.quote.findMany",
+              "prisma.client.findUnique",
+              "prisma.quote.create",
+              "prisma.quote.update",
+              "prisma.quoteSelectedModule.update",
+              "prisma.quoteSelectedItem.update",
+              "prisma.moduleItem.update"
+            ],
+            "relatedModels": [
+              "Quote",
+              "Client",
+              "QuoteSelectedModule",
+              "QuoteSelectedItem"
+            ],
+            "confidence": "high"
+          },
+          {
+            "path": "src/app/api/quotes/ai/route.ts",
+            "endpoint": "/quotes/ai",
+            "kind": "nextjs-app-route",
+            "domain": "quotes",
+            "methods": [
+              "POST"
+            ],
+            "purpose": "Handles write operations for /quotes/ai.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "error",
+              "analysis",
+              "suggestions"
+            ],
+            "sideEffects": [
+              "prisma.client.findUnique"
+            ],
+            "relatedModels": [
+              "Client"
+            ],
+            "confidence": "high"
+          },
+          {
+            "path": "src/app/api/quotes/pdf/route.ts",
+            "endpoint": "/quotes/pdf",
+            "kind": "nextjs-app-route",
+            "domain": "quotes",
+            "methods": [
+              "GET"
+            ],
+            "purpose": "Returns data for /quotes/pdf.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": [
+                "quoteId",
+                "version",
+                "layout"
+              ]
+            },
+            "responseKeys": [
+              "error"
+            ],
+            "sideEffects": [],
+            "relatedModels": [],
+            "confidence": "high"
+          },
+          {
+            "path": "src/app/api/quotes/public/route.ts",
+            "endpoint": "/quotes/public",
+            "kind": "nextjs-app-route",
+            "domain": "quotes",
+            "methods": [
+              "GET"
+            ],
+            "purpose": "Returns data for /quotes/public.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": [
+                "token"
+              ]
+            },
+            "responseKeys": [
+              "error"
+            ],
+            "sideEffects": [],
+            "relatedModels": [],
+            "confidence": "high"
+          }
+        ]
+      },
+      {
+        "domain": "client",
+        "routes": [
+          {
+            "path": "src/app/api/client/route.ts",
+            "endpoint": "/client",
+            "kind": "nextjs-app-route",
+            "domain": "client",
+            "methods": [
+              "GET"
+            ],
+            "purpose": "Returns data for /client.",
+            "authRequired": true,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "error",
+              "clientName",
+              "clientToken",
+              "defaultTheme",
+              "hasQuestionnaire",
+              "questionnaireCompletedByClient",
+              "questionnaire"
+            ],
+            "sideEffects": [],
+            "relatedModels": [],
+            "confidence": "medium"
+          },
+          {
+            "path": "src/app/api/client/preferences/route.ts",
+            "endpoint": "/client/preferences",
+            "kind": "nextjs-app-route",
+            "domain": "client",
+            "methods": [
+              "POST"
+            ],
+            "purpose": "Handles write operations for /client/preferences.",
+            "authRequired": true,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "error",
+              "saved"
+            ],
+            "sideEffects": [],
+            "relatedModels": [],
+            "confidence": "medium"
+          }
+        ]
+      },
+      {
+        "domain": "clients",
+        "routes": [
+          {
+            "path": "src/app/api/clients/route.ts",
+            "endpoint": "/clients",
+            "kind": "nextjs-app-route",
+            "domain": "clients",
+            "methods": [
+              "GET",
+              "POST",
+              "PUT",
+              "DELETE"
+            ],
+            "purpose": "Handles write operations for /clients.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": [
+                "id"
+              ]
+            },
+            "responseKeys": [
+              "error",
+              "success"
+            ],
+            "sideEffects": [
+              "prisma.client.create",
+              "prisma.client.update",
+              "prisma.questionnaireResponse.deleteMany",
+              "prisma.client.delete"
+            ],
+            "relatedModels": [
+              "Client",
+              "QuestionnaireResponse"
+            ],
+            "confidence": "high"
+          },
+          {
+            "path": "src/app/api/clients/ai/route.ts",
+            "endpoint": "/clients/ai",
+            "kind": "nextjs-app-route",
+            "domain": "clients",
+            "methods": [
+              "POST"
+            ],
+            "purpose": "Handles write operations for /clients/ai.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "error",
+              "client",
+              "ai",
+              "confidence",
+              "summary",
+              "fieldsFound"
+            ],
+            "sideEffects": [
+              "prisma.client.create",
+              "prisma.questionnaireResponse.create",
+              "prisma.client.findUnique"
+            ],
+            "relatedModels": [
+              "Client",
+              "QuestionnaireResponse"
+            ],
+            "confidence": "high"
+          }
+        ]
+      },
+      {
+        "domain": "modules",
+        "routes": [
+          {
+            "path": "src/app/api/modules/route.ts",
+            "endpoint": "/modules",
+            "kind": "nextjs-app-route",
+            "domain": "modules",
+            "methods": [
+              "GET",
+              "PUT"
+            ],
+            "purpose": "Updates resources behind /modules.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "error"
+            ],
+            "sideEffects": [
+              "prisma.quoteModule.findMany",
+              "prisma.moduleItem.update"
+            ],
+            "relatedModels": [
+              "QuoteModule",
+              "ModuleItem"
+            ],
+            "confidence": "high"
+          },
+          {
+            "path": "src/app/api/modules/seed/route.ts",
+            "endpoint": "/modules/seed",
+            "kind": "nextjs-app-route",
+            "domain": "modules",
+            "methods": [
+              "POST"
+            ],
+            "purpose": "Handles write operations for /modules/seed.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "success",
+              "categories",
+              "items",
+              "error"
+            ],
+            "sideEffects": [
+              "prisma.moduleItem.findMany",
+              "prisma.quoteModule.upsert"
+            ],
+            "relatedModels": [
+              "ModuleItem",
+              "QuoteModule"
+            ],
+            "confidence": "high"
+          }
+        ]
+      },
+      {
+        "domain": "auth",
+        "routes": [
+          {
+            "path": "src/app/api/auth/route.ts",
+            "endpoint": "/auth",
+            "kind": "nextjs-app-route",
+            "domain": "auth",
+            "methods": [
+              "GET",
+              "POST",
+              "PATCH",
+              "DELETE"
+            ],
+            "purpose": "Handles write operations for /auth.",
+            "authRequired": true,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "error",
+              "success",
+              "role",
+              "clientId",
+              "authenticated",
+              "userId",
+              "clientName"
+            ],
+            "sideEffects": [],
+            "relatedModels": [],
+            "confidence": "medium"
+          }
+        ]
+      },
+      {
+        "domain": "migrate",
+        "routes": [
+          {
+            "path": "src/app/api/migrate/route.ts",
+            "endpoint": "/migrate",
+            "kind": "nextjs-app-route",
+            "domain": "migrate",
+            "methods": [
+              "POST"
+            ],
+            "purpose": "Handles write operations for /migrate.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "success",
+              "migrations",
+              "mvpPlusToRecomendado",
+              "error"
+            ],
+            "sideEffects": [],
+            "relatedModels": [],
+            "confidence": "medium"
+          }
+        ]
+      },
+      {
+        "domain": "questionnaire",
+        "routes": [
+          {
+            "path": "src/app/api/questionnaire/route.ts",
+            "endpoint": "/questionnaire",
+            "kind": "nextjs-app-route",
+            "domain": "questionnaire",
+            "methods": [
+              "GET",
+              "POST",
+              "PATCH"
+            ],
+            "purpose": "Handles write operations for /questionnaire.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": [
+                "token"
+              ]
+            },
+            "responseKeys": [
+              "error",
+              "saved",
+              "updatedAt"
+            ],
+            "sideEffects": [
+              "prisma.client.findUnique",
+              "prisma.questionnaireResponse.upsert"
+            ],
+            "relatedModels": [
+              "Client",
+              "QuestionnaireResponse"
+            ],
+            "confidence": "high"
+          }
+        ]
+      },
+      {
+        "domain": "seed",
+        "routes": [
+          {
+            "path": "src/app/api/seed/route.ts",
+            "endpoint": "/seed",
+            "kind": "nextjs-app-route",
+            "domain": "seed",
+            "methods": [
+              "POST"
+            ],
+            "purpose": "Handles write operations for /seed.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "success",
+              "clientToken",
+              "link",
+              "error"
+            ],
+            "sideEffects": [
+              "prisma.client.upsert",
+              "prisma.questionnaireResponse.upsert"
+            ],
+            "relatedModels": [
+              "Client",
+              "QuestionnaireResponse"
+            ],
+            "confidence": "high"
+          }
+        ]
+      },
+      {
+        "domain": "services",
+        "routes": [
+          {
+            "path": "src/app/api/services/route.ts",
+            "endpoint": "/services",
+            "kind": "nextjs-app-route",
+            "domain": "services",
+            "methods": [
+              "GET",
+              "POST",
+              "PUT",
+              "DELETE"
+            ],
+            "purpose": "Handles write operations for /services.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": [
+                "id"
+              ]
+            },
+            "responseKeys": [
+              "error",
+              "success"
+            ],
+            "sideEffects": [
+              "prisma.service.createMany",
+              "prisma.service.findMany",
+              "prisma.service.create",
+              "prisma.service.update",
+              "prisma.service.delete"
+            ],
+            "relatedModels": [
+              "Service"
+            ],
+            "confidence": "high"
+          }
+        ]
+      },
+      {
+        "domain": "stages",
+        "routes": [
+          {
+            "path": "src/app/api/stages/route.ts",
+            "endpoint": "/stages",
+            "kind": "nextjs-app-route",
+            "domain": "stages",
+            "methods": [
+              "GET",
+              "POST",
+              "PATCH",
+              "DELETE"
+            ],
+            "purpose": "Handles write operations for /stages.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": [
+                "versionId",
+                "tier",
+                "stageId"
+              ]
+            },
+            "responseKeys": [
+              "error",
+              "success"
+            ],
+            "sideEffects": [],
+            "relatedModels": [],
+            "confidence": "high"
+          }
+        ]
+      }
+    ],
+    "handlers": [
+      "/auth [GET, POST, PATCH, DELETE]",
+      "/client/preferences [POST]",
+      "/client [GET]",
+      "/clients/ai [POST]",
+      "/clients [GET, POST, PUT, DELETE]",
+      "/migrate [POST]",
+      "/modules [GET, PUT]",
+      "/modules/seed [POST]",
+      "/questionnaire [GET, POST, PATCH]",
+      "/quotes/ai [POST]",
+      "/quotes/pdf [GET]",
+      "/quotes/public [GET]"
+    ],
+    "supportFiles": [],
+    "sensitiveOperations": [
+      "/auth: GET, POST, PATCH, DELETE",
+      "/client/preferences: POST",
+      "/client: GET",
+      "/clients/ai: POST",
+      "/clients: GET, POST, PUT, DELETE",
+      "/modules: GET, PUT",
+      "/modules/seed: POST",
+      "/questionnaire: GET, POST, PATCH",
+      "/quotes/ai: POST",
+      "/quotes: GET, POST, PATCH, DELETE"
+    ],
+    "risks": [
+      "Auth-sensitive handlers exist and should be changed carefully.",
+      "Several handlers mutate persistent data directly."
+    ],
+    "partialZones": [
+      "Backend support files were not confidently linked beyond route handlers."
+    ],
+    "confidenceBySection": {
+      "backendSurface": "high",
+      "supportFiles": "low",
+      "authInference": "medium"
+    },
+    "evidence": {
+      "sourcePaths": [
+        "src/app/api/auth/route.ts",
+        "src/app/api/client/preferences/route.ts",
+        "src/app/api/client/route.ts",
+        "src/app/api/clients/ai/route.ts",
+        "src/app/api/clients/route.ts",
+        "src/app/api/migrate/route.ts",
+        "src/app/api/modules/route.ts",
+        "src/app/api/modules/seed/route.ts"
+      ],
+      "routeFiles": [
+        "src/app/api/auth/route.ts",
+        "src/app/api/client/preferences/route.ts",
+        "src/app/api/client/route.ts",
+        "src/app/api/clients/ai/route.ts",
+        "src/app/api/clients/route.ts",
+        "src/app/api/migrate/route.ts",
+        "src/app/api/modules/route.ts",
+        "src/app/api/modules/seed/route.ts"
+      ],
+      "schemaRefs": [],
+      "importsSeen": [
+        "@/lib/prisma",
+        "next/server",
+        "@/lib/auth",
+        "openai"
+      ],
+      "symbolsSeen": [
+        "src/app/api/auth/route.ts#export:DELETE",
+        "src/app/api/auth/route.ts#export:GET",
+        "src/app/api/auth/route.ts#export:PATCH",
+        "src/app/api/auth/route.ts#export:POST",
+        "src/app/api/auth/route.ts#fn:DELETE",
+        "src/app/api/auth/route.ts#fn:GET",
+        "src/app/api/auth/route.ts#fn:PATCH",
+        "src/app/api/auth/route.ts#fn:POST",
+        "src/app/api/client/preferences/route.ts#export:POST",
+        "src/app/api/client/preferences/route.ts#fn:POST"
+      ],
+      "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+      "sourceFingerprint": [
+        "src/app/api/auth/route.ts:dae5d91a28557d581c231d414e99d036475e38b9",
+        "src/app/api/client/preferences/route.ts:946690b84dff122f2c0ae15b036828200793f6dc",
+        "src/app/api/client/route.ts:0a6bea8e75a2bda34be146b913915768337e5c0d",
+        "src/app/api/clients/ai/route.ts:df3781a1039a5441fecd4516046877215d9a28b2",
+        "src/app/api/clients/route.ts:661e7f216e3833d27ae0380f162a1f1af9547201",
+        "src/app/api/migrate/route.ts:d7b4eb3e83dcde1227c53a47e1a68898c8196807",
+        "src/app/api/modules/route.ts:8d9944058f4cd49aaa8aeb93b6638bf47b988978",
+        "src/app/api/modules/seed/route.ts:87fb92315992607e5065b164eaa4388f274a63bf"
+      ]
+    }
+  },
+  "frontend": {
+    "pages": [
+      "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+      "src/app/admin/cotizador/[clientId]/page.tsx",
+      "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+      "src/app/admin/page.tsx",
+      "src/app/blog/[slug]/page.tsx",
+      "src/app/blog/page.tsx",
+      "src/app/cliente/page.tsx",
+      "src/app/cotizacion-marco&carlos/layout.tsx",
+      "src/app/cotizacion-marco&carlos/page.tsx",
+      "src/app/cotizacion/[token]/page.tsx",
+      "src/app/layout.tsx",
+      "src/app/login/page.tsx"
+    ],
+    "layouts": [
+      "src/app/cotizacion-marco&carlos/layout.tsx",
+      "src/app/layout.tsx"
+    ],
+    "components": [
+      "src/components/Analytics.tsx",
+      "src/components/BreadcrumbSchema.tsx",
+      "src/components/CounterAnimation.tsx",
+      "src/components/ExamplesCarousel.tsx",
+      "src/components/FAQSchema.tsx",
+      "src/components/InfiniteCarousel.tsx",
+      "src/components/LazyImage.tsx",
+      "src/components/LazyVideo.tsx",
+      "src/components/LocalBusinessSchema.tsx",
+      "src/components/PaymentOptionsSection.tsx",
+      "src/components/PortfolioSection.tsx",
+      "src/components/ProjectForm.tsx",
+      "src/components/ProjectsCarousel.tsx",
+      "src/components/ServiceIcons.tsx",
+      "src/components/ServicesSection.tsx",
+      "src/components/StatsBar.tsx"
+    ],
+    "surfaces": [
+      {
+        "name": "admin",
+        "files": [
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/cotizador/[clientId]/page.tsx",
+          "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+          "src/app/admin/page.tsx"
+        ]
+      },
+      {
+        "name": "shared",
+        "files": [
+          "src/app/blog/[slug]/page.tsx",
+          "src/app/blog/page.tsx",
+          "src/app/cliente/page.tsx",
+          "src/app/cotizacion-marco&carlos/layout.tsx",
+          "src/app/cotizacion-marco&carlos/page.tsx",
+          "src/app/cotizacion/[token]/page.tsx",
+          "src/app/layout.tsx",
+          "src/app/login/page.tsx"
+        ]
+      }
+    ],
+    "hotspots": [
+      "shared: 43 frontend files",
+      "admin: 4 frontend files"
+    ],
+    "partialZones": [],
+    "confidenceBySection": {
+      "frontendSurface": "high",
+      "surfaceSegmentation": "medium"
+    },
+    "evidence": {
+      "sourcePaths": [
+        "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+        "src/app/admin/cotizador/[clientId]/page.tsx",
+        "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+        "src/app/admin/page.tsx",
+        "src/app/blog/[slug]/page.tsx",
+        "src/app/blog/page.tsx",
+        "src/app/cliente/page.tsx",
+        "src/app/cotizacion-marco&carlos/layout.tsx"
+      ],
+      "routeFiles": [],
+      "schemaRefs": [],
+      "importsSeen": [
+        "react",
+        "next/navigation",
+        "next/image",
+        "next",
+        "next/link"
+      ],
+      "symbolsSeen": [
+        "src/app/admin/cotizador/[clientId]/ajustes/page.tsx#fn:AjustesPage",
+        "src/app/admin/cotizador/[clientId]/page.tsx#fn:CotizadorPage",
+        "src/app/admin/cotizador/[clientId]/page.tsx#fn:RichTip",
+        "src/app/admin/cotizador/[clientId]/page.tsx#fn:Tip",
+        "src/app/admin/cotizador/[clientId]/roadmap/page.tsx#fn:RoadmapPage",
+        "src/app/admin/page.tsx#fn:AdminPage",
+        "src/app/blog/[slug]/page.tsx#export:generateMetadata",
+        "src/app/blog/[slug]/page.tsx#export:generateStaticParams",
+        "src/app/blog/[slug]/page.tsx#fn:BlogPost",
+        "src/app/blog/[slug]/page.tsx#fn:generateMetadata"
+      ],
+      "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+      "sourceFingerprint": [
+        "src/app/admin/cotizador/[clientId]/ajustes/page.tsx:7ca91065f7d6ebea5da49f37521bab2b0e4912ff",
+        "src/app/admin/cotizador/[clientId]/page.tsx:99c93b38e388a298eab5773675fee2fef99bce00",
+        "src/app/admin/cotizador/[clientId]/roadmap/page.tsx:6d045b39d22801d31ab80c45f45a344816c967f5",
+        "src/app/admin/page.tsx:2ee068781bcb2d470be939815f82538dfdecbb90",
+        "src/app/blog/[slug]/page.tsx:ffc5c4f7ec41b1152a84fbf62c97719606198512",
+        "src/app/blog/page.tsx:c9296cc7ab01eee8041bebb2b844b6131c31dd37",
+        "src/app/cliente/page.tsx:15cea6fa153ddea72a8b833101106b86c207cd0b",
+        "src/app/cotizacion-marco&carlos/layout.tsx:8badfe8586b26f2349885040cf402c3cef6091c9"
+      ]
+    }
+  },
+  "dataModels": {
+    "prismaFiles": [
+      "prisma/schema.prisma"
+    ],
+    "modelFiles": [],
+    "models": [
+      {
+        "name": "User",
+        "fields": [
+          {
+            "name": "id",
+            "type": "String",
+            "attributes": "@id @default(cuid())",
+            "isRelation": false
+          },
+          {
+            "name": "email",
+            "type": "String",
+            "attributes": "@unique",
+            "isRelation": false
+          },
+          {
+            "name": "passwordHash",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "role",
+            "type": "String",
+            "attributes": "@default(\"client\") // admin | client",
+            "isRelation": false
+          },
+          {
+            "name": "clientId",
+            "type": "String?",
+            "attributes": "@unique",
+            "isRelation": false
+          },
+          {
+            "name": "client",
+            "type": "Client?",
+            "attributes": "@relation(fields: [clientId], references: [id], onDelete: Cascade)",
+            "isRelation": true
+          },
+          {
+            "name": "createdAt",
+            "type": "DateTime",
+            "attributes": "@default(now())",
+            "isRelation": false
+          },
+          {
+            "name": "updatedAt",
+            "type": "DateTime",
+            "attributes": "@updatedAt",
+            "isRelation": false
+          }
+        ],
+        "importantFields": [
+          "id: String",
+          "email: String",
+          "clientId: String?",
+          "client: Client?",
+          "createdAt: DateTime",
+          "updatedAt: DateTime"
+        ],
+        "relations": [
+          "client -> Client"
+        ],
+        "purpose": "Appears to be a relational core entity in the data layer.",
+        "keyFields": [
+          "id",
+          "email",
+          "clientId",
+          "client",
+          "createdAt",
+          "updatedAt"
+        ],
+        "ownership": "Ownership is only partially inferred.",
+        "relatedEndpoints": [],
+        "relatedModules": [],
+        "confidence": "high",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "name": "Client",
+        "fields": [
+          {
+            "name": "id",
+            "type": "String",
+            "attributes": "@id @default(cuid())",
+            "isRelation": false
+          },
+          {
+            "name": "name",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "status",
+            "type": "String",
+            "attributes": "@default(\"prospecto\")",
+            "isRelation": false
+          },
+          {
+            "name": "token",
+            "type": "String",
+            "attributes": "@unique @default(cuid())",
+            "isRelation": false
+          },
+          {
+            "name": "defaultTheme",
+            "type": "String",
+            "attributes": "@default(\"dark\")",
+            "isRelation": false
+          },
+          {
+            "name": "createdAt",
+            "type": "DateTime",
+            "attributes": "@default(now())",
+            "isRelation": false
+          },
+          {
+            "name": "updatedAt",
+            "type": "DateTime",
+            "attributes": "@updatedAt",
+            "isRelation": false
+          },
+          {
+            "name": "user",
+            "type": "User?",
+            "attributes": "",
+            "isRelation": true
+          },
+          {
+            "name": "response",
+            "type": "QuestionnaireResponse?",
+            "attributes": "",
+            "isRelation": true
+          },
+          {
+            "name": "quotes",
+            "type": "Quote[]",
+            "attributes": "",
+            "isRelation": true
+          }
+        ],
+        "importantFields": [
+          "id: String",
+          "name: String",
+          "status: String",
+          "token: String",
+          "createdAt: DateTime",
+          "updatedAt: DateTime",
+          "user: User?",
+          "response: QuestionnaireResponse?",
+          "quotes: Quote[]"
+        ],
+        "relations": [
+          "user -> User",
+          "response -> QuestionnaireResponse",
+          "quotes -> Quote"
+        ],
+        "purpose": "Likely supports /clients/ai, /clients, /questionnaire, /quotes/ai, /quotes, /seed routes.",
+        "keyFields": [
+          "id",
+          "name",
+          "status",
+          "token",
+          "createdAt",
+          "updatedAt",
+          "user",
+          "response"
+        ],
+        "ownership": "Owned mainly by /clients/ai flow.",
+        "relatedEndpoints": [
+          "/clients/ai",
+          "/clients",
+          "/questionnaire",
+          "/quotes/ai",
+          "/quotes",
+          "/seed"
+        ],
+        "relatedModules": [
+          "api:clients",
+          "api:questionnaire",
+          "api:quotes",
+          "api:seed"
+        ],
+        "confidence": "high",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "name": "Service",
+        "fields": [
+          {
+            "name": "id",
+            "type": "String",
+            "attributes": "@id @default(cuid())",
+            "isRelation": false
+          },
+          {
+            "name": "name",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "description",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "category",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "price",
+            "type": "Float",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "isRecurring",
+            "type": "Boolean",
+            "attributes": "@default(false)",
+            "isRelation": false
+          },
+          {
+            "name": "createdAt",
+            "type": "DateTime",
+            "attributes": "@default(now())",
+            "isRelation": false
+          },
+          {
+            "name": "updatedAt",
+            "type": "DateTime",
+            "attributes": "@updatedAt",
+            "isRelation": false
+          }
+        ],
+        "importantFields": [
+          "id: String",
+          "name: String",
+          "price: Float",
+          "createdAt: DateTime",
+          "updatedAt: DateTime"
+        ],
+        "relations": [],
+        "purpose": "Likely supports /services routes.",
+        "keyFields": [
+          "id",
+          "name",
+          "price",
+          "createdAt",
+          "updatedAt"
+        ],
+        "ownership": "Owned mainly by /services flow.",
+        "relatedEndpoints": [
+          "/services"
+        ],
+        "relatedModules": [
+          "api:services"
+        ],
+        "confidence": "medium",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "name": "QuoteModule",
+        "fields": [
+          {
+            "name": "id",
+            "type": "String",
+            "attributes": "@id @default(cuid())",
+            "isRelation": false
+          },
+          {
+            "name": "name",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "slug",
+            "type": "String",
+            "attributes": "@unique",
+            "isRelation": false
+          },
+          {
+            "name": "icon",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "description",
+            "type": "String?",
+            "attributes": "// long description for tooltips",
+            "isRelation": false
+          },
+          {
+            "name": "category",
+            "type": "String",
+            "attributes": "@default(\"desarrollo-web\") // area grouping",
+            "isRelation": false
+          },
+          {
+            "name": "order",
+            "type": "Int",
+            "attributes": "@default(0)",
+            "isRelation": false
+          },
+          {
+            "name": "createdAt",
+            "type": "DateTime",
+            "attributes": "@default(now())",
+            "isRelation": false
+          },
+          {
+            "name": "updatedAt",
+            "type": "DateTime",
+            "attributes": "@updatedAt",
+            "isRelation": false
+          },
+          {
+            "name": "items",
+            "type": "ModuleItem[]",
+            "attributes": "",
+            "isRelation": true
+          },
+          {
+            "name": "selected",
+            "type": "QuoteSelectedModule[]",
+            "attributes": "",
+            "isRelation": true
+          }
+        ],
+        "importantFields": [
+          "id: String",
+          "name: String",
+          "slug: String",
+          "createdAt: DateTime",
+          "updatedAt: DateTime",
+          "items: ModuleItem[]",
+          "selected: QuoteSelectedModule[]"
+        ],
+        "relations": [
+          "items -> ModuleItem",
+          "selected -> QuoteSelectedModule"
+        ],
+        "purpose": "Likely supports /modules, /modules/seed routes.",
+        "keyFields": [
+          "id",
+          "name",
+          "slug",
+          "createdAt",
+          "updatedAt",
+          "items",
+          "selected"
+        ],
+        "ownership": "Owned mainly by /modules flow.",
+        "relatedEndpoints": [
+          "/modules",
+          "/modules/seed"
+        ],
+        "relatedModules": [
+          "api:modules"
+        ],
+        "confidence": "high",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "name": "ModuleItem",
+        "fields": [
+          {
+            "name": "id",
+            "type": "String",
+            "attributes": "@id @default(cuid())",
+            "isRelation": false
+          },
+          {
+            "name": "moduleId",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "module",
+            "type": "QuoteModule",
+            "attributes": "@relation(fields: [moduleId], references: [id], onDelete: Cascade)",
+            "isRelation": true
+          },
+          {
+            "name": "name",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "description",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "marketPriceMin",
+            "type": "Float",
+            "attributes": "@default(0)",
+            "isRelation": false
+          },
+          {
+            "name": "marketPriceAvg",
+            "type": "Float",
+            "attributes": "@default(0)",
+            "isRelation": false
+          },
+          {
+            "name": "marketPriceMax",
+            "type": "Float",
+            "attributes": "@default(0)",
+            "isRelation": false
+          },
+          {
+            "name": "realPrice",
+            "type": "Float?",
+            "attributes": "// precio real que cobramos (manual)",
+            "isRelation": false
+          },
+          {
+            "name": "costInternal",
+            "type": "Float",
+            "attributes": "@default(0)",
+            "isRelation": false
+          },
+          {
+            "name": "criticalLevel",
+            "type": "String",
+            "attributes": "@default(\"alto\")",
+            "isRelation": false
+          },
+          {
+            "name": "requiresDev",
+            "type": "Boolean",
+            "attributes": "@default(false)",
+            "isRelation": false
+          },
+          {
+            "name": "timeEstimate",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "team",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "deliverables",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "excludes",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "sla",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "impact",
+            "type": "String",
+            "attributes": "@default(\"medio\")",
+            "isRelation": false
+          },
+          {
+            "name": "order",
+            "type": "Int",
+            "attributes": "@default(0)",
+            "isRelation": false
+          },
+          {
+            "name": "notes",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "includes",
+            "type": "String?",
+            "attributes": "// what IS included (tooltip)",
+            "isRelation": false
+          },
+          {
+            "name": "clientRequirements",
+            "type": "String?",
+            "attributes": "// what the client must provide",
+            "isRelation": false
+          },
+          {
+            "name": "dependencies",
+            "type": "String?",
+            "attributes": "// comma-separated dependency item names",
+            "isRelation": false
+          },
+          {
+            "name": "parallelGroup",
+            "type": "String?",
+            "attributes": "// parallel execution group name",
+            "isRelation": false
+          },
+          {
+            "name": "devWeeksMin",
+            "type": "Float",
+            "attributes": "@default(0)",
+            "isRelation": false
+          },
+          {
+            "name": "devWeeksMax",
+            "type": "Float",
+            "attributes": "@default(0)",
+            "isRelation": false
+          },
+          {
+            "name": "unitLabel",
+            "type": "String?",
+            "attributes": "// per-unit label (e.g. \"por producto\")",
+            "isRelation": false
+          },
+          {
+            "name": "unitPrice",
+            "type": "Float?",
+            "attributes": "// price per unit",
+            "isRelation": false
+          },
+          {
+            "name": "isRecurringOnly",
+            "type": "Boolean",
+            "attributes": "@default(false) // monthly-only, no buy option",
+            "isRelation": false
+          },
+          {
+            "name": "isSaleOnly",
+            "type": "Boolean",
+            "attributes": "@default(false) // one-time fee only, no rent option",
+            "isRelation": false
+          },
+          {
+            "name": "deletedAt",
+            "type": "DateTime?",
+            "attributes": "// soft delete timestamp",
+            "isRelation": false
+          },
+          {
+            "name": "createdAt",
+            "type": "DateTime",
+            "attributes": "@default(now())",
+            "isRelation": false
+          },
+          {
+            "name": "updatedAt",
+            "type": "DateTime",
+            "attributes": "@updatedAt",
+            "isRelation": false
+          },
+          {
+            "name": "selected",
+            "type": "QuoteSelectedItem[]",
+            "attributes": "",
+            "isRelation": true
+          }
+        ],
+        "importantFields": [
+          "id: String",
+          "moduleId: String",
+          "module: QuoteModule",
+          "name: String",
+          "deletedAt: DateTime?",
+          "createdAt: DateTime",
+          "updatedAt: DateTime",
+          "selected: QuoteSelectedItem[]"
+        ],
+        "relations": [
+          "module -> QuoteModule",
+          "selected -> QuoteSelectedItem"
+        ],
+        "purpose": "Likely supports /modules, /modules/seed routes.",
+        "keyFields": [
+          "id",
+          "moduleId",
+          "module",
+          "name",
+          "deletedAt",
+          "createdAt",
+          "updatedAt",
+          "selected"
+        ],
+        "ownership": "Owned mainly by /modules flow.",
+        "relatedEndpoints": [
+          "/modules",
+          "/modules/seed"
+        ],
+        "relatedModules": [
+          "api:modules"
+        ],
+        "confidence": "high",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "name": "Quote",
+        "fields": [
+          {
+            "name": "id",
+            "type": "String",
+            "attributes": "@id @default(cuid())",
+            "isRelation": false
+          },
+          {
+            "name": "clientId",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "client",
+            "type": "Client",
+            "attributes": "@relation(fields: [clientId], references: [id], onDelete: Cascade)",
+            "isRelation": true
+          },
+          {
+            "name": "status",
+            "type": "String",
+            "attributes": "@default(\"borrador\")",
+            "isRelation": false
+          },
+          {
+            "name": "quoteToken",
+            "type": "String?",
+            "attributes": "@unique // friendly slug for client-facing URL",
+            "isRelation": false
+          },
+          {
+            "name": "publicShareEnabled",
+            "type": "Boolean",
+            "attributes": "@default(false)",
+            "isRelation": false
+          },
+          {
+            "name": "readyForClient",
+            "type": "Boolean",
+            "attributes": "@default(false) // admin releases quote for client view",
+            "isRelation": false
+          },
+          {
+            "name": "clientExcludedItems",
+            "type": "String?",
+            "attributes": "// comma-separated QuoteSelectedItem IDs the client crossed out",
+            "isRelation": false
+          },
+          {
+            "name": "clientQuantities",
+            "type": "String?",
+            "attributes": "// JSON: {\"itemId\": qty} client custom quantities",
+            "isRelation": false
+          },
+          {
+            "name": "createdAt",
+            "type": "DateTime",
+            "attributes": "@default(now())",
+            "isRelation": false
+          },
+          {
+            "name": "updatedAt",
+            "type": "DateTime",
+            "attributes": "@updatedAt",
+            "isRelation": false
+          },
+          {
+            "name": "versions",
+            "type": "QuoteVersion[]",
+            "attributes": "",
+            "isRelation": true
+          }
+        ],
+        "importantFields": [
+          "id: String",
+          "clientId: String",
+          "client: Client",
+          "status: String",
+          "quoteToken: String?",
+          "createdAt: DateTime",
+          "updatedAt: DateTime",
+          "versions: QuoteVersion[]"
+        ],
+        "relations": [
+          "client -> Client",
+          "versions -> QuoteVersion"
+        ],
+        "purpose": "Likely supports /quotes routes.",
+        "keyFields": [
+          "id",
+          "clientId",
+          "client",
+          "status",
+          "quoteToken",
+          "createdAt",
+          "updatedAt",
+          "versions"
+        ],
+        "ownership": "Owned mainly by /quotes flow.",
+        "relatedEndpoints": [
+          "/quotes"
+        ],
+        "relatedModules": [
+          "api:quotes"
+        ],
+        "confidence": "high",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "name": "QuoteVersion",
+        "fields": [
+          {
+            "name": "id",
+            "type": "String",
+            "attributes": "@id @default(cuid())",
+            "isRelation": false
+          },
+          {
+            "name": "quoteId",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "quote",
+            "type": "Quote",
+            "attributes": "@relation(fields: [quoteId], references: [id], onDelete: Cascade)",
+            "isRelation": true
+          },
+          {
+            "name": "version",
+            "type": "Int",
+            "attributes": "@default(1)",
+            "isRelation": false
+          },
+          {
+            "name": "name",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "modality",
+            "type": "String",
+            "attributes": "@default(\"compra\")",
+            "isRelation": false
+          },
+          {
+            "name": "notes",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "aiContext",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "roiEstimate",
+            "type": "Float?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "rentPercent",
+            "type": "Float",
+            "attributes": "@default(0.06)",
+            "isRelation": false
+          },
+          {
+            "name": "installFeePercent",
+            "type": "Float",
+            "attributes": "@default(0.15)",
+            "isRelation": false
+          },
+          {
+            "name": "executiveSummary",
+            "type": "String?",
+            "attributes": "// editable summary for client view",
+            "isRelation": false
+          },
+          {
+            "name": "stageWeeks",
+            "type": "Int",
+            "attributes": "@default(4) // weeks per stage",
+            "isRelation": false
+          },
+          {
+            "name": "createdAt",
+            "type": "DateTime",
+            "attributes": "@default(now())",
+            "isRelation": false
+          },
+          {
+            "name": "modules",
+            "type": "QuoteSelectedModule[]",
+            "attributes": "",
+            "isRelation": true
+          },
+          {
+            "name": "stages",
+            "type": "QuoteStage[]",
+            "attributes": "",
+            "isRelation": true
+          }
+        ],
+        "importantFields": [
+          "id: String",
+          "quoteId: String",
+          "quote: Quote",
+          "name: String?",
+          "createdAt: DateTime",
+          "modules: QuoteSelectedModule[]",
+          "stages: QuoteStage[]"
+        ],
+        "relations": [
+          "quote -> Quote",
+          "modules -> QuoteSelectedModule",
+          "stages -> QuoteStage"
+        ],
+        "purpose": "Appears to be a relational core entity in the data layer.",
+        "keyFields": [
+          "id",
+          "quoteId",
+          "quote",
+          "name",
+          "createdAt",
+          "modules",
+          "stages"
+        ],
+        "ownership": "Ownership is only partially inferred.",
+        "relatedEndpoints": [],
+        "relatedModules": [],
+        "confidence": "high",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "name": "QuoteSelectedModule",
+        "fields": [
+          {
+            "name": "id",
+            "type": "String",
+            "attributes": "@id @default(cuid())",
+            "isRelation": false
+          },
+          {
+            "name": "versionId",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "version",
+            "type": "QuoteVersion",
+            "attributes": "@relation(fields: [versionId], references: [id], onDelete: Cascade)",
+            "isRelation": true
+          },
+          {
+            "name": "moduleId",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "module",
+            "type": "QuoteModule",
+            "attributes": "@relation(fields: [moduleId], references: [id])",
+            "isRelation": true
+          },
+          {
+            "name": "enabled",
+            "type": "Boolean",
+            "attributes": "@default(true)",
+            "isRelation": false
+          },
+          {
+            "name": "items",
+            "type": "QuoteSelectedItem[]",
+            "attributes": "",
+            "isRelation": true
+          }
+        ],
+        "importantFields": [
+          "id: String",
+          "versionId: String",
+          "version: QuoteVersion",
+          "moduleId: String",
+          "module: QuoteModule",
+          "items: QuoteSelectedItem[]"
+        ],
+        "relations": [
+          "version -> QuoteVersion",
+          "module -> QuoteModule",
+          "items -> QuoteSelectedItem"
+        ],
+        "purpose": "Likely supports /quotes routes.",
+        "keyFields": [
+          "id",
+          "versionId",
+          "version",
+          "moduleId",
+          "module",
+          "items"
+        ],
+        "ownership": "Owned mainly by /quotes flow.",
+        "relatedEndpoints": [
+          "/quotes"
+        ],
+        "relatedModules": [
+          "api:quotes"
+        ],
+        "confidence": "high",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "name": "QuoteSelectedItem",
+        "fields": [
+          {
+            "name": "id",
+            "type": "String",
+            "attributes": "@id @default(cuid())",
+            "isRelation": false
+          },
+          {
+            "name": "selectedModuleId",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "selectedModule",
+            "type": "QuoteSelectedModule",
+            "attributes": "@relation(fields: [selectedModuleId], references: [id], onDelete: Cascade)",
+            "isRelation": true
+          },
+          {
+            "name": "itemId",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "item",
+            "type": "ModuleItem",
+            "attributes": "@relation(fields: [itemId], references: [id])",
+            "isRelation": true
+          },
+          {
+            "name": "enabled",
+            "type": "Boolean",
+            "attributes": "@default(true)",
+            "isRelation": false
+          },
+          {
+            "name": "phase",
+            "type": "String",
+            "attributes": "@default(\"mvp\") // mvp | recomendado | completo",
+            "isRelation": false
+          },
+          {
+            "name": "priceOverride",
+            "type": "Float?",
+            "attributes": "// override del precio real para este cliente",
+            "isRelation": false
+          },
+          {
+            "name": "quantity",
+            "type": "Int",
+            "attributes": "@default(1) // for per-unit items",
+            "isRelation": false
+          },
+          {
+            "name": "quantityMvp",
+            "type": "Int",
+            "attributes": "@default(1) // per-phase qty for unit items",
+            "isRelation": false
+          },
+          {
+            "name": "quantityRec",
+            "type": "Int",
+            "attributes": "@default(1)",
+            "isRelation": false
+          },
+          {
+            "name": "quantityFull",
+            "type": "Int",
+            "attributes": "@default(1)",
+            "isRelation": false
+          }
+        ],
+        "importantFields": [
+          "id: String",
+          "selectedModuleId: String",
+          "selectedModule: QuoteSelectedModule",
+          "itemId: String",
+          "item: ModuleItem"
+        ],
+        "relations": [
+          "selectedModule -> QuoteSelectedModule",
+          "item -> ModuleItem"
+        ],
+        "purpose": "Likely supports /quotes routes.",
+        "keyFields": [
+          "id",
+          "selectedModuleId",
+          "selectedModule",
+          "itemId",
+          "item"
+        ],
+        "ownership": "Owned mainly by /quotes flow.",
+        "relatedEndpoints": [
+          "/quotes"
+        ],
+        "relatedModules": [
+          "api:quotes"
+        ],
+        "confidence": "high",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "name": "QuoteStage",
+        "fields": [
+          {
+            "name": "id",
+            "type": "String",
+            "attributes": "@id @default(cuid())",
+            "isRelation": false
+          },
+          {
+            "name": "versionId",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "version",
+            "type": "QuoteVersion",
+            "attributes": "@relation(fields: [versionId], references: [id], onDelete: Cascade)",
+            "isRelation": true
+          },
+          {
+            "name": "tier",
+            "type": "String",
+            "attributes": "@default(\"mvp\") // mvp | recomendado | completo",
+            "isRelation": false
+          },
+          {
+            "name": "stageNumber",
+            "type": "Int",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "name",
+            "type": "String",
+            "attributes": "@default(\"Etapa\")",
+            "isRelation": false
+          },
+          {
+            "name": "durationWeeks",
+            "type": "Int",
+            "attributes": "@default(4)",
+            "isRelation": false
+          },
+          {
+            "name": "notes",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "itemIds",
+            "type": "String?",
+            "attributes": "// comma-separated QuoteSelectedItem IDs",
+            "isRelation": false
+          },
+          {
+            "name": "createdAt",
+            "type": "DateTime",
+            "attributes": "@default(now())",
+            "isRelation": false
+          }
+        ],
+        "importantFields": [
+          "id: String",
+          "versionId: String",
+          "version: QuoteVersion",
+          "name: String",
+          "createdAt: DateTime"
+        ],
+        "relations": [
+          "version -> QuoteVersion"
+        ],
+        "purpose": "Appears to be a relational core entity in the data layer.",
+        "keyFields": [
+          "id",
+          "versionId",
+          "version",
+          "name",
+          "createdAt"
+        ],
+        "ownership": "Ownership is only partially inferred.",
+        "relatedEndpoints": [],
+        "relatedModules": [],
+        "confidence": "high",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "name": "ClientFeedback",
+        "fields": [
+          {
+            "name": "id",
+            "type": "String",
+            "attributes": "@id @default(cuid())",
+            "isRelation": false
+          },
+          {
+            "name": "quoteToken",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "moduleName",
+            "type": "String",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "itemName",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "comment",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "confirmed",
+            "type": "Boolean",
+            "attributes": "@default(false)",
+            "isRelation": false
+          },
+          {
+            "name": "createdAt",
+            "type": "DateTime",
+            "attributes": "@default(now())",
+            "isRelation": false
+          }
+        ],
+        "importantFields": [
+          "id: String",
+          "createdAt: DateTime"
+        ],
+        "relations": [],
+        "purpose": "Purpose is only partially inferred from schema fields.",
+        "keyFields": [
+          "id",
+          "createdAt"
+        ],
+        "ownership": "Ownership is only partially inferred.",
+        "relatedEndpoints": [],
+        "relatedModules": [],
+        "confidence": "low",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      },
+      {
+        "name": "QuestionnaireResponse",
+        "fields": [
+          {
+            "name": "id",
+            "type": "String",
+            "attributes": "@id @default(cuid())",
+            "isRelation": false
+          },
+          {
+            "name": "clientId",
+            "type": "String",
+            "attributes": "@unique",
+            "isRelation": false
+          },
+          {
+            "name": "client",
+            "type": "Client",
+            "attributes": "@relation(fields: [clientId], references: [id])",
+            "isRelation": true
+          },
+          {
+            "name": "projectName",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "projectDescription",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "problemToSolve",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "marketplaceType",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "verticalNiche",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "userTypes",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "expectedUsers",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "coreFeatures",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "paymentMethods",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "shippingLogistics",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "designStyle",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "referenceLinks",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "hasBranding",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "platforms",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "integrations",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "adminPanel",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "timeline",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "budgetRange",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "priority",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "designProposals",
+            "type": "String?",
+            "attributes": "@default(\"2\")",
+            "isRelation": false
+          },
+          {
+            "name": "additionalNotes",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "quotedServices",
+            "type": "String?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "isCompleted",
+            "type": "Boolean",
+            "attributes": "@default(false)",
+            "isRelation": false
+          },
+          {
+            "name": "completedAt",
+            "type": "DateTime?",
+            "attributes": "",
+            "isRelation": false
+          },
+          {
+            "name": "createdAt",
+            "type": "DateTime",
+            "attributes": "@default(now())",
+            "isRelation": false
+          },
+          {
+            "name": "updatedAt",
+            "type": "DateTime",
+            "attributes": "@updatedAt",
+            "isRelation": false
+          }
+        ],
+        "importantFields": [
+          "id: String",
+          "clientId: String",
+          "client: Client",
+          "createdAt: DateTime",
+          "updatedAt: DateTime"
+        ],
+        "relations": [
+          "client -> Client"
+        ],
+        "purpose": "Likely supports /clients/ai, /clients, /questionnaire, /seed routes.",
+        "keyFields": [
+          "id",
+          "clientId",
+          "client",
+          "createdAt",
+          "updatedAt"
+        ],
+        "ownership": "Owned mainly by /clients/ai flow.",
+        "relatedEndpoints": [
+          "/clients/ai",
+          "/clients",
+          "/questionnaire",
+          "/seed"
+        ],
+        "relatedModules": [
+          "api:clients",
+          "api:questionnaire",
+          "api:seed"
+        ],
+        "confidence": "high",
+        "evidence": {
+          "sourcePaths": [
+            "prisma/schema.prisma"
+          ],
+          "routeFiles": [],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [],
+          "symbolsSeen": [],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+          ]
+        }
+      }
+    ],
+    "enums": [],
+    "coreEntities": [
+      "Client",
+      "QuestionnaireResponse",
+      "ModuleItem",
+      "QuoteModule",
+      "QuoteSelectedModule"
+    ],
+    "risks": [
+      "Relational changes can ripple across linked entities.",
+      "Enum and status transitions should be checked across API handlers.",
+      "API handlers write directly to the data layer; schema changes should be coordinated with route contracts."
+    ],
+    "confidenceBySection": {
+      "entities": "high",
+      "relationships": "medium"
+    },
+    "evidence": {
+      "sourcePaths": [
+        "prisma/schema.prisma"
+      ],
+      "routeFiles": [],
+      "schemaRefs": [
+        "prisma/schema.prisma"
+      ],
+      "importsSeen": [],
+      "symbolsSeen": [],
+      "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+      "sourceFingerprint": [
+        "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+      ]
+    }
+  },
+  "api": {
+    "contracts": [
+      {
+        "path": "src/app/api/auth/route.ts",
+        "endpoint": "/auth",
+        "kind": "nextjs-app-route",
+        "domain": "auth",
+        "methods": [
+          "GET",
+          "POST",
+          "PATCH",
+          "DELETE"
+        ],
+        "purpose": "Handles write operations for /auth.",
+        "authRequired": true,
+        "requestShape": {
+          "bodyFields": [],
+          "queryFields": []
+        },
+        "responseKeys": [
+          "error",
+          "success",
+          "role",
+          "clientId",
+          "authenticated",
+          "userId",
+          "clientName"
+        ],
+        "sideEffects": [],
+        "relatedModels": [],
+        "confidence": "medium",
+        "publicRoute": "/auth",
+        "responseShape": {
+          "keys": [
+            "error",
+            "success",
+            "role",
+            "clientId",
+            "authenticated",
+            "userId",
+            "clientName"
+          ],
+          "confidence": "medium"
+        },
+        "confidenceByAspect": {
+          "backendSurface": "high",
+          "authInference": "medium",
+          "requestShape": "low",
+          "responseShape": "medium"
+        },
+        "gaps": [
+          "Request shape is partial.",
+          "Related entity/model is unclear."
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/auth/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/auth/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server",
+            "@/lib/auth"
+          ],
+          "symbolsSeen": [
+            "src/app/api/auth/route.ts#export:DELETE",
+            "src/app/api/auth/route.ts#export:GET",
+            "src/app/api/auth/route.ts#export:PATCH",
+            "src/app/api/auth/route.ts#export:POST",
+            "src/app/api/auth/route.ts#fn:DELETE",
+            "src/app/api/auth/route.ts#fn:GET",
+            "src/app/api/auth/route.ts#fn:PATCH",
+            "src/app/api/auth/route.ts#fn:POST"
+          ],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/auth/route.ts:dae5d91a28557d581c231d414e99d036475e38b9"
+          ]
+        }
+      },
+      {
+        "path": "src/app/api/client/preferences/route.ts",
+        "endpoint": "/client/preferences",
+        "kind": "nextjs-app-route",
+        "domain": "client",
+        "methods": [
+          "POST"
+        ],
+        "purpose": "Handles write operations for /client/preferences.",
+        "authRequired": true,
+        "requestShape": {
+          "bodyFields": [],
+          "queryFields": []
+        },
+        "responseKeys": [
+          "error",
+          "saved"
+        ],
+        "sideEffects": [],
+        "relatedModels": [],
+        "confidence": "medium",
+        "publicRoute": "/client/preferences",
+        "responseShape": {
+          "keys": [
+            "error",
+            "saved"
+          ],
+          "confidence": "medium"
+        },
+        "confidenceByAspect": {
+          "backendSurface": "high",
+          "authInference": "medium",
+          "requestShape": "low",
+          "responseShape": "medium"
+        },
+        "gaps": [
+          "Request shape is partial.",
+          "Related entity/model is unclear."
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/client/preferences/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/client/preferences/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server",
+            "@/lib/auth"
+          ],
+          "symbolsSeen": [
+            "src/app/api/client/preferences/route.ts#export:POST",
+            "src/app/api/client/preferences/route.ts#fn:POST"
+          ],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/client/preferences/route.ts:946690b84dff122f2c0ae15b036828200793f6dc"
+          ]
+        }
+      },
+      {
+        "path": "src/app/api/client/route.ts",
+        "endpoint": "/client",
+        "kind": "nextjs-app-route",
+        "domain": "client",
+        "methods": [
+          "GET"
+        ],
+        "purpose": "Returns data for /client.",
+        "authRequired": true,
+        "requestShape": {
+          "bodyFields": [],
+          "queryFields": []
+        },
+        "responseKeys": [
+          "error",
+          "clientName",
+          "clientToken",
+          "defaultTheme",
+          "hasQuestionnaire",
+          "questionnaireCompletedByClient",
+          "questionnaire"
+        ],
+        "sideEffects": [],
+        "relatedModels": [],
+        "confidence": "medium",
+        "publicRoute": "/client",
+        "responseShape": {
+          "keys": [
+            "error",
+            "clientName",
+            "clientToken",
+            "defaultTheme",
+            "hasQuestionnaire",
+            "questionnaireCompletedByClient",
+            "questionnaire"
+          ],
+          "confidence": "medium"
+        },
+        "confidenceByAspect": {
+          "backendSurface": "high",
+          "authInference": "medium",
+          "requestShape": "low",
+          "responseShape": "medium"
+        },
+        "gaps": [
+          "Request shape is partial.",
+          "Related entity/model is unclear."
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/client/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/client/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server",
+            "@/lib/auth"
+          ],
+          "symbolsSeen": [
+            "src/app/api/client/route.ts#export:GET",
+            "src/app/api/client/route.ts#fn:GET"
+          ],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/client/route.ts:0a6bea8e75a2bda34be146b913915768337e5c0d"
+          ]
+        }
+      },
+      {
+        "path": "src/app/api/clients/ai/route.ts",
+        "endpoint": "/clients/ai",
+        "kind": "nextjs-app-route",
+        "domain": "clients",
+        "methods": [
+          "POST"
+        ],
+        "purpose": "Handles write operations for /clients/ai.",
+        "authRequired": false,
+        "requestShape": {
+          "bodyFields": [],
+          "queryFields": []
+        },
+        "responseKeys": [
+          "error",
+          "client",
+          "ai",
+          "confidence",
+          "summary",
+          "fieldsFound"
+        ],
+        "sideEffects": [
+          "prisma.client.create",
+          "prisma.questionnaireResponse.create",
+          "prisma.client.findUnique"
+        ],
+        "relatedModels": [
+          "Client",
+          "QuestionnaireResponse"
+        ],
+        "confidence": "high",
+        "publicRoute": "/clients/ai",
+        "responseShape": {
+          "keys": [
+            "error",
+            "client",
+            "ai",
+            "confidence",
+            "summary",
+            "fieldsFound"
+          ],
+          "confidence": "medium"
+        },
+        "confidenceByAspect": {
+          "backendSurface": "high",
+          "authInference": "low",
+          "requestShape": "low",
+          "responseShape": "medium"
+        },
+        "gaps": [
+          "Request shape is partial.",
+          "Auth is not evident from static inspection."
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/clients/ai/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/clients/ai/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server",
+            "openai"
+          ],
+          "symbolsSeen": [
+            "src/app/api/clients/ai/route.ts#export:POST",
+            "src/app/api/clients/ai/route.ts#fn:POST"
+          ],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/clients/ai/route.ts:df3781a1039a5441fecd4516046877215d9a28b2"
+          ]
+        }
+      },
+      {
+        "path": "src/app/api/clients/route.ts",
+        "endpoint": "/clients",
+        "kind": "nextjs-app-route",
+        "domain": "clients",
+        "methods": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "purpose": "Handles write operations for /clients.",
+        "authRequired": false,
+        "requestShape": {
+          "bodyFields": [],
+          "queryFields": [
+            "id"
+          ]
+        },
+        "responseKeys": [
+          "error",
+          "success"
+        ],
+        "sideEffects": [
+          "prisma.client.create",
+          "prisma.client.update",
+          "prisma.questionnaireResponse.deleteMany",
+          "prisma.client.delete"
+        ],
+        "relatedModels": [
+          "Client",
+          "QuestionnaireResponse"
+        ],
+        "confidence": "high",
+        "publicRoute": "/clients",
+        "responseShape": {
+          "keys": [
+            "error",
+            "success"
+          ],
+          "confidence": "medium"
+        },
+        "confidenceByAspect": {
+          "backendSurface": "high",
+          "authInference": "low",
+          "requestShape": "medium",
+          "responseShape": "medium"
+        },
+        "gaps": [
+          "Auth is not evident from static inspection."
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/clients/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/clients/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [
+            "src/app/api/clients/route.ts#export:DELETE",
+            "src/app/api/clients/route.ts#export:GET",
+            "src/app/api/clients/route.ts#export:POST",
+            "src/app/api/clients/route.ts#export:PUT",
+            "src/app/api/clients/route.ts#fn:DELETE",
+            "src/app/api/clients/route.ts#fn:GET",
+            "src/app/api/clients/route.ts#fn:POST",
+            "src/app/api/clients/route.ts#fn:PUT"
+          ],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/clients/route.ts:661e7f216e3833d27ae0380f162a1f1af9547201"
+          ]
+        }
+      },
+      {
+        "path": "src/app/api/migrate/route.ts",
+        "endpoint": "/migrate",
+        "kind": "nextjs-app-route",
+        "domain": "migrate",
+        "methods": [
+          "POST"
+        ],
+        "purpose": "Handles write operations for /migrate.",
+        "authRequired": false,
+        "requestShape": {
+          "bodyFields": [],
+          "queryFields": []
+        },
+        "responseKeys": [
+          "success",
+          "migrations",
+          "mvpPlusToRecomendado",
+          "error"
+        ],
+        "sideEffects": [],
+        "relatedModels": [],
+        "confidence": "medium",
+        "publicRoute": "/migrate",
+        "responseShape": {
+          "keys": [
+            "success",
+            "migrations",
+            "mvpPlusToRecomendado",
+            "error"
+          ],
+          "confidence": "medium"
+        },
+        "confidenceByAspect": {
+          "backendSurface": "high",
+          "authInference": "low",
+          "requestShape": "low",
+          "responseShape": "medium"
+        },
+        "gaps": [
+          "Request shape is partial.",
+          "Related entity/model is unclear.",
+          "Auth is not evident from static inspection."
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/migrate/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/migrate/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [
+            "src/app/api/migrate/route.ts#export:POST",
+            "src/app/api/migrate/route.ts#fn:POST"
+          ],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/migrate/route.ts:d7b4eb3e83dcde1227c53a47e1a68898c8196807"
+          ]
+        }
+      },
+      {
+        "path": "src/app/api/modules/route.ts",
+        "endpoint": "/modules",
+        "kind": "nextjs-app-route",
+        "domain": "modules",
+        "methods": [
+          "GET",
+          "PUT"
+        ],
+        "purpose": "Updates resources behind /modules.",
+        "authRequired": false,
+        "requestShape": {
+          "bodyFields": [],
+          "queryFields": []
+        },
+        "responseKeys": [
+          "error"
+        ],
+        "sideEffects": [
+          "prisma.quoteModule.findMany",
+          "prisma.moduleItem.update"
+        ],
+        "relatedModels": [
+          "QuoteModule",
+          "ModuleItem"
+        ],
+        "confidence": "high",
+        "publicRoute": "/modules",
+        "responseShape": {
+          "keys": [
+            "error"
+          ],
+          "confidence": "medium"
+        },
+        "confidenceByAspect": {
+          "backendSurface": "high",
+          "authInference": "low",
+          "requestShape": "low",
+          "responseShape": "medium"
+        },
+        "gaps": [
+          "Request shape is partial.",
+          "Auth is not evident from static inspection."
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/modules/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/modules/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [
+            "src/app/api/modules/route.ts#export:GET",
+            "src/app/api/modules/route.ts#export:PUT",
+            "src/app/api/modules/route.ts#fn:GET",
+            "src/app/api/modules/route.ts#fn:PUT"
+          ],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/modules/route.ts:8d9944058f4cd49aaa8aeb93b6638bf47b988978"
+          ]
+        }
+      },
+      {
+        "path": "src/app/api/modules/seed/route.ts",
+        "endpoint": "/modules/seed",
+        "kind": "nextjs-app-route",
+        "domain": "modules",
+        "methods": [
+          "POST"
+        ],
+        "purpose": "Handles write operations for /modules/seed.",
+        "authRequired": false,
+        "requestShape": {
+          "bodyFields": [],
+          "queryFields": []
+        },
+        "responseKeys": [
+          "success",
+          "categories",
+          "items",
+          "error"
+        ],
+        "sideEffects": [
+          "prisma.moduleItem.findMany",
+          "prisma.quoteModule.upsert"
+        ],
+        "relatedModels": [
+          "ModuleItem",
+          "QuoteModule"
+        ],
+        "confidence": "high",
+        "publicRoute": "/modules/seed",
+        "responseShape": {
+          "keys": [
+            "success",
+            "categories",
+            "items",
+            "error"
+          ],
+          "confidence": "medium"
+        },
+        "confidenceByAspect": {
+          "backendSurface": "high",
+          "authInference": "low",
+          "requestShape": "low",
+          "responseShape": "medium"
+        },
+        "gaps": [
+          "Request shape is partial.",
+          "Auth is not evident from static inspection."
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/modules/seed/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/modules/seed/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [
+            "src/app/api/modules/seed/route.ts#export:POST",
+            "src/app/api/modules/seed/route.ts#fn:POST"
+          ],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/modules/seed/route.ts:87fb92315992607e5065b164eaa4388f274a63bf"
+          ]
+        }
+      },
+      {
+        "path": "src/app/api/questionnaire/route.ts",
+        "endpoint": "/questionnaire",
+        "kind": "nextjs-app-route",
+        "domain": "questionnaire",
+        "methods": [
+          "GET",
+          "POST",
+          "PATCH"
+        ],
+        "purpose": "Handles write operations for /questionnaire.",
+        "authRequired": false,
+        "requestShape": {
+          "bodyFields": [],
+          "queryFields": [
+            "token"
+          ]
+        },
+        "responseKeys": [
+          "error",
+          "saved",
+          "updatedAt"
+        ],
+        "sideEffects": [
+          "prisma.client.findUnique",
+          "prisma.questionnaireResponse.upsert"
+        ],
+        "relatedModels": [
+          "Client",
+          "QuestionnaireResponse"
+        ],
+        "confidence": "high",
+        "publicRoute": "/questionnaire",
+        "responseShape": {
+          "keys": [
+            "error",
+            "saved",
+            "updatedAt"
+          ],
+          "confidence": "medium"
+        },
+        "confidenceByAspect": {
+          "backendSurface": "high",
+          "authInference": "low",
+          "requestShape": "medium",
+          "responseShape": "medium"
+        },
+        "gaps": [
+          "Auth is not evident from static inspection."
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/questionnaire/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/questionnaire/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [
+            "src/app/api/questionnaire/route.ts#export:GET",
+            "src/app/api/questionnaire/route.ts#export:PATCH",
+            "src/app/api/questionnaire/route.ts#export:POST",
+            "src/app/api/questionnaire/route.ts#fn:GET",
+            "src/app/api/questionnaire/route.ts#fn:PATCH",
+            "src/app/api/questionnaire/route.ts#fn:POST"
+          ],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/questionnaire/route.ts:c1658c1c100d5a36063b6c5e50acda051b082b27"
+          ]
+        }
+      },
+      {
+        "path": "src/app/api/quotes/ai/route.ts",
+        "endpoint": "/quotes/ai",
+        "kind": "nextjs-app-route",
+        "domain": "quotes",
+        "methods": [
+          "POST"
+        ],
+        "purpose": "Handles write operations for /quotes/ai.",
+        "authRequired": false,
+        "requestShape": {
+          "bodyFields": [],
+          "queryFields": []
+        },
+        "responseKeys": [
+          "error",
+          "analysis",
+          "suggestions"
+        ],
+        "sideEffects": [
+          "prisma.client.findUnique"
+        ],
+        "relatedModels": [
+          "Client"
+        ],
+        "confidence": "high",
+        "publicRoute": "/quotes/ai",
+        "responseShape": {
+          "keys": [
+            "error",
+            "analysis",
+            "suggestions"
+          ],
+          "confidence": "medium"
+        },
+        "confidenceByAspect": {
+          "backendSurface": "high",
+          "authInference": "low",
+          "requestShape": "low",
+          "responseShape": "medium"
+        },
+        "gaps": [
+          "Request shape is partial.",
+          "Auth is not evident from static inspection."
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/quotes/ai/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/quotes/ai/route.ts"
+          ],
+          "schemaRefs": [
+            "prisma/schema.prisma"
+          ],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server",
+            "openai"
+          ],
+          "symbolsSeen": [
+            "src/app/api/quotes/ai/route.ts#export:POST",
+            "src/app/api/quotes/ai/route.ts#fn:POST"
+          ],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/quotes/ai/route.ts:ff3817b00b024495b0ef82f58352150424294ca2"
+          ]
+        }
+      },
+      {
+        "path": "src/app/api/quotes/pdf/route.ts",
+        "endpoint": "/quotes/pdf",
+        "kind": "nextjs-app-route",
+        "domain": "quotes",
+        "methods": [
+          "GET"
+        ],
+        "purpose": "Returns data for /quotes/pdf.",
+        "authRequired": false,
+        "requestShape": {
+          "bodyFields": [],
+          "queryFields": [
+            "quoteId",
+            "version",
+            "layout"
+          ]
+        },
+        "responseKeys": [
+          "error"
+        ],
+        "sideEffects": [],
+        "relatedModels": [],
+        "confidence": "high",
+        "publicRoute": "/quotes/pdf",
+        "responseShape": {
+          "keys": [
+            "error"
+          ],
+          "confidence": "medium"
+        },
+        "confidenceByAspect": {
+          "backendSurface": "high",
+          "authInference": "low",
+          "requestShape": "medium",
+          "responseShape": "medium"
+        },
+        "gaps": [
+          "Related entity/model is unclear.",
+          "Auth is not evident from static inspection."
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/quotes/pdf/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/quotes/pdf/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server",
+            "jspdf",
+            "jspdf-autotable"
+          ],
+          "symbolsSeen": [
+            "src/app/api/quotes/pdf/route.ts#export:GET",
+            "src/app/api/quotes/pdf/route.ts#fn:GET"
+          ],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/quotes/pdf/route.ts:3a93053173d51ab53261dae9bc68c86c1ad6d56f"
+          ]
+        }
+      },
+      {
+        "path": "src/app/api/quotes/public/route.ts",
+        "endpoint": "/quotes/public",
+        "kind": "nextjs-app-route",
+        "domain": "quotes",
+        "methods": [
+          "GET"
+        ],
+        "purpose": "Returns data for /quotes/public.",
+        "authRequired": false,
+        "requestShape": {
+          "bodyFields": [],
+          "queryFields": [
+            "token"
+          ]
+        },
+        "responseKeys": [
+          "error"
+        ],
+        "sideEffects": [],
+        "relatedModels": [],
+        "confidence": "high",
+        "publicRoute": "/quotes/public",
+        "responseShape": {
+          "keys": [
+            "error"
+          ],
+          "confidence": "medium"
+        },
+        "confidenceByAspect": {
+          "backendSurface": "high",
+          "authInference": "low",
+          "requestShape": "medium",
+          "responseShape": "medium"
+        },
+        "gaps": [
+          "Related entity/model is unclear.",
+          "Auth is not evident from static inspection."
+        ],
+        "evidence": {
+          "sourcePaths": [
+            "src/app/api/quotes/public/route.ts"
+          ],
+          "routeFiles": [
+            "src/app/api/quotes/public/route.ts"
+          ],
+          "schemaRefs": [],
+          "importsSeen": [
+            "@/lib/prisma",
+            "next/server"
+          ],
+          "symbolsSeen": [
+            "src/app/api/quotes/public/route.ts#export:GET",
+            "src/app/api/quotes/public/route.ts#fn:GET"
+          ],
+          "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+          "sourceFingerprint": [
+            "src/app/api/quotes/public/route.ts:acc08e889bffc05a9c085f22a60ee37415b6b799"
+          ]
+        }
+      }
+    ],
+    "routeGroups": [
+      {
+        "domain": "quotes",
+        "routes": [
+          {
+            "path": "src/app/api/quotes/route.ts",
+            "endpoint": "/quotes",
+            "kind": "nextjs-app-route",
+            "domain": "quotes",
+            "methods": [
+              "GET",
+              "POST",
+              "PATCH",
+              "DELETE"
+            ],
+            "purpose": "Handles write operations for /quotes.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": [
+                "clientId",
+                "quoteId"
+              ]
+            },
+            "responseKeys": [
+              "error",
+              "success"
+            ],
+            "sideEffects": [
+              "prisma.quote.findUnique",
+              "prisma.quote.findMany",
+              "prisma.client.findUnique",
+              "prisma.quote.create",
+              "prisma.quote.update",
+              "prisma.quoteSelectedModule.update",
+              "prisma.quoteSelectedItem.update",
+              "prisma.moduleItem.update"
+            ],
+            "relatedModels": [
+              "Quote",
+              "Client",
+              "QuoteSelectedModule",
+              "QuoteSelectedItem"
+            ],
+            "confidence": "high"
+          },
+          {
+            "path": "src/app/api/quotes/ai/route.ts",
+            "endpoint": "/quotes/ai",
+            "kind": "nextjs-app-route",
+            "domain": "quotes",
+            "methods": [
+              "POST"
+            ],
+            "purpose": "Handles write operations for /quotes/ai.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "error",
+              "analysis",
+              "suggestions"
+            ],
+            "sideEffects": [
+              "prisma.client.findUnique"
+            ],
+            "relatedModels": [
+              "Client"
+            ],
+            "confidence": "high"
+          },
+          {
+            "path": "src/app/api/quotes/pdf/route.ts",
+            "endpoint": "/quotes/pdf",
+            "kind": "nextjs-app-route",
+            "domain": "quotes",
+            "methods": [
+              "GET"
+            ],
+            "purpose": "Returns data for /quotes/pdf.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": [
+                "quoteId",
+                "version",
+                "layout"
+              ]
+            },
+            "responseKeys": [
+              "error"
+            ],
+            "sideEffects": [],
+            "relatedModels": [],
+            "confidence": "high"
+          },
+          {
+            "path": "src/app/api/quotes/public/route.ts",
+            "endpoint": "/quotes/public",
+            "kind": "nextjs-app-route",
+            "domain": "quotes",
+            "methods": [
+              "GET"
+            ],
+            "purpose": "Returns data for /quotes/public.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": [
+                "token"
+              ]
+            },
+            "responseKeys": [
+              "error"
+            ],
+            "sideEffects": [],
+            "relatedModels": [],
+            "confidence": "high"
+          }
+        ]
+      },
+      {
+        "domain": "client",
+        "routes": [
+          {
+            "path": "src/app/api/client/route.ts",
+            "endpoint": "/client",
+            "kind": "nextjs-app-route",
+            "domain": "client",
+            "methods": [
+              "GET"
+            ],
+            "purpose": "Returns data for /client.",
+            "authRequired": true,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "error",
+              "clientName",
+              "clientToken",
+              "defaultTheme",
+              "hasQuestionnaire",
+              "questionnaireCompletedByClient",
+              "questionnaire"
+            ],
+            "sideEffects": [],
+            "relatedModels": [],
+            "confidence": "medium"
+          },
+          {
+            "path": "src/app/api/client/preferences/route.ts",
+            "endpoint": "/client/preferences",
+            "kind": "nextjs-app-route",
+            "domain": "client",
+            "methods": [
+              "POST"
+            ],
+            "purpose": "Handles write operations for /client/preferences.",
+            "authRequired": true,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "error",
+              "saved"
+            ],
+            "sideEffects": [],
+            "relatedModels": [],
+            "confidence": "medium"
+          }
+        ]
+      },
+      {
+        "domain": "clients",
+        "routes": [
+          {
+            "path": "src/app/api/clients/route.ts",
+            "endpoint": "/clients",
+            "kind": "nextjs-app-route",
+            "domain": "clients",
+            "methods": [
+              "GET",
+              "POST",
+              "PUT",
+              "DELETE"
+            ],
+            "purpose": "Handles write operations for /clients.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": [
+                "id"
+              ]
+            },
+            "responseKeys": [
+              "error",
+              "success"
+            ],
+            "sideEffects": [
+              "prisma.client.create",
+              "prisma.client.update",
+              "prisma.questionnaireResponse.deleteMany",
+              "prisma.client.delete"
+            ],
+            "relatedModels": [
+              "Client",
+              "QuestionnaireResponse"
+            ],
+            "confidence": "high"
+          },
+          {
+            "path": "src/app/api/clients/ai/route.ts",
+            "endpoint": "/clients/ai",
+            "kind": "nextjs-app-route",
+            "domain": "clients",
+            "methods": [
+              "POST"
+            ],
+            "purpose": "Handles write operations for /clients/ai.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "error",
+              "client",
+              "ai",
+              "confidence",
+              "summary",
+              "fieldsFound"
+            ],
+            "sideEffects": [
+              "prisma.client.create",
+              "prisma.questionnaireResponse.create",
+              "prisma.client.findUnique"
+            ],
+            "relatedModels": [
+              "Client",
+              "QuestionnaireResponse"
+            ],
+            "confidence": "high"
+          }
+        ]
+      },
+      {
+        "domain": "modules",
+        "routes": [
+          {
+            "path": "src/app/api/modules/route.ts",
+            "endpoint": "/modules",
+            "kind": "nextjs-app-route",
+            "domain": "modules",
+            "methods": [
+              "GET",
+              "PUT"
+            ],
+            "purpose": "Updates resources behind /modules.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "error"
+            ],
+            "sideEffects": [
+              "prisma.quoteModule.findMany",
+              "prisma.moduleItem.update"
+            ],
+            "relatedModels": [
+              "QuoteModule",
+              "ModuleItem"
+            ],
+            "confidence": "high"
+          },
+          {
+            "path": "src/app/api/modules/seed/route.ts",
+            "endpoint": "/modules/seed",
+            "kind": "nextjs-app-route",
+            "domain": "modules",
+            "methods": [
+              "POST"
+            ],
+            "purpose": "Handles write operations for /modules/seed.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "success",
+              "categories",
+              "items",
+              "error"
+            ],
+            "sideEffects": [
+              "prisma.moduleItem.findMany",
+              "prisma.quoteModule.upsert"
+            ],
+            "relatedModels": [
+              "ModuleItem",
+              "QuoteModule"
+            ],
+            "confidence": "high"
+          }
+        ]
+      },
+      {
+        "domain": "auth",
+        "routes": [
+          {
+            "path": "src/app/api/auth/route.ts",
+            "endpoint": "/auth",
+            "kind": "nextjs-app-route",
+            "domain": "auth",
+            "methods": [
+              "GET",
+              "POST",
+              "PATCH",
+              "DELETE"
+            ],
+            "purpose": "Handles write operations for /auth.",
+            "authRequired": true,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "error",
+              "success",
+              "role",
+              "clientId",
+              "authenticated",
+              "userId",
+              "clientName"
+            ],
+            "sideEffects": [],
+            "relatedModels": [],
+            "confidence": "medium"
+          }
+        ]
+      },
+      {
+        "domain": "migrate",
+        "routes": [
+          {
+            "path": "src/app/api/migrate/route.ts",
+            "endpoint": "/migrate",
+            "kind": "nextjs-app-route",
+            "domain": "migrate",
+            "methods": [
+              "POST"
+            ],
+            "purpose": "Handles write operations for /migrate.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "success",
+              "migrations",
+              "mvpPlusToRecomendado",
+              "error"
+            ],
+            "sideEffects": [],
+            "relatedModels": [],
+            "confidence": "medium"
+          }
+        ]
+      },
+      {
+        "domain": "questionnaire",
+        "routes": [
+          {
+            "path": "src/app/api/questionnaire/route.ts",
+            "endpoint": "/questionnaire",
+            "kind": "nextjs-app-route",
+            "domain": "questionnaire",
+            "methods": [
+              "GET",
+              "POST",
+              "PATCH"
+            ],
+            "purpose": "Handles write operations for /questionnaire.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": [
+                "token"
+              ]
+            },
+            "responseKeys": [
+              "error",
+              "saved",
+              "updatedAt"
+            ],
+            "sideEffects": [
+              "prisma.client.findUnique",
+              "prisma.questionnaireResponse.upsert"
+            ],
+            "relatedModels": [
+              "Client",
+              "QuestionnaireResponse"
+            ],
+            "confidence": "high"
+          }
+        ]
+      },
+      {
+        "domain": "seed",
+        "routes": [
+          {
+            "path": "src/app/api/seed/route.ts",
+            "endpoint": "/seed",
+            "kind": "nextjs-app-route",
+            "domain": "seed",
+            "methods": [
+              "POST"
+            ],
+            "purpose": "Handles write operations for /seed.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": []
+            },
+            "responseKeys": [
+              "success",
+              "clientToken",
+              "link",
+              "error"
+            ],
+            "sideEffects": [
+              "prisma.client.upsert",
+              "prisma.questionnaireResponse.upsert"
+            ],
+            "relatedModels": [
+              "Client",
+              "QuestionnaireResponse"
+            ],
+            "confidence": "high"
+          }
+        ]
+      },
+      {
+        "domain": "services",
+        "routes": [
+          {
+            "path": "src/app/api/services/route.ts",
+            "endpoint": "/services",
+            "kind": "nextjs-app-route",
+            "domain": "services",
+            "methods": [
+              "GET",
+              "POST",
+              "PUT",
+              "DELETE"
+            ],
+            "purpose": "Handles write operations for /services.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": [
+                "id"
+              ]
+            },
+            "responseKeys": [
+              "error",
+              "success"
+            ],
+            "sideEffects": [
+              "prisma.service.createMany",
+              "prisma.service.findMany",
+              "prisma.service.create",
+              "prisma.service.update",
+              "prisma.service.delete"
+            ],
+            "relatedModels": [
+              "Service"
+            ],
+            "confidence": "high"
+          }
+        ]
+      },
+      {
+        "domain": "stages",
+        "routes": [
+          {
+            "path": "src/app/api/stages/route.ts",
+            "endpoint": "/stages",
+            "kind": "nextjs-app-route",
+            "domain": "stages",
+            "methods": [
+              "GET",
+              "POST",
+              "PATCH",
+              "DELETE"
+            ],
+            "purpose": "Handles write operations for /stages.",
+            "authRequired": false,
+            "requestShape": {
+              "bodyFields": [],
+              "queryFields": [
+                "versionId",
+                "tier",
+                "stageId"
+              ]
+            },
+            "responseKeys": [
+              "error",
+              "success"
+            ],
+            "sideEffects": [],
+            "relatedModels": [],
+            "confidence": "high"
+          }
+        ]
+      }
+    ],
+    "evidence": {
+      "sourcePaths": [
+        "src/app/api/auth/route.ts",
+        "src/app/api/client/preferences/route.ts",
+        "src/app/api/client/route.ts",
+        "src/app/api/clients/ai/route.ts",
+        "src/app/api/clients/route.ts",
+        "src/app/api/migrate/route.ts",
+        "src/app/api/modules/route.ts",
+        "src/app/api/modules/seed/route.ts"
+      ],
+      "routeFiles": [
+        "src/app/api/auth/route.ts",
+        "src/app/api/client/preferences/route.ts",
+        "src/app/api/client/route.ts",
+        "src/app/api/clients/ai/route.ts",
+        "src/app/api/clients/route.ts",
+        "src/app/api/migrate/route.ts",
+        "src/app/api/modules/route.ts",
+        "src/app/api/modules/seed/route.ts"
+      ],
+      "schemaRefs": [],
+      "importsSeen": [
+        "@/lib/prisma",
+        "next/server",
+        "@/lib/auth",
+        "openai",
+        "jspdf",
+        "jspdf-autotable"
+      ],
+      "symbolsSeen": [
+        "src/app/api/auth/route.ts#export:DELETE",
+        "src/app/api/auth/route.ts#export:GET",
+        "src/app/api/auth/route.ts#export:PATCH",
+        "src/app/api/auth/route.ts#export:POST",
+        "src/app/api/auth/route.ts#fn:DELETE",
+        "src/app/api/auth/route.ts#fn:GET",
+        "src/app/api/auth/route.ts#fn:PATCH",
+        "src/app/api/auth/route.ts#fn:POST",
+        "src/app/api/client/preferences/route.ts#export:POST",
+        "src/app/api/client/preferences/route.ts#fn:POST",
+        "src/app/api/client/route.ts#export:GET",
+        "src/app/api/client/route.ts#fn:GET",
+        "src/app/api/clients/ai/route.ts#export:POST",
+        "src/app/api/clients/ai/route.ts#fn:POST",
+        "src/app/api/clients/route.ts#export:DELETE",
+        "src/app/api/clients/route.ts#export:GET"
+      ],
+      "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+      "sourceFingerprint": [
+        "src/app/api/auth/route.ts:dae5d91a28557d581c231d414e99d036475e38b9",
+        "src/app/api/client/preferences/route.ts:946690b84dff122f2c0ae15b036828200793f6dc",
+        "src/app/api/client/route.ts:0a6bea8e75a2bda34be146b913915768337e5c0d",
+        "src/app/api/clients/ai/route.ts:df3781a1039a5441fecd4516046877215d9a28b2",
+        "src/app/api/clients/route.ts:661e7f216e3833d27ae0380f162a1f1af9547201",
+        "src/app/api/migrate/route.ts:d7b4eb3e83dcde1227c53a47e1a68898c8196807",
+        "src/app/api/modules/route.ts:8d9944058f4cd49aaa8aeb93b6638bf47b988978",
+        "src/app/api/modules/seed/route.ts:87fb92315992607e5065b164eaa4388f274a63bf"
+      ]
+    }
+  },
+  "decisions": [
+    {
+      "statement": "nextjs appears to be the primary framework/runtime entry for the repo.",
+      "qualifier": "observed",
+      "confidence": "high",
+      "evidence": {
+        "sourcePaths": [],
+        "routeFiles": [],
+        "schemaRefs": [],
+        "importsSeen": [],
+        "symbolsSeen": [],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": []
+      }
+    },
+    {
+      "statement": "Next.js is the primary application framework for this repo.",
+      "qualifier": "observed",
+      "confidence": "high",
+      "evidence": {
+        "sourcePaths": [],
+        "routeFiles": [
+          "src/app/api/auth/route.ts",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts",
+          "src/app/api/clients/route.ts",
+          "src/app/api/migrate/route.ts",
+          "src/app/api/modules/route.ts",
+          "src/app/api/modules/seed/route.ts"
+        ],
+        "schemaRefs": [
+          "prisma/schema.prisma"
+        ],
+        "importsSeen": [],
+        "symbolsSeen": [],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": []
+      }
+    },
+    {
+      "statement": "App Router route handlers are used for API endpoints.",
+      "qualifier": "observed",
+      "confidence": "medium",
+      "evidence": {
+        "sourcePaths": [],
+        "routeFiles": [
+          "src/app/api/auth/route.ts",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts",
+          "src/app/api/clients/route.ts",
+          "src/app/api/migrate/route.ts",
+          "src/app/api/modules/route.ts",
+          "src/app/api/modules/seed/route.ts"
+        ],
+        "schemaRefs": [
+          "prisma/schema.prisma"
+        ],
+        "importsSeen": [],
+        "symbolsSeen": [],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": []
+      }
+    },
+    {
+      "statement": "Prisma schema files indicate a schema-first data strategy.",
+      "qualifier": "candidate",
+      "confidence": "high",
+      "evidence": {
+        "sourcePaths": [],
+        "routeFiles": [
+          "src/app/api/auth/route.ts",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts",
+          "src/app/api/clients/route.ts",
+          "src/app/api/migrate/route.ts",
+          "src/app/api/modules/route.ts",
+          "src/app/api/modules/seed/route.ts"
+        ],
+        "schemaRefs": [
+          "prisma/schema.prisma"
+        ],
+        "importsSeen": [],
+        "symbolsSeen": [],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": []
+      }
+    },
+    {
+      "statement": "PDF generation capability is present in dependencies.",
+      "qualifier": "candidate",
+      "confidence": "medium",
+      "evidence": {
+        "sourcePaths": [],
+        "routeFiles": [
+          "src/app/api/auth/route.ts",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts",
+          "src/app/api/clients/route.ts",
+          "src/app/api/migrate/route.ts",
+          "src/app/api/modules/route.ts",
+          "src/app/api/modules/seed/route.ts"
+        ],
+        "schemaRefs": [
+          "prisma/schema.prisma"
+        ],
+        "importsSeen": [],
+        "symbolsSeen": [],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": []
+      }
+    },
+    {
+      "statement": "AI integration dependency is present in the application stack.",
+      "qualifier": "candidate",
+      "confidence": "medium",
+      "evidence": {
+        "sourcePaths": [],
+        "routeFiles": [
+          "src/app/api/auth/route.ts",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts",
+          "src/app/api/clients/route.ts",
+          "src/app/api/migrate/route.ts",
+          "src/app/api/modules/route.ts",
+          "src/app/api/modules/seed/route.ts"
+        ],
+        "schemaRefs": [
+          "prisma/schema.prisma"
+        ],
+        "importsSeen": [],
+        "symbolsSeen": [],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": []
+      }
+    }
+  ],
+  "recent": {
+    "projectChanges": {
+      "strategy": "filesystem-mtime",
+      "files": [
+        {
+          "path": "tsconfig.tsbuildinfo",
+          "mtimeMs": 1771541630955.4282
+        },
+        {
+          "path": "src/app/cliente/page.tsx",
+          "mtimeMs": 1771541613860.328
+        },
+        {
+          "path": "src/app/api/quotes/pdf/route.ts",
+          "mtimeMs": 1771536959108.1091
+        },
+        {
+          "path": "src/app/api/client/route.ts",
+          "mtimeMs": 1771536837237.7646
+        },
+        {
+          "path": "src/app/admin/page.tsx",
+          "mtimeMs": 1771531700899.151
+        },
+        {
+          "path": "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "mtimeMs": 1771531687444.583
+        },
+        {
+          "path": "src/app/api/quotes/route.ts",
+          "mtimeMs": 1771531550288.2534
+        },
+        {
+          "path": "src/app/admin/cotizador/[clientId]/page.tsx",
+          "mtimeMs": 1771531512413.2585
+        }
+      ]
+    },
+    "mappingChanges": {
+      "strategy": "filesystem-mtime",
+      "files": [
+        {
+          "path": "AI_CONTEXT/09-OPEN-ISSUES.md",
+          "mtimeMs": 1774081183883.1475
+        },
+        {
+          "path": "AI_CONTEXT/08-RECENT-CHANGES.md",
+          "mtimeMs": 1774081183882.1338
+        },
+        {
+          "path": "AI_CONTEXT/07-DECISIONS-ADR.md",
+          "mtimeMs": 1774081183881.1077
+        },
+        {
+          "path": "AI_CONTEXT/06-API-CONTRACTS.md",
+          "mtimeMs": 1774081183879.7563
+        },
+        {
+          "path": "AI_CONTEXT/05-DATA-MODELS.md",
+          "mtimeMs": 1774081183878.1753
+        },
+        {
+          "path": "AI_CONTEXT/04-FRONTEND.md",
+          "mtimeMs": 1774081183876.0461
+        },
+        {
+          "path": "AI_CONTEXT/03-BACKEND.md",
+          "mtimeMs": 1774081183875.0217
+        },
+        {
+          "path": "AI_CONTEXT/02-ARCHITECTURE.md",
+          "mtimeMs": 1774081183873.955
+        }
+      ]
+    },
+    "limitations": "Recent changes are inferred from filesystem mtimes. This is weaker than git diff/history and should not be treated as strong semantic evidence.",
+    "evidence": {
+      "sourcePaths": [
+        "tsconfig.tsbuildinfo",
+        "src/app/cliente/page.tsx",
+        "src/app/api/quotes/pdf/route.ts",
+        "src/app/api/client/route.ts",
+        "src/app/admin/page.tsx",
+        "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+        "src/app/api/quotes/route.ts",
+        "src/app/admin/cotizador/[clientId]/page.tsx"
+      ],
+      "routeFiles": [],
+      "schemaRefs": [],
+      "importsSeen": [],
+      "symbolsSeen": [],
+      "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+      "sourceFingerprint": [
+        "tsconfig.tsbuildinfo:52478074fad685242ccde1dab48a33542ecfc13f",
+        "src/app/cliente/page.tsx:15cea6fa153ddea72a8b833101106b86c207cd0b",
+        "src/app/api/quotes/pdf/route.ts:3a93053173d51ab53261dae9bc68c86c1ad6d56f",
+        "src/app/api/client/route.ts:0a6bea8e75a2bda34be146b913915768337e5c0d",
+        "src/app/admin/page.tsx:2ee068781bcb2d470be939815f82538dfdecbb90",
+        "src/app/admin/cotizador/[clientId]/ajustes/page.tsx:7ca91065f7d6ebea5da49f37521bab2b0e4912ff",
+        "src/app/api/quotes/route.ts:a869ef51bbf22ac819dca405a0dbc91fbd7dd535",
+        "src/app/admin/cotizador/[clientId]/page.tsx:99c93b38e388a298eab5773675fee2fef99bce00"
+      ]
+    }
+  },
+  "openIssues": [
+    {
+      "severity": "info",
+      "kind": "no-unresolved",
+      "detail": "No unresolved contradictions were detected in the deterministic evidence pass.",
+      "evidence": {
+        "sourcePaths": [
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/cotizador/[clientId]/page.tsx",
+          "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+          "src/app/admin/page.tsx",
+          "src/app/api/auth/route.ts",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts"
+        ],
+        "routeFiles": [
+          "src/app/api/auth/route.ts",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts",
+          "src/app/api/clients/route.ts",
+          "src/app/api/migrate/route.ts",
+          "src/app/api/modules/route.ts",
+          "src/app/api/modules/seed/route.ts"
+        ],
+        "schemaRefs": [
+          "prisma/schema.prisma"
+        ],
+        "importsSeen": [
+          "react",
+          "next/navigation",
+          "next/image",
+          "@/lib/prisma",
+          "next/server",
+          "@/lib/auth",
+          "openai"
+        ],
+        "symbolsSeen": [
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx#fn:AjustesPage",
+          "src/app/admin/cotizador/[clientId]/page.tsx#fn:CotizadorPage",
+          "src/app/admin/cotizador/[clientId]/page.tsx#fn:RichTip",
+          "src/app/admin/cotizador/[clientId]/page.tsx#fn:Tip",
+          "src/app/admin/cotizador/[clientId]/roadmap/page.tsx#fn:RoadmapPage",
+          "src/app/admin/page.tsx#fn:AdminPage",
+          "src/app/api/auth/route.ts#export:DELETE",
+          "src/app/api/auth/route.ts#export:GET",
+          "src/app/api/auth/route.ts#export:PATCH",
+          "src/app/api/auth/route.ts#export:POST"
+        ],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": [
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx:7ca91065f7d6ebea5da49f37521bab2b0e4912ff",
+          "src/app/admin/cotizador/[clientId]/page.tsx:99c93b38e388a298eab5773675fee2fef99bce00",
+          "src/app/admin/cotizador/[clientId]/roadmap/page.tsx:6d045b39d22801d31ab80c45f45a344816c967f5",
+          "src/app/admin/page.tsx:2ee068781bcb2d470be939815f82538dfdecbb90",
+          "src/app/api/auth/route.ts:dae5d91a28557d581c231d414e99d036475e38b9",
+          "src/app/api/client/preferences/route.ts:946690b84dff122f2c0ae15b036828200793f6dc",
+          "src/app/api/client/route.ts:0a6bea8e75a2bda34be146b913915768337e5c0d",
+          "src/app/api/clients/ai/route.ts:df3781a1039a5441fecd4516046877215d9a28b2"
+        ]
+      }
+    },
+    {
+      "severity": "medium",
+      "kind": "partial-endpoint",
+      "detail": "/auth: Request shape is partial. Related entity/model is unclear.",
+      "evidence": {
+        "sourcePaths": [
+          "src/app/api/auth/route.ts"
+        ],
+        "routeFiles": [
+          "src/app/api/auth/route.ts"
+        ],
+        "schemaRefs": [],
+        "importsSeen": [
+          "@/lib/prisma",
+          "next/server",
+          "@/lib/auth"
+        ],
+        "symbolsSeen": [
+          "src/app/api/auth/route.ts#export:DELETE",
+          "src/app/api/auth/route.ts#export:GET",
+          "src/app/api/auth/route.ts#export:PATCH",
+          "src/app/api/auth/route.ts#export:POST",
+          "src/app/api/auth/route.ts#fn:DELETE",
+          "src/app/api/auth/route.ts#fn:GET",
+          "src/app/api/auth/route.ts#fn:PATCH",
+          "src/app/api/auth/route.ts#fn:POST"
+        ],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": [
+          "src/app/api/auth/route.ts:dae5d91a28557d581c231d414e99d036475e38b9"
+        ]
+      }
+    },
+    {
+      "severity": "medium",
+      "kind": "partial-endpoint",
+      "detail": "/client/preferences: Request shape is partial. Related entity/model is unclear.",
+      "evidence": {
+        "sourcePaths": [
+          "src/app/api/client/preferences/route.ts"
+        ],
+        "routeFiles": [
+          "src/app/api/client/preferences/route.ts"
+        ],
+        "schemaRefs": [],
+        "importsSeen": [
+          "@/lib/prisma",
+          "next/server",
+          "@/lib/auth"
+        ],
+        "symbolsSeen": [
+          "src/app/api/client/preferences/route.ts#export:POST",
+          "src/app/api/client/preferences/route.ts#fn:POST"
+        ],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": [
+          "src/app/api/client/preferences/route.ts:946690b84dff122f2c0ae15b036828200793f6dc"
+        ]
+      }
+    },
+    {
+      "severity": "medium",
+      "kind": "partial-endpoint",
+      "detail": "/client: Request shape is partial. Related entity/model is unclear.",
+      "evidence": {
+        "sourcePaths": [
+          "src/app/api/client/route.ts"
+        ],
+        "routeFiles": [
+          "src/app/api/client/route.ts"
+        ],
+        "schemaRefs": [],
+        "importsSeen": [
+          "@/lib/prisma",
+          "next/server",
+          "@/lib/auth"
+        ],
+        "symbolsSeen": [
+          "src/app/api/client/route.ts#export:GET",
+          "src/app/api/client/route.ts#fn:GET"
+        ],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": [
+          "src/app/api/client/route.ts:0a6bea8e75a2bda34be146b913915768337e5c0d"
+        ]
+      }
+    },
+    {
+      "severity": "medium",
+      "kind": "partial-endpoint",
+      "detail": "/clients/ai: Request shape is partial. Auth is not evident from static inspection.",
+      "evidence": {
+        "sourcePaths": [
+          "src/app/api/clients/ai/route.ts"
+        ],
+        "routeFiles": [
+          "src/app/api/clients/ai/route.ts"
+        ],
+        "schemaRefs": [
+          "prisma/schema.prisma"
+        ],
+        "importsSeen": [
+          "@/lib/prisma",
+          "next/server",
+          "openai"
+        ],
+        "symbolsSeen": [
+          "src/app/api/clients/ai/route.ts#export:POST",
+          "src/app/api/clients/ai/route.ts#fn:POST"
+        ],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": [
+          "src/app/api/clients/ai/route.ts:df3781a1039a5441fecd4516046877215d9a28b2"
+        ]
+      }
+    },
+    {
+      "severity": "medium",
+      "kind": "partial-endpoint",
+      "detail": "/clients: Auth is not evident from static inspection.",
+      "evidence": {
+        "sourcePaths": [
+          "src/app/api/clients/route.ts"
+        ],
+        "routeFiles": [
+          "src/app/api/clients/route.ts"
+        ],
+        "schemaRefs": [
+          "prisma/schema.prisma"
+        ],
+        "importsSeen": [
+          "@/lib/prisma",
+          "next/server"
+        ],
+        "symbolsSeen": [
+          "src/app/api/clients/route.ts#export:DELETE",
+          "src/app/api/clients/route.ts#export:GET",
+          "src/app/api/clients/route.ts#export:POST",
+          "src/app/api/clients/route.ts#export:PUT",
+          "src/app/api/clients/route.ts#fn:DELETE",
+          "src/app/api/clients/route.ts#fn:GET",
+          "src/app/api/clients/route.ts#fn:POST",
+          "src/app/api/clients/route.ts#fn:PUT"
+        ],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": [
+          "src/app/api/clients/route.ts:661e7f216e3833d27ae0380f162a1f1af9547201"
+        ]
+      }
+    },
+    {
+      "severity": "medium",
+      "kind": "partial-endpoint",
+      "detail": "/migrate: Request shape is partial. Related entity/model is unclear. Auth is not evident from static inspection.",
+      "evidence": {
+        "sourcePaths": [
+          "src/app/api/migrate/route.ts"
+        ],
+        "routeFiles": [
+          "src/app/api/migrate/route.ts"
+        ],
+        "schemaRefs": [],
+        "importsSeen": [
+          "@/lib/prisma",
+          "next/server"
+        ],
+        "symbolsSeen": [
+          "src/app/api/migrate/route.ts#export:POST",
+          "src/app/api/migrate/route.ts#fn:POST"
+        ],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": [
+          "src/app/api/migrate/route.ts:d7b4eb3e83dcde1227c53a47e1a68898c8196807"
+        ]
+      }
+    },
+    {
+      "severity": "medium",
+      "kind": "partial-endpoint",
+      "detail": "/modules: Request shape is partial. Auth is not evident from static inspection.",
+      "evidence": {
+        "sourcePaths": [
+          "src/app/api/modules/route.ts"
+        ],
+        "routeFiles": [
+          "src/app/api/modules/route.ts"
+        ],
+        "schemaRefs": [
+          "prisma/schema.prisma"
+        ],
+        "importsSeen": [
+          "@/lib/prisma",
+          "next/server"
+        ],
+        "symbolsSeen": [
+          "src/app/api/modules/route.ts#export:GET",
+          "src/app/api/modules/route.ts#export:PUT",
+          "src/app/api/modules/route.ts#fn:GET",
+          "src/app/api/modules/route.ts#fn:PUT"
+        ],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": [
+          "src/app/api/modules/route.ts:8d9944058f4cd49aaa8aeb93b6638bf47b988978"
+        ]
+      }
+    },
+    {
+      "severity": "medium",
+      "kind": "partial-endpoint",
+      "detail": "/modules/seed: Request shape is partial. Auth is not evident from static inspection.",
+      "evidence": {
+        "sourcePaths": [
+          "src/app/api/modules/seed/route.ts"
+        ],
+        "routeFiles": [
+          "src/app/api/modules/seed/route.ts"
+        ],
+        "schemaRefs": [
+          "prisma/schema.prisma"
+        ],
+        "importsSeen": [
+          "@/lib/prisma",
+          "next/server"
+        ],
+        "symbolsSeen": [
+          "src/app/api/modules/seed/route.ts#export:POST",
+          "src/app/api/modules/seed/route.ts#fn:POST"
+        ],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": [
+          "src/app/api/modules/seed/route.ts:87fb92315992607e5065b164eaa4388f274a63bf"
+        ]
+      }
+    },
+    {
+      "severity": "medium",
+      "kind": "partial-endpoint",
+      "detail": "/questionnaire: Auth is not evident from static inspection.",
+      "evidence": {
+        "sourcePaths": [
+          "src/app/api/questionnaire/route.ts"
+        ],
+        "routeFiles": [
+          "src/app/api/questionnaire/route.ts"
+        ],
+        "schemaRefs": [
+          "prisma/schema.prisma"
+        ],
+        "importsSeen": [
+          "@/lib/prisma",
+          "next/server"
+        ],
+        "symbolsSeen": [
+          "src/app/api/questionnaire/route.ts#export:GET",
+          "src/app/api/questionnaire/route.ts#export:PATCH",
+          "src/app/api/questionnaire/route.ts#export:POST",
+          "src/app/api/questionnaire/route.ts#fn:GET",
+          "src/app/api/questionnaire/route.ts#fn:PATCH",
+          "src/app/api/questionnaire/route.ts#fn:POST"
+        ],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": [
+          "src/app/api/questionnaire/route.ts:c1658c1c100d5a36063b6c5e50acda051b082b27"
+        ]
+      }
+    },
+    {
+      "severity": "medium",
+      "kind": "partial-endpoint",
+      "detail": "/quotes/ai: Request shape is partial. Auth is not evident from static inspection.",
+      "evidence": {
+        "sourcePaths": [
+          "src/app/api/quotes/ai/route.ts"
+        ],
+        "routeFiles": [
+          "src/app/api/quotes/ai/route.ts"
+        ],
+        "schemaRefs": [
+          "prisma/schema.prisma"
+        ],
+        "importsSeen": [
+          "@/lib/prisma",
+          "next/server",
+          "openai"
+        ],
+        "symbolsSeen": [
+          "src/app/api/quotes/ai/route.ts#export:POST",
+          "src/app/api/quotes/ai/route.ts#fn:POST"
+        ],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": [
+          "src/app/api/quotes/ai/route.ts:ff3817b00b024495b0ef82f58352150424294ca2"
+        ]
+      }
+    },
+    {
+      "severity": "medium",
+      "kind": "partial-endpoint",
+      "detail": "/quotes/pdf: Related entity/model is unclear. Auth is not evident from static inspection.",
+      "evidence": {
+        "sourcePaths": [
+          "src/app/api/quotes/pdf/route.ts"
+        ],
+        "routeFiles": [
+          "src/app/api/quotes/pdf/route.ts"
+        ],
+        "schemaRefs": [],
+        "importsSeen": [
+          "@/lib/prisma",
+          "next/server",
+          "jspdf",
+          "jspdf-autotable"
+        ],
+        "symbolsSeen": [
+          "src/app/api/quotes/pdf/route.ts#export:GET",
+          "src/app/api/quotes/pdf/route.ts#fn:GET"
+        ],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": [
+          "src/app/api/quotes/pdf/route.ts:3a93053173d51ab53261dae9bc68c86c1ad6d56f"
+        ]
+      }
+    },
+    {
+      "severity": "medium",
+      "kind": "partial-endpoint",
+      "detail": "/quotes/public: Related entity/model is unclear. Auth is not evident from static inspection.",
+      "evidence": {
+        "sourcePaths": [
+          "src/app/api/quotes/public/route.ts"
+        ],
+        "routeFiles": [
+          "src/app/api/quotes/public/route.ts"
+        ],
+        "schemaRefs": [],
+        "importsSeen": [
+          "@/lib/prisma",
+          "next/server"
+        ],
+        "symbolsSeen": [
+          "src/app/api/quotes/public/route.ts#export:GET",
+          "src/app/api/quotes/public/route.ts#fn:GET"
+        ],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": [
+          "src/app/api/quotes/public/route.ts:acc08e889bffc05a9c085f22a60ee37415b6b799"
+        ]
+      }
+    },
+    {
+      "severity": "medium",
+      "kind": "data-model-gap",
+      "detail": "ClientFeedback: purpose or relationships remain partially inferred.",
+      "evidence": {
+        "sourcePaths": [
+          "prisma/schema.prisma"
+        ],
+        "routeFiles": [],
+        "schemaRefs": [
+          "prisma/schema.prisma"
+        ],
+        "importsSeen": [],
+        "symbolsSeen": [],
+        "basedOnCommit": "72f8631fe0ed5dee0d8a88f5cf1c08dc21121ae1",
+        "sourceFingerprint": [
+          "prisma/schema.prisma:40e1ec3089b259da683b3b59fc3ebd8587416177"
+        ]
+      }
+    }
+  ],
+  "critic": {
+    "schemaVersion": "ecc.ai-context-critic.v1",
+    "generatedAt": "2026-03-21T10:24:12.268Z",
+    "mode": "balanced",
+    "overall": {
+      "accuracyScore": 0.82,
+      "usefulnessScore": 0.82,
+      "evidenceScore": 0.79,
+      "confidenceHonestyScore": 0.86,
+      "signalDensityScore": 0.8,
+      "averageScore": 0.82,
+      "decision": "ready"
+    },
+    "globalIssues": [],
+    "globalWarnings": [],
+    "docEvaluations": [
+      {
+        "docKey": "start",
+        "docPath": "AI_CONTEXT/00-START-HERE.md",
+        "scores": {
+          "accuracyScore": 0.84,
+          "usefulnessScore": 0.9,
+          "evidenceScore": 0.78,
+          "confidenceHonestyScore": 0.86,
+          "signalDensityScore": 0.84
+        },
+        "averageScore": 0.84,
+        "decision": "ready",
+        "sectionConfidence": {
+          "router": "high",
+          "entrypoints": "high"
+        },
+        "evidenceAnchors": [
+          "src/app/cotizacion-marco&carlos/layout.tsx",
+          "src/app/layout.tsx",
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/cotizador/[clientId]/page.tsx",
+          "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+          "src/app/admin/page.tsx",
+          "src/app/blog/[slug]/page.tsx",
+          "src/app/blog/page.tsx"
+        ],
+        "warnings": [],
+        "issues": []
+      },
+      {
+        "docKey": "overview",
+        "docPath": "AI_CONTEXT/01-PROJECT-OVERVIEW.md",
+        "scores": {
+          "accuracyScore": 0.8,
+          "usefulnessScore": 0.82,
+          "evidenceScore": 0.76,
+          "confidenceHonestyScore": 0.72,
+          "signalDensityScore": 0.8
+        },
+        "averageScore": 0.78,
+        "decision": "ready",
+        "sectionConfidence": {
+          "narrative": "high",
+          "hotspots": "high"
+        },
+        "evidenceAnchors": [
+          "src/app/cotizacion-marco&carlos/layout.tsx",
+          "src/app/layout.tsx",
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/cotizador/[clientId]/page.tsx",
+          "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+          "src/app/admin/page.tsx",
+          "src/app/blog/[slug]/page.tsx",
+          "src/app/blog/page.tsx"
+        ],
+        "warnings": [],
+        "issues": []
+      },
+      {
+        "docKey": "architecture",
+        "docPath": "AI_CONTEXT/02-ARCHITECTURE.md",
+        "scores": {
+          "accuracyScore": 0.72,
+          "usefulnessScore": 0.82,
+          "evidenceScore": 0.8,
+          "confidenceHonestyScore": 0.88,
+          "signalDensityScore": 0.8
+        },
+        "averageScore": 0.8,
+        "decision": "ready",
+        "sectionConfidence": {
+          "boundaries": "high",
+          "requestFlow": "medium"
+        },
+        "evidenceAnchors": [
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/cotizador/[clientId]/page.tsx",
+          "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+          "src/app/admin/page.tsx",
+          "src/app/api/auth/route.ts",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts"
+        ],
+        "warnings": [],
+        "issues": []
+      },
+      {
+        "docKey": "backend",
+        "docPath": "AI_CONTEXT/03-BACKEND.md",
+        "scores": {
+          "accuracyScore": 0.86,
+          "usefulnessScore": 0.84,
+          "evidenceScore": 0.82,
+          "confidenceHonestyScore": 0.88,
+          "signalDensityScore": 0.82
+        },
+        "averageScore": 0.84,
+        "decision": "ready",
+        "sectionConfidence": {
+          "backendSurface": "high",
+          "supportingFiles": "low"
+        },
+        "evidenceAnchors": [
+          "src/app/api/auth/route.ts",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts",
+          "src/app/api/clients/route.ts",
+          "src/app/api/migrate/route.ts",
+          "src/app/api/modules/route.ts",
+          "src/app/api/modules/seed/route.ts"
+        ],
+        "warnings": [],
+        "issues": []
+      },
+      {
+        "docKey": "frontend",
+        "docPath": "AI_CONTEXT/04-FRONTEND.md",
+        "scores": {
+          "accuracyScore": 0.84,
+          "usefulnessScore": 0.8,
+          "evidenceScore": 0.78,
+          "confidenceHonestyScore": 0.72,
+          "signalDensityScore": 0.82
+        },
+        "averageScore": 0.79,
+        "decision": "ready",
+        "sectionConfidence": {
+          "frontendSurface": "high"
+        },
+        "evidenceAnchors": [
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/cotizador/[clientId]/page.tsx",
+          "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+          "src/app/admin/page.tsx",
+          "src/app/blog/[slug]/page.tsx",
+          "src/app/blog/page.tsx",
+          "src/app/cliente/page.tsx",
+          "src/app/cotizacion-marco&carlos/layout.tsx"
+        ],
+        "warnings": [],
+        "issues": []
+      },
+      {
+        "docKey": "data",
+        "docPath": "AI_CONTEXT/05-DATA-MODELS.md",
+        "scores": {
+          "accuracyScore": 0.84,
+          "usefulnessScore": 0.84,
+          "evidenceScore": 0.84,
+          "confidenceHonestyScore": 0.9,
+          "signalDensityScore": 0.8
+        },
+        "averageScore": 0.84,
+        "decision": "ready",
+        "sectionConfidence": {
+          "entities": "high",
+          "relationships": "medium"
+        },
+        "evidenceAnchors": [
+          "prisma/schema.prisma"
+        ],
+        "warnings": [],
+        "issues": []
+      },
+      {
+        "docKey": "api",
+        "docPath": "AI_CONTEXT/06-API-CONTRACTS.md",
+        "scores": {
+          "accuracyScore": 0.82,
+          "usefulnessScore": 0.88,
+          "evidenceScore": 0.84,
+          "confidenceHonestyScore": 0.9,
+          "signalDensityScore": 0.84
+        },
+        "averageScore": 0.86,
+        "decision": "ready",
+        "sectionConfidence": {
+          "methods": "high",
+          "auth": "low",
+          "responseShape": "medium"
+        },
+        "evidenceAnchors": [
+          "src/app/api/auth/route.ts",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts",
+          "prisma/schema.prisma",
+          "src/app/api/clients/route.ts",
+          "src/app/api/migrate/route.ts",
+          "src/app/api/modules/route.ts"
+        ],
+        "warnings": [],
+        "issues": []
+      },
+      {
+        "docKey": "adr",
+        "docPath": "AI_CONTEXT/07-DECISIONS-ADR.md",
+        "scores": {
+          "accuracyScore": 0.76,
+          "usefulnessScore": 0.74,
+          "evidenceScore": 0.76,
+          "confidenceHonestyScore": 0.9,
+          "signalDensityScore": 0.74
+        },
+        "averageScore": 0.78,
+        "decision": "ready",
+        "sectionConfidence": {
+          "decisions": "medium"
+        },
+        "evidenceAnchors": [
+          "src/app/api/auth/route.ts",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts",
+          "src/app/api/clients/route.ts",
+          "src/app/api/migrate/route.ts",
+          "src/app/api/modules/route.ts",
+          "src/app/api/modules/seed/route.ts"
+        ],
+        "warnings": [],
+        "issues": []
+      },
+      {
+        "docKey": "recent",
+        "docPath": "AI_CONTEXT/08-RECENT-CHANGES.md",
+        "scores": {
+          "accuracyScore": 0.84,
+          "usefulnessScore": 0.72,
+          "evidenceScore": 0.74,
+          "confidenceHonestyScore": 0.92,
+          "signalDensityScore": 0.72
+        },
+        "averageScore": 0.79,
+        "decision": "ready",
+        "sectionConfidence": {
+          "recentProjectChanges": "medium"
+        },
+        "evidenceAnchors": [
+          "tsconfig.tsbuildinfo",
+          "src/app/cliente/page.tsx",
+          "src/app/api/quotes/pdf/route.ts",
+          "src/app/api/client/route.ts",
+          "src/app/admin/page.tsx",
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/api/quotes/route.ts",
+          "src/app/admin/cotizador/[clientId]/page.tsx"
+        ],
+        "warnings": [],
+        "issues": []
+      },
+      {
+        "docKey": "issues",
+        "docPath": "AI_CONTEXT/09-OPEN-ISSUES.md",
+        "scores": {
+          "accuracyScore": 0.86,
+          "usefulnessScore": 0.88,
+          "evidenceScore": 0.8,
+          "confidenceHonestyScore": 0.94,
+          "signalDensityScore": 0.84
+        },
+        "averageScore": 0.86,
+        "decision": "ready",
+        "sectionConfidence": {
+          "openIssues": "high"
+        },
+        "evidenceAnchors": [
+          "src/app/admin/cotizador/[clientId]/ajustes/page.tsx",
+          "src/app/admin/cotizador/[clientId]/page.tsx",
+          "src/app/admin/cotizador/[clientId]/roadmap/page.tsx",
+          "src/app/admin/page.tsx",
+          "src/app/api/auth/route.ts",
+          "src/app/api/client/preferences/route.ts",
+          "src/app/api/client/route.ts",
+          "src/app/api/clients/ai/route.ts"
+        ],
+        "warnings": [],
+        "issues": []
+      }
+    ]
+  }
+}

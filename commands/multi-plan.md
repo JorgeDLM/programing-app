@@ -13,6 +13,10 @@ $ARGUMENTS
 - **Code Sovereignty**: External models have **zero filesystem write access**, all modifications by Claude
 - **Stop-Loss Mechanism**: Do not proceed to next phase until current phase output is validated
 - **Planning Only**: This command allows reading context and writing to `.claude/plan/*` plan files, but **NEVER modify production code**
+- **Prepared Context First**: For new tasks, prepare or load a `PreparedContextPackage` before any repo exploration
+- **Working Set First**: Start from `WorkingSet`, recommended `AI_CONTEXT` docs, and previous artifacts, not the whole repo
+- **Controlled Expansion Only**: If context is insufficient, request expansion explicitly before any broad search
+- **Backward Compatibility**: Legacy retrieval remains available only as a compatibility fallback, never as the default path
 
 ---
 
@@ -26,7 +30,7 @@ Bash({
 ROLE_FILE: <role prompt path>
 <TASK>
 Requirement: <enhanced requirement>
-Context: <retrieved project context>
+Context: <PreparedContextPackage + WorkingSet + recommended docs + previous artifacts>
 </TASK>
 OUTPUT: Step-by-step implementation plan with pseudo-code. DO NOT modify any files.
 EOF",
@@ -65,7 +69,7 @@ TaskOutput({ task_id: "<task_id>", block: true, timeout: 600000 })
 
 **Planning Task**: $ARGUMENTS
 
-### Phase 1: Full Context Retrieval
+### Phase 1: Prepared Context Bootstrap
 
 `[Mode: Research]`
 
@@ -85,7 +89,40 @@ Wait for enhanced prompt, **replace original $ARGUMENTS with enhanced result** f
 
 **If ace-tool MCP is NOT available**: Skip this step and use the original `$ARGUMENTS` as-is for all subsequent phases.
 
-#### 1.2 Context Retrieval
+#### 1.2 Context Bootstrap (Primary Path)
+
+Before any repo exploration, load context through the new stack:
+
+1. Generate or load a `PreparedContextPackage`
+2. Read the `WorkingSet`
+3. Read recommended `AI_CONTEXT` docs first
+4. Reuse previous task/session artifacts when they are relevant
+5. Carry forward the current budget and expansion policy
+
+Preferred helper:
+
+```bash
+node scripts/context-prepare.js --task "$ARGUMENTS" --write .claude/plan/task-context.json
+```
+
+Use the resulting `PreparedContextPackage` as the context source for all planning analysis.
+
+#### 1.3 Controlled Expansion (Only If Needed)
+
+If the initial `WorkingSet` is insufficient:
+
+1. Identify the missing context precisely
+2. Request controlled expansion
+3. Re-read the updated `WorkingSet`
+4. Continue planning from the expanded bounded context
+
+Preferred helper:
+
+```bash
+node scripts/context-expand.js --prepared-context .claude/plan/task-context.json --request '{"mode":"narrow","paths":["path/to/file.ts"],"reason":"Need adjacent implementation detail"}' --write .claude/plan/task-context-expanded.json
+```
+
+#### 1.4 Compatibility Retrieval (Not Default)
 
 **If ace-tool MCP is available**, call `mcp__ace-tool__search_context` tool:
 
@@ -98,6 +135,7 @@ mcp__ace-tool__search_context({
 
 - Build semantic query using natural language (Where/What/How)
 - **NEVER answer based on assumptions**
+- Only use this after the prepared context path is exhausted or expansion is explicitly denied
 
 **If ace-tool MCP is NOT available**, use Claude Code built-in tools as fallback:
 1. **Glob**: Find relevant files by pattern (e.g., `Glob("**/*.ts")`, `Glob("src/**/*.py")`)
@@ -105,13 +143,15 @@ mcp__ace-tool__search_context({
 3. **Read**: Read the discovered files to gather complete context
 4. **Task (Explore agent)**: For deeper exploration, use `Task` with `subagent_type: "Explore"` to search across the codebase
 
-#### 1.3 Completeness Check
+Legacy retrieval is compatibility-only. It is not the preferred route for a new task.
+
+#### 1.5 Completeness Check
 
 - Must obtain **complete definitions and signatures** for relevant classes, functions, variables
 - If context insufficient, trigger **recursive retrieval**
 - Prioritize output: entry file + line number + key symbol name; add minimal code snippets only when necessary to resolve ambiguity
 
-#### 1.4 Requirement Alignment
+#### 1.6 Requirement Alignment
 
 - If requirements still have ambiguity, **MUST** output guiding questions for user
 - Until requirement boundaries are clear (no omissions, no redundancy)
@@ -135,6 +175,14 @@ Distribute **original requirement** (without preset opinions) to both models:
    - ROLE_FILE: `~/.claude/.ccg/prompts/gemini/analyzer.md`
    - Focus: UI/UX impact, user experience, visual design
    - OUTPUT: Multi-perspective solutions + pros/cons analysis
+
+Both models should receive the bounded context package first:
+
+- `PreparedContextPackage`
+- `WorkingSet`
+- recommended docs
+- previous artifacts
+- current expansion budget
 
 Wait for both models' complete results with `TaskOutput`. **Save SESSION_ID** (`CODEX_SESSION` and `GEMINI_SESSION`).
 
